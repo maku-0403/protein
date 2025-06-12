@@ -25,15 +25,13 @@ for csv_path in cif_files:
         with open(csv_path,"r") as f:
             for line in f:
                 data_list.append(line.strip().replace("'", "").split(','))
-        sphere_df = pd.DataFrame(data=data_list[2:], columns=data_list[1])
-        sphere_df["volume"] = sphere_df["volume"].astype('float64')
 
-        for i in range(0,len(sphere_df)):
-            if sphere_df.iloc[i]["element_name"] == "CA" and len(sphere_df) - i >= 4:
+        for i in range(2,len(data_list)):
+            if data_list[i][2] == "CA" and len(data_list) - i >= 6:
                 j = 0
                 while j < 4:
-                    if sphere_df.iloc[i+j]["volume"] > 0.3:
-                        temp_list = [sphere_df.iloc[i]["unit"],sphere_df.iloc[i]["amino_number"]]
+                    if float(data_list[i+j][4]) > 0.3:
+                        temp_list = [data_list[i][0],data_list[i][1]]
                         del_list.append(temp_list)
                         break
                     else:
