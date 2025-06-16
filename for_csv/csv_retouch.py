@@ -8,16 +8,18 @@ import pandas as pd
 root_dir = "/Volumes/pdb_res/CIF/cif_to_csv/all_csv_temperature/sphere"
 
 # 全ての.csvファイルのフルパスを再帰的に取得
-cif_files = glob.glob(os.path.join(root_dir, '**', '*.csv'), recursive=True)
+csv_files = glob.glob(os.path.join(root_dir, '**', '*.csv'), recursive=True)
+
+process_count = 0
 
 #１つのCSVファイルごとに再帰的に繰り返し
-for csv_path in cif_files:
+for csv_path in csv_files:
+    process_count += 1
+    if process_count % 100 == 0:
+        print(f"処理中: {process_count} / {len(csv_files)}")
     while True:
         path = Path(csv_path)
         pdb_id = path.stem
-        
-        #処理中のパスを表示
-        print(f"処理中: {csv_path}")
         
         data_list = list()
         del_list = list()

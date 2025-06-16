@@ -7,7 +7,7 @@ degree = int(input('How many degree(s)? : '))
 input_amino_number = int(input('How many number(s) of amino acid? : '))
 
 # mmCIFルートディレクトリ（あなたの環境に合わせて変更）
-root_dir = "/Volumes/pdb_res/CIF/cif_to_csv/all_csv_cosw"
+root_dir = "/Volumes/pdb_res/CIF/allcsv_to_retouch/0.3"
 
 # 全ての.cifファイルのフルパスを再帰的に取得
 csv_files = glob.glob(os.path.join(root_dir, '**', '*.csv'), recursive=True)
@@ -15,7 +15,7 @@ csv_files = glob.glob(os.path.join(root_dir, '**', '*.csv'), recursive=True)
 save_path_pool = ['0.5-1.0Å/', '1.0-1.5Å/', '1.5-2.0Å/', '2.0-2.5Å/', '2.5-3.0Å/', '3.0-3.5Å/', '3.5-4.0Å/', '4.0-Å/']
 save_file_pool = ['0-5%', '5-10%', '10-15%', '15-20%', '20-40%', '40-60%', '60-80%', '80-100%']
 
-path_name = '/Volumes/pdb_res/CIF/csv_to_graph_data/all_csv_resolution/all_date'
+path_name = '/Volumes/pdb_res/CIF/csv_to_graph_data/tempreture/sphere_0.3'
 
 # 各PDB ID用のCSVファイルを作成
 for save_path in save_path_pool:
@@ -34,7 +34,8 @@ for csv_path in csv_files:
     with open(csv_path) as f:
         reader = csv.reader(f)
         l = [row for row in reader]
-        if len(l[0]) == 2:
+        print(l)
+        if (len(l[0]) == 2) and (len(l) > 6):
             file_name = l[0][1]
             count = 0
             multi_unit_name = [l[6][0]]
@@ -57,6 +58,8 @@ for csv_path in csv_files:
                             temp = [float(l[1][1]), w_rate, file_name, l[3][1]]
                             w_res = temp
                 for i, (low, high) in enumerate([(0.5, 1.0), (1.0, 1.5), (1.5, 2.0), (2.0, 2.5), (2.5, 3.0), (3.0, 3.5), (3.5, 4.0), (4.0, float('inf'))]):
+                    if len(w_res) == 0:
+                        break
                     if low <= w_res[0] < high:
                         for j, (low_rate, high_rate) in enumerate([(0, 5), (5, 10), (10, 15), (15, 20), (20, 40), (40, 60), (60, 80), (80, 100)]):
                             if low_rate <= w_res[1] < high_rate:
