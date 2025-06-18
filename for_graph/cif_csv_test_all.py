@@ -34,7 +34,6 @@ for csv_path in csv_files:
     with open(csv_path) as f:
         reader = csv.reader(f)
         l = [row for row in reader]
-        print(l)
         if (len(l[0]) == 2) and (len(l) > 6):
             file_name = l[0][1]
             count = 0
