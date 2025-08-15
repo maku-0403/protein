@@ -2,7 +2,6 @@ import os
 import csv
 import glob
 from pathlib import Path
-import pandas as pd
 
 # ルートディレクトリ（あなたの環境に合わせて変更）
 root_dir = input('Root directory: ')
@@ -22,8 +21,12 @@ for csv_path in csv_files:
         reader = csv.reader(f)
         l = [row for row in reader]
         if len(l) != 0:
-            if (len(l[0]) == 2) and (len(l) > 6):
+            if (len(l[0]) == 2) and (len(l) > 2):
                 #search here
-                if 'ELEC' in l[3][1]:
-                    count += 1
+                sum = 0
+                for i in range(2,len(l)):
+                    sum += float(l[i][3])
+                avg = sum / (len(l)-2)
+                if avg >= 200:
+                    print(csv_path)
 print(count)
