@@ -2,6 +2,7 @@ import csv
 import math
 import os
 import glob
+from CifFile import ReadCif
 
 # mmCIFルートディレクトリ（あなたの環境に合わせて変更）
 root_dir = "/Volumes/pdb_res/CIF/mmCIF"
@@ -20,86 +21,107 @@ for cif_path in cif_files:
     new_list = list()
     cos_list = list()
     w_list = list()
-    
-    final_date_TF = 'F'
-    program_name_TF = 'F'
-
-    pdb_id = ''
-    resolution = ''
-    final_date = ''
-    exp_type = ''
-    program_name = ''
 
     #計算可能なペプチド結合の数の変数'count'の定義
     count = 0
 
     #CIFファイルの読み込み
-    with open(cif_path, "r") as f:
-        #上から1行ごとに読み込み、'line'として定義
-        for line in f:
-            #一度すべて文字として読み込み、空白を削除
-            line = str(line)
-            line = line.split(' ')
-            line = [item for item in line if item != '']
-            #PDBidを探し、変数'pdb_id'に格納
-            if line[0] == '_entry.id':
-                pdb_id = line[1]
-            #C,CA,Nの座標を抜き出し、「ユニット」「アミノ酸番号」「元素」「x,y,z座標」をリスト'all_list'に追加
-            if len(line) > 12 and line[0] == 'ATOM' and (line[3]=='C' or line[3]=='CA' or line[3]=='N'):
-                temp_list=[line[6],line[8],line[3],line[10:13]]
-                all_list.append(temp_list)
-            #分解能
-            if line[0] == '_reflns.d_resolution_high' or line[0] == '_refine.ls_d_res_high':
-                if len(line) > 2:
-                    resolution = line[1]
-                else:
-                    resolution = 'unknown'
-            #最終更新日
-            if final_date_TF == 'F':
-                if '_pdbx_audit_revision_history' in line[0]:
-                    final_date_TF = 'T'
-            elif final_date_TF == 'T':
-                if line[0] == '#':
-                    final_date_TF = 'F'
-                elif '_pdbx_audit_revision_history' not in line[0]:
-                    final_date = line[5]
-            #実験手法
-            if line[0] == '_exptl.method':
-                if len(line) > 2:
-                    for i in range(1,len(line)):
-                        if line[i][-1] == "'":
-                            temp = line[1:i+1]
-                    if len(temp) == 1:
-                        exp_type = ''
-                        exp_type = temp[0].replace("'",'')
-                    else:
-                        exp_type = ''
-                        for i in range(0,len(temp)):
-                            exp_type += ' ' + temp[i]
-                            exp_type = exp_type.replace("'",'')
-            #プログラム
-            if program_name_TF == 'F':
-                if '_software.name' in line[0]:
-                    if len(line) > 2:
-                        program_name = line[1]
-                    else:
-                        program_name_TF = 'T'
-            elif program_name_TF == 'T':
-                if len(line) > 2 and line[1] == 'refinement':
-                    program_name = line[0]
-                    program_name_TF = 'F'
-
-    if pdb_id == '':
-        pdb_id = 'unknown'
-    if resolution == '':
-        resolution = 'unknown'
-    if final_date == '':
-        final_date = 'unknown'
-    if exp_type == '':
-        exp_type = 'unknown'
-    if program_name == '':
-        program_name = 'unknown'
-
+    cf = ReadCif(cif_path)
+    blk = cf.first_block()
+    
+    #pdb_idの抽出
+    pdb_id = blk["_entry.id"]
+    
+    #C,CA,Nの座標を抜き出し、「ユニット」「アミノ酸番号」「元素」「x,y,z座標」をリスト'all_list'に追加
+    loop = blk.GetLoop("_atom_site.group_PDB")
+    cols = list(loop.keys())
+    rows = [[pkt[6],pkt[8],pkt[3],pkt[10:13]] for pkt in loop if (pkt[0] == "ATOM") and ((pkt[3] == "C") or (pkt[3] == "CA") or (pkt[3] == "N"))]
+    all_list = rows
+    
+    #分解能の抽出
+    try:
+        resolution = blk["_refine.ls_d_res_high"]
+    except:
+        resolution = "?"
+    
+    #最終更新日
+    try:
+        loop = blk.GetLoop("_pdbx_audit_revision_history.revision_date")
+        cols = list(loop.keys())
+        rows = [list(pkt) for pkt in loop]
+        final_date = rows[-1][cols.index("_pdbx_audit_revision_history.revision_date")]
+    except:
+        try:
+            final_date = blk["_pdbx_audit_revision_history.revision_date"]
+        except:
+            final_date = "?"
+    
+    #実験手法
+    try:
+        loop = blk.GetLoop("_exptl.method")
+        cols = list(loop.keys())
+        rows = [list(pkt) for pkt in loop]
+        for i in range(0,len(rows)):
+            exp_type = rows[i][cols.index("_exptl.method")]
+    except:
+        try:
+            exp_type = blk["_exptl.method"]
+        except:
+            exp_type = "?"
+    
+    #プログラム
+    try:
+        loop = blk.GetLoop("_software.name")
+        cols = list(loop.keys())
+        rows = [list(pkt) for pkt in loop]
+        for i in range(0,len(rows)):
+            if rows[i][cols.index("_software.classification")] == "refinement":
+                program_name = rows[i][cols.index("_software.name")]
+    except:
+        try:
+            program_name = blk["_software.name"]
+        except:
+            program_name = "?"
+    
+    #R(WORK+TEST)
+    try:
+        loop = blk.GetLoop("_refine.ls_R_factor_obs")
+        cols = list(loop.keys())
+        rows = [list(pkt) for pkt in loop]
+        for i in range(0,len(rows)):
+            r_work_test = rows[i][cols.index("_refine.ls_R_factor_obs")]
+    except:
+        try:
+            r_work_test = blk["_refine.ls_R_factor_obs"]
+        except:
+            r_work_test = "?"
+    
+    #R(WORK)
+    try:
+        loop = blk.GetLoop("_refine.ls_R_factor_R_work")
+        cols = list(loop.keys())
+        rows = [list(pkt) for pkt in loop]
+        for i in range(0,len(rows)):
+            r_work = rows[i][cols.index("_refine.ls_R_factor_R_work")]
+    except:
+        try:
+            r_work = blk["_refine.ls_R_factor_R_work"]
+        except:
+            r_work = "?"
+    
+    #R(FREE)
+    try:
+        loop = blk.GetLoop("_refine.ls_R_factor_R_free")
+        cols = list(loop.keys())
+        rows = [list(pkt) for pkt in loop]
+        for i in range(0,len(rows)):
+            r_free = rows[i][cols.index("_refine.ls_R_factor_R_free")]
+    except:
+        try:
+            r_free = blk["_refine.ls_R_factor_R_free"]
+        except:
+            r_free = "?"
+    
     #抜き出した原子の個数(all_listの要素数)分ループする
     for i in range(0,len(all_list)-3):
         #CA,C,Nの順に並んでいるもののみに条件を絞る
@@ -133,8 +155,6 @@ for cif_path in cif_files:
             bN = (bNx ** 2 + bNy ** 2 + bNz ** 2) ** 0.5
             #外積を元にcos_wを算出し、リスト'cos_list'に追加
             cos_w = abs((aNx * bNx + aNy * bNy + aNz *bNz) / (aN * bN))
-            cos_w = max(-1.0, min(1.0, cos_w))  # 値を[-1, 1]に丸める
-
             cos_list.append(cos_w)
             #cos_wの値を元にw角を算出し、リスト'w_list'に追加
             w = math.degrees(math.acos(cos_w))
@@ -154,6 +174,9 @@ for cif_path in cif_files:
             writer.writerow(['FINAL_DATE',final_date])
             writer.writerow(['EXPERIMENT_TYPE',exp_type])
             writer.writerow(['PROGRAM',program_name])
+            writer.writerow(['R_VALUE(WORK+TEST)',r_work_test])
+            writer.writerow(['R_VALUE(WORK)',r_work])
+            writer.writerow(['R_VALUE(FREE)',r_free])
             writer.writerow(['unit','amino_number','cos_w','w'])
             for i in range(0,count):
                 temp_list = [new_list[i][0],new_list[i][1],cos_list[i],w_list[i]]

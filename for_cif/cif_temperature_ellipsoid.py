@@ -1,6 +1,7 @@
 import csv
 import os
 import glob
+import math
 
 # mmCIFルートディレクトリ（あなたの環境に合わせて変更）
 root_dir = "/Volumes/pdb_res/CIF/mmCIF"
@@ -47,7 +48,7 @@ for cif_path in cif_files:
                     anisou_TF = 'F'
                     anisou_comp = True
                 #もし'_atom_site_anisotrop'が含まれていなく、元素名が'C','CA','N'で、アミノ酸番号の部分が空('.')でない場合
-                elif ('_atom_site_anisotrop' not in line[0]) and (line[2]=='C' or line[2]=='CA' or line[2]=='N') and (line[6] != '.'):
+                elif ('_atom_site_anisotrop' not in line[0]) and (line[2]=='C' or line[2]=='CA' or line[2]=='N') and (line[6] != '.') and (float(line[8]) >= 0) and (float(line[9]) >= 0) and (float(line[10]) >= 0):
                     #anisou_listに、'ユニット','アミノ酸番号','元素名','Uの分散値'を追加
                     temp_list = [line[5],line[6],line[2],line[8:11]]
                     anisou_list.append(temp_list)
@@ -55,12 +56,19 @@ for cif_path in cif_files:
     #anisouの要素数が0以上（DNA,RNAを除くため）で、anisouの記述がある場合
     if len(anisou_list) > 0 and anisou_comp:
         #ファイル名をpdbのidにし、csvファイルを新規作成
-        with open('/Volumes/pdb_res/CIF/cul_csv_temperature/'+pdb_id+'.csv', 'w') as f:
+        with open('/Volumes/pdb_res/CIF/cif_to_csv/all_csv_temperature/ellipsoid/'+pdb_id+'.csv', 'w') as f:
             writer = csv.writer(f)
             #'楕円体'という情報の記述
             writer.writerow(['temperature_type','ellipsoid'])
             #'ユニット','アミノ酸番号','元素名','U11(x軸)','U22(y軸)','U33(z軸)'を1行ずつ全て書き出す
-            writer.writerow(['unit','amino_number','element_name','anisou_U[1][1](x-axis)','anisou_U[2][2](y-axis)','anisou_U[3][3](z-axis)'])
+            writer.writerow(['unit','amino_number','element_name','x-radius','y-radius','z-radius',"volume"])
             for i in range(0,len(anisou_list)):
                 temp_list = [anisou_list[i][0],anisou_list[i][1],anisou_list[i][2],anisou_list[i][3][0],anisou_list[i][3][1],anisou_list[i][3][2]]
-                writer.writerow(temp_list)
+                # 各軸方向の半径を計算
+                rx = math.sqrt(float(temp_list[3]))
+                ry = math.sqrt(float(temp_list[4]))
+                rz = math.sqrt(float(temp_list[5]))
+                # 楕円体の体積を計算
+                volume = (4/3) * math.pi * rx * ry * rz
+                last_list = [anisou_list[i][0],anisou_list[i][1],anisou_list[i][2],anisou_list[i][3][0],anisou_list[i][3][1],anisou_list[i][3][2],volume]
+                writer.writerow(last_list)
