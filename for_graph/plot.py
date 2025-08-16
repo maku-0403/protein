@@ -19,6 +19,8 @@ for csv_path in csv_files:
     process_count += 1
     if process_count % 100 == 0:
         print(f"処理中: {process_count} / {len(csv_files)}")
+    if process_count == 5000:
+        break
     with open(csv_path) as f:
             reader = csv.reader(f)
             l = [row for row in reader]
@@ -38,11 +40,8 @@ for csv_path in csv_files:
                         reader = csv.reader(f)
                         l = [row for row in reader]
                         resolution = float(l[1][1])
-                        if avg <= 200 and resolution <= 5:
-                            y.append(avg)
-                            x.append(resolution)
-                        else:
-                            print(file_name)
+                        y.append(avg)
+                        x.append(resolution)
             except:
                 continue
 
