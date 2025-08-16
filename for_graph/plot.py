@@ -19,8 +19,6 @@ for csv_path in csv_files:
     process_count += 1
     if process_count % 100 == 0:
         print(f"処理中: {process_count} / {len(csv_files)}")
-    if process_count == 1000:
-        break
     with open(csv_path) as f:
             reader = csv.reader(f)
             l = [row for row in reader]
@@ -33,16 +31,23 @@ for csv_path in csv_files:
                     sum += float(l[i][3])
                 avg = sum / (len(l)-2)
                 if avg != 0:
-                    x.append(avg)
-                    file_name = os.path.splitext(os.path.basename(path))[0]
+                    file_name = os.path.splitext(os.path.basename(csv_path))[0]
+                    print
                     y_path = res_dir+file_name+'.csv'
                     with open(y_path) as f:
                         reader = csv.reader(f)
                         l = [row for row in reader]
-                        resolution = l[1][1]
-                        y.append(resolution)
+                        resolution = float(l[1][1])
+                        if avg <= 200 and resolution <= 5:
+                            y.append(avg)
+                            x.append(resolution)
+                        else:
+                            print(file_name)
             except:
                 continue
+
+print('x:'+str(len(x)))
+print('y:'+str(len(y)))
 
 # 散布図の作成
 plt.scatter(x, y)

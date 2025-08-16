@@ -1,0 +1,1 @@
+rows = [list(pkt) for pkt in loop]

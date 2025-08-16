@@ -2,7 +2,7 @@ import csv
 import math
 import os
 import glob
-from CifFile import ReadCif
+import gemmi
 
 # mmCIFルートディレクトリ（あなたの環境に合わせて変更）
 root_dir = "/Volumes/pdb_res/CIF/mmCIF"
@@ -10,10 +10,14 @@ root_dir = "/Volumes/pdb_res/CIF/mmCIF"
 # 全ての.cifファイルのフルパスを再帰的に取得
 cif_files = glob.glob(os.path.join(root_dir, '**', '*.cif'), recursive=True)
 
+process_count = 0
+
 #１つのCIFファイルごとに再帰的に繰り返し
 for cif_path in cif_files:
+    process_count += 1
     #処理中のパスを表示
-    print(f"処理中: {cif_path}")
+    if process_count % 100 == 0:
+        print(f"処理中: {process_count} / {len(cif_files)}")
     
     #読み込み/計算/書き込みのためのリスト類の定義
     temp_list = list()
@@ -26,99 +30,87 @@ for cif_path in cif_files:
     count = 0
 
     #CIFファイルの読み込み
-    cf = ReadCif(cif_path)
-    blk = cf.first_block()
+    doc = gemmi.cif.read_file(cif_path)
+    blk = doc.sole_block()
     
     #pdb_idの抽出
-    pdb_id = blk["_entry.id"]
+    pdb_id = blk.find_value('_entry.id')
     
     #C,CA,Nの座標を抜き出し、「ユニット」「アミノ酸番号」「元素」「x,y,z座標」をリスト'all_list'に追加
-    loop = blk.GetLoop("_atom_site.group_PDB")
-    cols = list(loop.keys())
-    rows = [[pkt[6],pkt[8],pkt[3],pkt[10:13]] for pkt in loop if (pkt[0] == "ATOM") and ((pkt[3] == "C") or (pkt[3] == "CA") or (pkt[3] == "N"))]
-    all_list = rows
+    table = blk.find('_atom_site.', ['label_asym_id','label_seq_id','label_atom_id','Cartn_x', 'Cartn_y', 'Cartn_z','group_PDB'])
+    if table:  # 見つかったとき
+        rows = list()
+        for row in table:
+            if (row[6] == "ATOM") and ((row[2] == "C") or (row[2] == "CA") or (row[2] == "N")):
+                rows.append([row[0],row[1],row[2],[row[3],row[4],row[5]]])
+                all_list = rows
     
     #分解能の抽出
     try:
-        resolution = blk["_refine.ls_d_res_high"]
+        resolution = blk.find_value("_refine.ls_d_res_high")
     except:
         resolution = "?"
     
     #最終更新日
     try:
-        loop = blk.GetLoop("_pdbx_audit_revision_history.revision_date")
-        cols = list(loop.keys())
-        rows = [list(pkt) for pkt in loop]
-        final_date = rows[-1][cols.index("_pdbx_audit_revision_history.revision_date")]
+        loop = blk.find_loop("_pdbx_audit_revision_history.revision_date")
+        final_date = loop[-1]
     except:
         try:
-            final_date = blk["_pdbx_audit_revision_history.revision_date"]
+            final_date = blk.find_value("_pdbx_audit_revision_history.revision_date")
         except:
             final_date = "?"
-    
+
     #実験手法
     try:
-        loop = blk.GetLoop("_exptl.method")
-        cols = list(loop.keys())
-        rows = [list(pkt) for pkt in loop]
-        for i in range(0,len(rows)):
-            exp_type = rows[i][cols.index("_exptl.method")]
+        loop = blk.find_loop("_exptl.method")
+        exp_type = loop[-1]
     except:
         try:
-            exp_type = blk["_exptl.method"]
+            exp_type = blk.find_value("_exptl.method")
         except:
             exp_type = "?"
     
     #プログラム
     try:
-        loop = blk.GetLoop("_software.name")
-        cols = list(loop.keys())
-        rows = [list(pkt) for pkt in loop]
-        for i in range(0,len(rows)):
-            if rows[i][cols.index("_software.classification")] == "refinement":
-                program_name = rows[i][cols.index("_software.name")]
+        table = blk.find('_software.', ['name','classification'])
+        if table:  # 見つかったとき
+            for row in table:
+                if row[1] == "refinement":
+                    program_name = rows[0]
     except:
         try:
-            program_name = blk["_software.name"]
+            program_name = blk.find_value("_software.name")
         except:
             program_name = "?"
     
     #R(WORK+TEST)
     try:
-        loop = blk.GetLoop("_refine.ls_R_factor_obs")
-        cols = list(loop.keys())
-        rows = [list(pkt) for pkt in loop]
-        for i in range(0,len(rows)):
-            r_work_test = rows[i][cols.index("_refine.ls_R_factor_obs")]
+        loop = blk.find_loop("_refine.ls_R_factor_obs")
+        r_work_test = loop[-1]
     except:
         try:
-            r_work_test = blk["_refine.ls_R_factor_obs"]
+            r_work_test = blk.find_value("_refine.ls_R_factor_obs")
         except:
             r_work_test = "?"
     
     #R(WORK)
     try:
-        loop = blk.GetLoop("_refine.ls_R_factor_R_work")
-        cols = list(loop.keys())
-        rows = [list(pkt) for pkt in loop]
-        for i in range(0,len(rows)):
-            r_work = rows[i][cols.index("_refine.ls_R_factor_R_work")]
+        loop = blk.find_loop("_refine.ls_R_factor_R_work")
+        r_work = loop[-1]
     except:
         try:
-            r_work = blk["_refine.ls_R_factor_R_work"]
+            r_work = blk.find_value("_refine.ls_R_factor_R_work")
         except:
             r_work = "?"
     
     #R(FREE)
     try:
-        loop = blk.GetLoop("_refine.ls_R_factor_R_free")
-        cols = list(loop.keys())
-        rows = [list(pkt) for pkt in loop]
-        for i in range(0,len(rows)):
-            r_free = rows[i][cols.index("_refine.ls_R_factor_R_free")]
+        loop = blk.find_loop("_refine.ls_R_factor_R_free")
+        r_free = loop[-1]
     except:
         try:
-            r_free = blk["_refine.ls_R_factor_R_free"]
+            r_free = blk.find_value("_refine.ls_R_factor_R_free")
         except:
             r_free = "?"
     
@@ -157,6 +149,7 @@ for cif_path in cif_files:
             cos_w = abs((aNx * bNx + aNy * bNy + aNz *bNz) / (aN * bN))
             cos_list.append(cos_w)
             #cos_wの値を元にw角を算出し、リスト'w_list'に追加
+            cos_w = max(-1.0, min(1.0, cos_w))
             w = math.degrees(math.acos(cos_w))
             w_list.append(w)
             #毎回countを1増やし、csv書き出しループ処理に使用
