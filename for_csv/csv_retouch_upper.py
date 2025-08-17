@@ -1,0 +1,92 @@
+import csv
+import os
+import glob
+from pathlib import Path
+import pandas as pd
+import numpy as np
+
+# sphereルートディレクトリと出力ディレクトリ
+root_dir = "/Volumes/pdb_res/CIF/cif_to_csv/all_csv_temperature/sphere"
+out_path = "/Volumes/pdb_res/CIF/allcsv_to_retouch/upper_25"
+
+# 全ての.csvファイルのフルパスを再帰的に取得
+csv_files = glob.glob(os.path.join(root_dir, '**', '*.csv'), recursive=True)
+
+process_count = 0
+
+# 1つのCSVファイルごとに処理（保存先に同名ファイルがなければ処理）
+for csv_path in csv_files:
+    file_name = os.path.basename(csv_path)
+    save_path = os.path.join(out_path, file_name)
+
+    if not os.path.exists(save_path):
+        process_count += 1
+        if process_count % 100 == 0:
+            print(f"処理中: {process_count} / {len(csv_files)}")
+        while True:
+            path = Path(csv_path)
+            pdb_id = path.stem
+            
+            data_list = list()
+            temp_list = list()
+            sort_list = list()
+            max_data_list = list()
+            del_list = list()
+            
+            with open(csv_path,"r") as f:
+                for line in f:
+                    data_list.append(line.strip().replace("'", "").split(','))
+
+            for i in range(2,len(data_list)):
+                if data_list[i][2] == "CA" and len(data_list) - i >= 6:
+                    temp_list = [data_list[i][0],data_list[i][1],data_list[i][4]]
+                    for j in range(0,4):
+                        temp_list[2] = max(temp_list[2],data_list[i+j][4])
+                    sort_list.append(temp_list[2])
+                    max_data_list.append(temp_list)
+                    i += 3
+            
+            threshold = np.percentile(sort_list,75)
+            
+            for i in range(0,sort_list):
+                if sort_list[i] > threshold:
+                    temp_list = [max_data_list[i][0],max_data_list[i][1]]
+                    del_list.append(temp_list)
+
+            if len(del_list) == 0:
+                break
+
+            data_list = list()
+
+            cos_path = "/Volumes/pdb_res/CIF/cif_to_csv/all_csv_cosw/"+pdb_id+".csv"
+
+            with open(cos_path,"r") as f:
+                for line in f:
+                    data_list.append(line.strip().replace("'", "").split(','))
+            
+            if len(data_list) == 1:
+                break
+            
+            cos_df = pd.DataFrame(data=data_list[6:], columns=data_list[5])
+            
+            to_drop = pd.MultiIndex.from_tuples(del_list, names=['unit', 'amino_number'])
+
+            cos_df = (
+                cos_df
+                    .set_index(['unit', 'amino_number'])
+                    .drop(index=to_drop, errors='ignore')   # errors='ignore' で存在しない組み合わせは無視
+                    .reset_index()
+            )
+
+
+            
+            out_path = out_path+"/"+pdb_id+".csv"
+            
+            with open(out_path, 'w') as f:
+                writer = csv.writer(f)
+                for i in range(0,6):
+                    writer.writerow(data_list[i])
+            
+            cos_df.to_csv(out_path, mode="a", header=False, index=False)
+            
+            break

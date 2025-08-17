@@ -5,6 +5,7 @@ import math
 
 # mmCIFルートディレクトリ（あなたの環境に合わせて変更）
 root_dir = "/Volumes/pdb_res/CIF/mmCIF"
+out_dir = "/Volumes/pdb_res/CIF/cif_to_csv/all_csv_temperature/sphere"
 
 # 全ての.cifファイルのフルパスを再帰的に取得
 cif_files = glob.glob(os.path.join(root_dir, '**', '*.cif'), recursive=True)
@@ -41,7 +42,7 @@ for cif_path in cif_files:
     #anisouの要素数が0以上（DNA,RNAを除くため）
     if len(sphere_list) > 0:
         #ファイル名をpdbのidにし、csvファイルを新規作成
-        with open('/Volumes/pdb_res/CIF/cif_to_csv/all_csv_temperature/sphere/'+pdb_id+'.csv', 'w') as f:
+        with open(out_dir+'/'+pdb_id+'.csv', 'w') as f:
             writer = csv.writer(f)
             #'楕円体'という情報の記述
             writer.writerow(['temperature_type','sphere'])

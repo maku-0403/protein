@@ -6,6 +6,7 @@ import gemmi
 
 # mmCIFルートディレクトリ（あなたの環境に合わせて変更）
 root_dir = "/Volumes/pdb_res/CIF/mmCIF"
+out_dir = "/Volumes/pdb_res/CIF/cif_to_csv/all_csv_cosw"
 
 # 全ての.cifファイルのフルパスを再帰的に取得
 cif_files = glob.glob(os.path.join(root_dir, '**', '*.cif'), recursive=True)
@@ -155,7 +156,7 @@ for cif_path in cif_files:
             #毎回countを1増やし、csv書き出しループ処理に使用
             count += 1
     #csvで書き出し
-    with open('/Volumes/pdb_res/CIF/cif_to_csv/all_csv_cosw/'+pdb_id+'.csv', 'w') as f:
+    with open(out_dir+'/'+pdb_id+'.csv', 'w') as f:
         writer = csv.writer(f)
         #DNAやRNAのように計算できないものがあった場合、"NO_DATA"と出力
         if len(new_list) == 0:

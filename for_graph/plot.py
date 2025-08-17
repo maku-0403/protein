@@ -15,6 +15,10 @@ y = list()
 
 process_count = 0
 
+with open('/Users/kuniimahan/Desktop/school/研究関係/千葉研/protein-1/plot_out.csv', 'w') as f:
+    writer = csv.writer(f)
+    writer.writerow(['pdb_id','resolution','B-factor'])
+
 for csv_path in csv_files:
     process_count += 1
     if process_count % 100 == 0:
@@ -40,8 +44,13 @@ for csv_path in csv_files:
                         reader = csv.reader(f)
                         l = [row for row in reader]
                         resolution = float(l[1][1])
-                        y.append(avg)
-                        x.append(resolution)
+                        if resolution <= 5 and avg <= 200:
+                            y.append(avg)
+                            x.append(resolution)
+                        else:
+                            with open('/Users/kuniimahan/Desktop/school/研究関係/千葉研/protein-1/plot_out.csv', 'a') as f:
+                                writer = csv.writer(f)
+                                writer.writerow([file_name,resolution,avg])
             except:
                 continue
 
