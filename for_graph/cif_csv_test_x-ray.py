@@ -49,12 +49,12 @@ for csv_path in csv_files:
                 if 'X-RAY' in l[3][1] or 'NEUTRON' in l[3][1]:
                     surch_count += 1
                     file_name = l[0][1]
-                    if l[1][1] == '?' or l[1][1] == '' or l[1][1] == '.':
+                    if l[1][1] == '?' or l[1][1] == '' or l[1][1] == '.' or l[1][1] == 'unknown':
                         if (file_name in mapping) and (mapping[file_name] != ''):
                             resolution = float(mapping[file_name])
                             res_error_count += 1
                         else:
-                            resolution = l[1][1]
+                            resolution = '?'
                     else:
                         resolution = float(l[1][1])
                     multi_unit_name = [l[9][0]]
@@ -76,7 +76,7 @@ for csv_path in csv_files:
                             if amino_number <= 9:
                                 break
                             w_rate = count / amino_number * 100
-                            if resolution not in ('?', '', '.'):
+                            if resolution != '?':
                                 temp = [resolution, w_rate, file_name, l[3][1]]
                                 w_res = temp
                         for i, (low, high) in enumerate([(0.5, 1.0), (1.0, 1.5), (1.5, 2.0), (2.0, 2.5), (2.5, 3.0), (3.0, 3.5), (3.5, 4.0), (4.0, float('inf'))]):

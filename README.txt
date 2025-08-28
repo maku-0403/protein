@@ -36,4 +36,8 @@ find . -type f -name "*.gz" -exec gunzip {} +
 
 14. root_dirにSSD内のsphereファイルのパス、out_dirに13で作ったupper_25ファイルのパスを貼り付ける。
 
+15. csv_retouch_upper.py内で切る割合を適宜設定する。
+
+16. csv_retouch_upper.pyを実行して終了するまで待つ（結構時間かかる）
+
 ***パスをコピーするときは全て/になっているか確認する。\だと動作しない。***

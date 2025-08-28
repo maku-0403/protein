@@ -50,7 +50,7 @@ for csv_path in csv_files:
             if len(sort_list) == 0:
                 break
 
-            #####ここで残すパーセントを指定（75を入力したら25%切り捨てという意味）
+            #####ここで残すパーセントを指定（75を入力したら25%切り捨てという意味）#####
             threshold = np.percentile(sort_list,75)
             
             for i in range(0,len(sort_list)):
