@@ -19,19 +19,19 @@ root_dir = "/Volumes/pdb_res/CIF/cif_to_csv/all_csv_cosw"
 # 全ての.cifファイルのフルパスを再帰的に取得
 csv_files = glob.glob(os.path.join(root_dir, '**', '*.csv'), recursive=True)
 
-save_path_pool = ['0.5-1.0Å', '1.0-1.5Å', '1.5-2.0Å', '2.0-2.5Å', '2.5-3.0Å', '3.0-3.5Å', '3.5-4.0Å', '4.0Å-']
+save_path_pool = ['0.5-1.0Å', '1.0-1.5Å', '1.5-2.0Å', '2.0-2.5Å', '2.5-3.0Å', '3.0-3.5Å', '3.5-4.0Å', '4.0-4.5Å', '4.5-5.0Å', '5.0Å-']
 save_file_pool = ['0-5%', '5-10%', '10-15%', '15-20%', '20-40%', '40-60%', '60-80%', '80-100%']
 
-path_name = '/Volumes/pdb_res/CIF/csv_to_graph_data/all_csv_resolution/all_date'
+save_path_name = '/Volumes/pdb_res/CIF/csv_to_graph_data/electron'
 
 # 各PDB ID用のCSVファイルを作成
 for save_path in save_path_pool:
     for save_file in save_file_pool:
-        with open(f"{path_name}/each_PDBid/{save_path}/{save_file}.csv", 'w') as f:
+        with open(f"{save_path_name}/each_PDBid/{save_path}/{save_file}.csv", 'w') as f:
             writer = csv.writer(f)
 
 # カウント用リストを初期化
-counts = [[0 for _ in range(8)] for _ in range(8)]
+counts = [[0 for _ in range(8)] for _ in range(10)]
 process_count = 0
 surch_count = 0
 res_error_count = 0
@@ -45,6 +45,8 @@ for csv_path in csv_files:
         l = [row for row in reader]
         if len(l) != 0:
             if (len(l[0]) == 2) and (len(l) > 8):
+                #search here
+                if 'ELECTRON' in l[3][1]:
                     surch_count += 1
                     file_name = l[0][1]
                     if l[1][1] == '?' or l[1][1] == '' or l[1][1] == '.':
@@ -77,14 +79,14 @@ for csv_path in csv_files:
                             if resolution not in ('?', '', '.'):
                                 temp = [resolution, w_rate, file_name, l[3][1]]
                                 w_res = temp
-                        for i, (low, high) in enumerate([(0.5, 1.0), (1.0, 1.5), (1.5, 2.0), (2.0, 2.5), (2.5, 3.0), (3.0, 3.5), (3.5, 4.0), (4.0, float('inf'))]):
+                        for i, (low, high) in enumerate([(0.5, 1.0), (1.0, 1.5), (1.5, 2.0), (2.0, 2.5), (2.5, 3.0), (3.0, 3.5), (3.5, 4.0), (4.0, 4.5), (4.5, 5.0), (5.0, float('inf'))]):
                             if len(w_res) == 0:
                                 break
                             if low <= w_res[0] < high:
                                 for j, (low_rate, high_rate) in enumerate([(0, 5), (5, 10), (10, 15), (15, 20), (20, 40), (40, 60), (60, 80), (80, 100)]):
                                     if low_rate <= w_res[1] < high_rate:
                                         counts[i][j] += 1
-                                        with open(f"{path_name}/each_PDBid/{save_path_pool[i]}/{save_file_pool[j]}.csv", 'a') as f:
+                                        with open(f"{save_path_name}/each_PDBid/{save_path_pool[i]}/{save_file_pool[j]}.csv", 'a') as f:
                                             writer = csv.writer(f)
                                             writer.writerow([w_res[2],unit_name])
 
@@ -97,16 +99,16 @@ def rate(a, b):
         return 0
     return f"{float(a / b * 100):.2f}%"
 
-rates = [[rate(counts[i][j], totals[i]) for j in range(8)] for i in range(8)]
+rates = [[rate(counts[i][j], totals[i]) for j in range(8)] for i in range(10)]
 
 # CSVデータを保存
-with open(f"{path_name}/CSV_data.csv", 'w') as f:
+with open(f"{save_path_name}/CSV_data.csv", 'w') as f:
     writer = csv.writer(f)
     writer.writerow(['rate', '0.5-1.0Å', '1.0-1.5Å', '1.5-2.0Å', '2.0-2.5Å', '2.5-3.0Å', '3.0-3.5Å', '3.5-4.0Å', '4.0-Å'])
     for j, save_file in enumerate(save_file_pool):
-        writer.writerow([save_file] + [counts[i][j] for i in range(8)])
+        writer.writerow([save_file] + [counts[i][j] for i in range(10)])
     for j, save_file in enumerate(save_file_pool):
-        writer.writerow([save_file] + [rates[i][j] for i in range(8)])
+        writer.writerow([save_file] + [rates[i][j] for i in range(10)])
     writer.writerow(['sum'] + totals)
 
 print(res_error_count)

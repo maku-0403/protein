@@ -78,7 +78,7 @@ for cif_path in cif_files:
         if table:  # 見つかったとき
             for row in table:
                 if row[1] == "refinement":
-                    program_name = rows[0]
+                    program_name = row[0]
     except:
         try:
             program_name = blk.find_value("_software.name")

@@ -32,6 +32,8 @@ find . -type f -name "*.gz" -exec gunzip {} +
 
 12. cif_temperature_sphere.pyを実行して終了するまで待つ（結構時間かかる）
 
-13. （作成中）
+13. SSDに"upper_25"というファイルを作る。
+
+14. root_dirにSSD内のsphereファイルのパス、out_dirに13で作ったupper_25ファイルのパスを貼り付ける。
 
 ***パスをコピーするときは全て/になっているか確認する。\だと動作しない。***
