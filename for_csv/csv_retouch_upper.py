@@ -7,7 +7,7 @@ import numpy as np
 
 # sphereルートディレクトリと出力ディレクトリ
 root_dir = "/Volumes/pdb_res/CIF/cif_to_csv/all_csv_temperature/sphere"
-out_dir = "/Volumes/pdb_res/CIF/allcsv_to_retouch/upper_25"
+out_dir = "/Volumes/pdb_res/CIF/allcsv_to_retouch/test"
 
 # 全ての.csvファイルのフルパスを再帰的に取得
 csv_files = glob.glob(os.path.join(root_dir, '**', '*.csv'), recursive=True)
@@ -37,12 +37,8 @@ for csv_path in csv_files:
             with open(csv_path,"r") as f:
                 for line in f:
                     data_list.append(line.strip().replace("'", "").split(','))
-
-            if len(data_list) == 1:
-                break
-
             for i in range(2,len(data_list)):
-                if data_list[i][2] == "CA" and len(data_list) - i >= 9:
+                if data_list[i][2] == "CA" and len(data_list) - i >= 6:
                     temp_list = [data_list[i][0],data_list[i][1],float(data_list[i][4])]
                     for j in range(0,4):
                         temp_list[2] = max(temp_list[2],float(data_list[i+j][4]))
