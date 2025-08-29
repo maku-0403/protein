@@ -38,8 +38,11 @@ for csv_path in csv_files:
                 for line in f:
                     data_list.append(line.strip().replace("'", "").split(','))
 
+            if len(data_list) == 1:
+                break
+
             for i in range(2,len(data_list)):
-                if data_list[i][2] == "CA" and len(data_list) - i >= 6:
+                if data_list[i][2] == "CA" and len(data_list) - i >= 9:
                     temp_list = [data_list[i][0],data_list[i][1],float(data_list[i][4])]
                     for j in range(0,4):
                         temp_list[2] = max(temp_list[2],float(data_list[i+j][4]))

@@ -55,7 +55,7 @@ for cif_path in cif_files:
     #最終更新日
     try:
         loop = blk.find_loop("_pdbx_audit_revision_history.revision_date")
-        final_date = loop[-1]
+        final_date = loop[0]
     except:
         try:
             final_date = blk.find_value("_pdbx_audit_revision_history.revision_date")
