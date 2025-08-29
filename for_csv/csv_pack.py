@@ -20,8 +20,6 @@ for csv_path in csv_files:
         reader = csv.reader(f)
         l = [row for row in reader]
 
-print(l)
-
 with open(csv_path,'w',newline="") as f:
         writer = csv.writer(f)
         for i in range(0,len(l)):
