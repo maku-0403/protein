@@ -19,9 +19,8 @@ for csv_path in csv_files:
     with open(csv_path) as f:
         reader = csv.reader(f)
         l = [row for row in reader]
-
-with open(csv_path,'w',newline="") as f:
-        writer = csv.writer(f)
-        for i in range(0,len(l)):
-            if len(l[i]) != 0:
-                writer.writerow(l[i])
+    with open(csv_path,'w',newline="") as f:
+            writer = csv.writer(f)
+            for i in range(0,len(l)):
+                if len(l[i]) != 0:
+                    writer.writerow(l[i])
