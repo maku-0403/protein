@@ -27,7 +27,7 @@ save_path_name = '/Volumes/pdb_res/CIF/csv_to_graph_data/electron/extra'
 # 各PDB ID用のCSVファイルを作成
 for save_path in save_path_pool:
     for save_file in save_file_pool:
-        with open(f"{save_path_name}/each_PDBid/{save_path}/{save_file}.csv", 'w') as f:
+        with open(f"{save_path_name}/each_PDBid/{save_path}/{save_file}.csv", 'w',newline="") as f:
             writer = csv.writer(f)
 
 # カウント用リストを初期化
@@ -86,7 +86,7 @@ for csv_path in csv_files:
                                 for j, (low_rate, high_rate) in enumerate([(0, 5), (5, 10), (10, 15), (15, 20), (20, 40), (40, 60), (60, 80), (80, 100)]):
                                     if low_rate <= w_res[1] < high_rate:
                                         counts[i][j] += 1
-                                        with open(f"{save_path_name}/each_PDBid/{save_path_pool[i]}/{save_file_pool[j]}.csv", 'a') as f:
+                                        with open(f"{save_path_name}/each_PDBid/{save_path_pool[i]}/{save_file_pool[j]}.csv", 'a',newline="") as f:
                                             writer = csv.writer(f)
                                             writer.writerow([w_res[2],unit_name])
 
@@ -102,7 +102,7 @@ def rate(a, b):
 rates = [[rate(counts[i][j], totals[i]) for j in range(8)] for i in range(27)]
 
 # CSVデータを保存
-with open(f"{save_path_name}/CSV_data.csv", 'w') as f:
+with open(f"{save_path_name}/CSV_data.csv", 'w',newline="") as f:
     writer = csv.writer(f)
     writer.writerow(['rate', '0.5-1.0Å', '1.0-1.5Å', '1.5-2.0Å', '2.0-2.5Å', '2.5-3.0Å', '3.0-3.5Å', '3.5-4.0Å', '4.0-4.5Å', '4.5-5.0Å', '5.0-5.5Å', '5.5-6.0Å', '6.0-6.5Å', '6.5-7.0Å', '7.0-8.0Å', '8.0-9.0Å', '9.0-10.0Å', '10.0-11.0Å', '11.0-12.0Å', '12.0-13.0Å', '13.0-14.0Å', '14.0-15.0Å', '15.0-16.0Å', '16.0-17.0Å', '17.0-18.0Å', '18.0-19.0Å', '19.0-20.0Å', '20.0Å-'])
     for j, save_file in enumerate(save_file_pool):

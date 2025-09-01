@@ -35,7 +35,7 @@ for csv_path in csv_files:
                         if i == len(exp_list)-1:
                             exp_list.append([l[3][1],1])
 
-with open('exp_list.csv', 'w') as f:
+with open('exp_list.csv', 'w',newline="") as f:
     writer = csv.writer(f)
     for i in range(0,len(exp_list)):
         writer.writerow([exp_list[i][0],exp_list[i][1]])

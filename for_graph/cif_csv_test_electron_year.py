@@ -10,8 +10,10 @@ df = pd.read_csv("/Volumes/pdb_res/PDB/pdb_resolution_list.csv", header=None)
 mapping = pd.Series(df[1].values, index=df[0]).to_dict()
 
 w_res = list()
-degree = int(input('How many degree(s)? : '))
-input_amino_number = int(input('How many number(s) of amino acid? : '))
+# degree = int(input('How many degree(s)? : '))
+# input_amino_number = int(input('How many number(s) of amino acid? : '))
+degree = 10
+input_amino_number = 100
 input_year_str = input('Which year?: ')
 
 # mmCIFルートディレクトリ（あなたの環境に合わせて変更）
@@ -23,12 +25,12 @@ csv_files = glob.glob(os.path.join(root_dir, '**', '*.csv'), recursive=True)
 save_path_pool = ['0.5-1.0Å', '1.0-1.5Å', '1.5-2.0Å', '2.0-2.5Å', '2.5-3.0Å', '3.0-3.5Å', '3.5-4.0Å', '4.0-4.5Å', '4.5-5.0Å', '5.0Å-']
 save_file_pool = ['0-5%', '5-10%', '10-15%', '15-20%', '20-40%', '40-60%', '60-80%', '80-100%']
 
-save_path_name = '/Volumes/pdb_res/CIF/csv_to_graph_data/electron/each_year/'+input_year_str
+save_path_name = '/Volumes/pdb_res/CIF/csv_to_graph_data/x-ray_neutron/each_year/'+input_year_str
 
 # 各PDB ID用のCSVファイルを作成
 for save_path in save_path_pool:
     for save_file in save_file_pool:
-        with open(f"{save_path_name}/each_PDBid/{save_path}/{save_file}.csv", 'w') as f:
+        with open(f"{save_path_name}/each_PDBid/{save_path}/{save_file}.csv", 'w',newline="") as f:
             writer = csv.writer(f)
 
 # カウント用リストを初期化
@@ -47,7 +49,7 @@ for csv_path in csv_files:
         if len(l) != 0:
             if (len(l[0]) == 2) and (len(l) > 8):
                 #search here
-                if 'ELECTRON' in l[3][1]:
+                if 'X-RAY' in l[3][1] or 'NEUTRON' in l[3][1]:
                     surch_count += 1
                     file_name = l[0][1]
                     if l[1][1] == '?' or l[1][1] == '' or l[1][1] == '.' or l[1][1] == 'unknown':
@@ -90,7 +92,7 @@ for csv_path in csv_files:
                                     for j, (low_rate, high_rate) in enumerate([(0, 5), (5, 10), (10, 15), (15, 20), (20, 40), (40, 60), (60, 80), (80, 100)]):
                                         if low_rate <= w_res[1] < high_rate:
                                             counts[i][j] += 1
-                                            with open(f"{save_path_name}/each_PDBid/{save_path_pool[i]}/{save_file_pool[j]}.csv", 'a') as f:
+                                            with open(f"{save_path_name}/each_PDBid/{save_path_pool[i]}/{save_file_pool[j]}.csv", 'a',newline="") as f:
                                                 writer = csv.writer(f)
                                                 writer.writerow([w_res[2],unit_name])
 
@@ -106,7 +108,7 @@ def rate(a, b):
 rates = [[rate(counts[i][j], totals[i]) for j in range(8)] for i in range(10)]
 
 # CSVデータを保存
-with open(f"{save_path_name}/CSV_data.csv", 'w') as f:
+with open(f"{save_path_name}/CSV_data.csv", 'w',newline="") as f:
     writer = csv.writer(f)
     writer.writerow(['rate', '0.5-1.0Å', '1.0-1.5Å', '1.5-2.0Å', '2.0-2.5Å', '2.5-3.0Å', '3.0-3.5Å', '3.5-4.0Å', '4.0-4.5Å', '4.5-5.0Å', '5.0Å-'])
     for j, save_file in enumerate(save_file_pool):

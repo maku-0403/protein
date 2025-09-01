@@ -74,7 +74,7 @@ for csv_path in csv_files:
             
             out_path = "/Volumes/pdb_res/CIF/allcsv_to_retouch/0.3/"+pdb_id+".csv"
             
-            with open(out_path, 'w') as f:
+            with open(out_path, 'w',newline="") as f:
                 writer = csv.writer(f)
                 for i in range(0,6):
                     writer.writerow(data_list[i])

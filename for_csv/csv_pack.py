@@ -3,7 +3,7 @@ import glob
 import os
 
 # ルートディレクトリ（あなたの環境に合わせて変更）
-root_dir = "/Users/kuniimahan/Desktop/school/研究関係/千葉研/protein-1/for_csv"
+root_dir = "/Volumes/KIOXIA/upper_15"
 
 # 全ての.csvファイルのフルパスを再帰的に取得
 csv_files = glob.glob(os.path.join(root_dir, '**', '*.csv'), recursive=True)

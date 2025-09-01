@@ -83,7 +83,7 @@ for csv_path in csv_files:
                     .reset_index()
             )
             
-            with open(save_path, 'w') as f:
+            with open(save_path, 'w',newline="") as f:
                 writer = csv.writer(f)
                 for i in range(0,9):
                     writer.writerow(data_list[i])
