@@ -41,3 +41,5 @@ find . -type f -name "*.gz" -exec gunzip {} +
 16. csv_retouch_upper.pyを実行して終了するまで待つ（結構時間かかる）
 
 ***パスをコピーするときは全て/になっているか確認する。\だと動作しない。***
+
+find ./mmCIF -type f -name "*.gz" -exec gunzip {} +

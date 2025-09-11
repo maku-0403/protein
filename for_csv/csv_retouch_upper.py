@@ -7,7 +7,7 @@ import numpy as np
 
 # sphereルートディレクトリと出力ディレクトリ
 root_dir = "/Volumes/pdb_res/CIF/cif_to_csv/all_csv_temperature/sphere"
-out_dir = "/Volumes/pdb_res/CIF/allcsv_to_retouch/test"
+out_dir = "/Volumes/pdb_res/CIF/allcsv_to_retouch/upper_25"
 
 # 全ての.csvファイルのフルパスを再帰的に取得
 csv_files = glob.glob(os.path.join(root_dir, '**', '*.csv'), recursive=True)
@@ -61,9 +61,12 @@ for csv_path in csv_files:
 
             cos_path = "/Volumes/pdb_res/CIF/cif_to_csv/all_csv_cosw/"+pdb_id+".csv"
 
-            with open(cos_path,"r") as f:
-                for line in f:
-                    data_list.append(line.strip().replace("'", "").split(','))
+            try:
+                with open(cos_path,"r") as f:
+                    for line in f:
+                        data_list.append(line.strip().replace("'", "").split(','))
+            except:
+                break
             
             if len(data_list) == 1:
                 break

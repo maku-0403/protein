@@ -23,8 +23,8 @@ for csv_path in csv_files:
     process_count += 1
     if process_count % 100 == 0:
         print(f"処理中: {process_count} / {len(csv_files)}")
-    if process_count == 5000:
-        break
+    # if process_count == 5000:
+    #     break
     with open(csv_path) as f:
             reader = csv.reader(f)
             l = [row for row in reader]
@@ -44,13 +44,13 @@ for csv_path in csv_files:
                         reader = csv.reader(f)
                         l = [row for row in reader]
                         resolution = float(l[1][1])
-                        if resolution <= 5 and avg <= 200:
-                            y.append(avg)
-                            x.append(resolution)
-                        else:
-                            with open('/Users/kuniimahan/Desktop/school/研究関係/千葉研/protein-1/plot_out.csv', 'a') as f:
-                                writer = csv.writer(f)
-                                writer.writerow([file_name,resolution,avg])
+                        # if resolution <= 5 and avg <= 200:
+                        y.append(avg)
+                        x.append(resolution)
+                        # else:
+                        #     with open('/Users/kuniimahan/Desktop/school/研究関係/千葉研/protein-1/plot_out.csv', 'a') as f:
+                        #         writer = csv.writer(f)
+                        #         writer.writerow([file_name,resolution,avg])
             except:
                 continue
 
