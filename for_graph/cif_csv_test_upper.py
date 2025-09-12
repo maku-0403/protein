@@ -18,18 +18,18 @@ root_dir = "/Volumes/pdb_res/CIF/cif_to_csv/all_csv_cosw"
 
 upper_dir = "/Volumes/pdb_res/CIF/allcsv_to_retouch/0.3"
 
-# 全ての.cifファイルのフルパスを再帰的に取得
+# 全ての.csvファイルのフルパスを再帰的に取得
 csv_files = glob.glob(os.path.join(root_dir, '**', '*.csv'), recursive=True)
 
 save_path_pool = ['0.5-1.0Å', '1.0-1.5Å', '1.5-2.0Å', '2.0-2.5Å', '2.5-3.0Å', '3.0-3.5Å', '3.5-4.0Å', '4.0-4.5Å', '4.5-5.0Å', '5.0Å-']
 save_file_pool = ['0-5%', '5-10%', '10-15%', '15-20%', '20-40%', '40-60%', '60-80%', '80-100%']
 
-out_path_name = '/Volumes/pdb_res/CIF/csv_to_graph_data/all_csv_resolution'
+path_name = '/Volumes/pdb_res/CIF/csv_to_graph_data/tempreture/upper_test'
 
 # 各PDB ID用のCSVファイルを作成
 for save_path in save_path_pool:
     for save_file in save_file_pool:
-        with open(f"{out_path_name}/each_PDBid/{save_path}/{save_file}.csv", 'w',newline="") as f:
+        with open(f"{path_name}/each_PDBid/{save_path}/{save_file}.csv", 'w',newline="") as f:
             writer = csv.writer(f)
 
 # カウント用リストを初期化
@@ -68,51 +68,43 @@ for csv_path in csv_files:
                     count = 0
                     w_res = list()
                     unit_name = multi_unit_name[i]
+                    print(file_name,i,multi_unit_number_index)
                     amino_number = int(l[multi_unit_number_index[i+1]-1][1])
                     if  amino_number >= input_amino_number:
-                        with open(csv_path) as f:
+                        with open(upper_dir+'/'+file_name+'.csv') as f:
                             reader = csv.reader(f)
-                            l = [row for row in reader]
-                            if len(l) != 0:
-                                if (len(l[0]) == 2) and (len(l) > 9):
-                                        surch_count += 1
-                                        file_name = l[0][1]
-                                        if l[1][1] == '?' or l[1][1] == '' or l[1][1] == '.' or l[1][1] == 'unknown':
-                                            if (file_name in mapping) and (mapping[file_name] != ''):
-                                                resolution = float(mapping[file_name])
-                                                res_error_count += 1
-                                            else:
-                                                resolution = '?'
-                                        else:
-                                            resolution = float(l[1][1])
-                                        multi_unit_name = [l[9][0]]
-                                        upper_multi_unit_number_index = [9]
-                                        for i in range(10,len(l)):
-                                            if l[i][0] != l[i-1][0]:
-                                                multi_unit_name.append(l[i][0])
-                                                multi_unit_number_index.append(i)
-                                        multi_unit_number_index.append(len(l))
-                                        for i in range(0,len(multi_unit_name)):
-                                            count = 0
-                                            w_res = list()
-                                            unit_name = multi_unit_name[i]
-                        for j in range(upper_multi_unit_number_index[i], upper_multi_unit_number_index[i+1]):
-                            if float(l[j][3]) > degree:
-                                count += 1
-                        w_rate = count / amino_number * 100
-                        if resolution != '?':
-                            temp = [resolution, w_rate, file_name, l[3][1]]
-                            w_res = temp
-                    for i, (low, high) in enumerate([(0.5, 1.0), (1.0, 1.5), (1.5, 2.0), (2.0, 2.5), (2.5, 3.0), (3.0, 3.5), (3.5, 4.0), (4.0, 4.5), (4.5, 5.0), (5.0, float('inf'))]):
-                        if len(w_res) == 0:
-                            break
-                        if low <= w_res[0] < high:
-                            for j, (low_rate, high_rate) in enumerate([(0, 5), (5, 10), (10, 15), (15, 20), (20, 40), (40, 60), (60, 80), (80, 100)]):
-                                if low_rate <= w_res[1] < high_rate:
-                                    counts[i][j] += 1
-                                    with open(f"{out_path_name}/each_PDBid/{save_path_pool[i]}/{save_file_pool[j]}.csv", 'a',newline="") as f:
-                                        writer = csv.writer(f)
-                                        writer.writerow([w_res[2],unit_name])
+                            lu = [row for row in reader]
+                            if len(lu) != 0:
+                                if (len(lu[0]) == 2) and (len(lu) > 9):
+                                    upper_multi_unit_name = [lu[9][0]]
+                                    upper_multi_unit_number_index = [9]
+                                    for i in range(10,len(lu)):
+                                        if lu[i][0] != lu[i-1][0]:
+                                            upper_multi_unit_name.append(lu[i][0])
+                                            upper_multi_unit_number_index.append(i)
+                                    upper_multi_unit_number_index.append(len(lu))
+                                    for i in range(0,len(upper_multi_unit_name)):
+                                        count = 0
+                                        w_res = list()
+                                        unit_name = upper_multi_unit_name[i]
+                                        amino_number = int(lu[upper_multi_unit_number_index[i+1]-1][1])
+                                        for j in range(upper_multi_unit_number_index[i], upper_multi_unit_number_index[i+1]):
+                                            if float(lu[j][3]) > degree:
+                                                count += 1
+                                        w_rate = count / amino_number * 100
+                                        if resolution != '?':
+                                            temp = [resolution, w_rate, file_name, lu[3][1]]
+                                            w_res = temp
+                                        for i, (low, high) in enumerate([(0.5, 1.0), (1.0, 1.5), (1.5, 2.0), (2.0, 2.5), (2.5, 3.0), (3.0, 3.5), (3.5, 4.0), (4.0, 4.5), (4.5, 5.0), (5.0, float('inf'))]):
+                                            if len(w_res) == 0:
+                                                break
+                                            if low <= w_res[0] < high:
+                                                for j, (low_rate, high_rate) in enumerate([(0, 5), (5, 10), (10, 15), (15, 20), (20, 40), (40, 60), (60, 80), (80, 100)]):
+                                                    if low_rate <= w_res[1] < high_rate:
+                                                        counts[i][j] += 1
+                                                        with open(f"{path_name}/each_PDBid/{save_path_pool[i]}/{save_file_pool[j]}.csv", 'a',newline="") as f:
+                                                            writer = csv.writer(f)
+                                                            writer.writerow([w_res[2],unit_name])
 
 # 合計を計算
 totals = [sum(count) for count in counts]
@@ -126,7 +118,7 @@ def rate(a, b):
 rates = [[rate(counts[i][j], totals[i]) for j in range(8)] for i in range(10)]
 
 # CSVデータを保存
-with open(f"{out_path_name}/CSV_data.csv", 'w',newline="") as f:
+with open(f"{path_name}/CSV_data.csv", 'w',newline="") as f:
     writer = csv.writer(f)
     writer.writerow(['rate', '0.5-1.0Å', '1.0-1.5Å', '1.5-2.0Å', '2.0-2.5Å', '2.5-3.0Å', '3.0-3.5Å', '3.5-4.0Å', '4.0-4.5Å', '4.5-5.0Å', '5.0Å-'])
     for j, save_file in enumerate(save_file_pool):
