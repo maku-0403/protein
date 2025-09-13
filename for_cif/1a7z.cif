@@ -1,0 +1,2103 @@
+data_1A7Z
+# 
+_entry.id   1A7Z 
+# 
+_audit_conform.dict_name       mmcif_pdbx.dic 
+_audit_conform.dict_version    5.395 
+_audit_conform.dict_location   http://mmcif.pdb.org/dictionaries/ascii/mmcif_pdbx.dic 
+# 
+loop_
+_database_2.database_id 
+_database_2.database_code 
+_database_2.pdbx_database_accession 
+_database_2.pdbx_DOI 
+PDB   1A7Z         pdb_00001a7z 10.2210/pdb1a7z/pdb 
+WWPDB D_1000170506 ?            ?                   
+# 
+loop_
+_pdbx_audit_revision_history.ordinal 
+_pdbx_audit_revision_history.data_content_type 
+_pdbx_audit_revision_history.major_revision 
+_pdbx_audit_revision_history.minor_revision 
+_pdbx_audit_revision_history.revision_date 
+1 'Structure model' 1 0 1999-03-23 
+2 'Structure model' 1 1 2011-06-14 
+3 'Structure model' 1 2 2011-07-13 
+4 'Structure model' 1 3 2011-07-27 
+5 'Structure model' 1 4 2012-12-12 
+6 'Structure model' 1 5 2018-03-07 
+7 'Structure model' 1 6 2019-11-13 
+8 'Structure model' 2 0 2023-11-15 
+9 'Structure model' 3 0 2024-07-10 
+# 
+_pdbx_audit_revision_details.ordinal             1 
+_pdbx_audit_revision_details.revision_ordinal    1 
+_pdbx_audit_revision_details.data_content_type   'Structure model' 
+_pdbx_audit_revision_details.provider            repository 
+_pdbx_audit_revision_details.type                'Initial release' 
+_pdbx_audit_revision_details.description         ? 
+_pdbx_audit_revision_details.details             ? 
+# 
+loop_
+_pdbx_audit_revision_group.ordinal 
+_pdbx_audit_revision_group.revision_ordinal 
+_pdbx_audit_revision_group.data_content_type 
+_pdbx_audit_revision_group.group 
+1  2 'Structure model' 'Version format compliance' 
+2  3 'Structure model' 'Version format compliance' 
+3  4 'Structure model' 'Atomic model'              
+4  4 'Structure model' 'Database references'       
+5  4 'Structure model' 'Derived calculations'      
+6  4 'Structure model' 'Non-polymer description'   
+7  4 'Structure model' 'Structure summary'         
+8  5 'Structure model' Other                       
+9  6 'Structure model' Advisory                    
+10 6 'Structure model' 'Data collection'           
+11 6 'Structure model' Other                       
+12 7 'Structure model' 'Database references'       
+13 7 'Structure model' 'Derived calculations'      
+14 8 'Structure model' 'Atomic model'              
+15 8 'Structure model' 'Data collection'           
+16 8 'Structure model' 'Database references'       
+17 8 'Structure model' 'Derived calculations'      
+18 9 'Structure model' 'Data collection'           
+19 9 'Structure model' 'Derived calculations'      
+20 9 'Structure model' 'Non-polymer description'   
+21 9 'Structure model' 'Structure summary'         
+# 
+loop_
+_pdbx_audit_revision_category.ordinal 
+_pdbx_audit_revision_category.revision_ordinal 
+_pdbx_audit_revision_category.data_content_type 
+_pdbx_audit_revision_category.category 
+1  6 'Structure model' diffrn_source                 
+2  6 'Structure model' pdbx_database_status          
+3  6 'Structure model' pdbx_validate_polymer_linkage 
+4  7 'Structure model' citation                      
+5  7 'Structure model' citation_author               
+6  7 'Structure model' struct_conn                   
+7  8 'Structure model' atom_site                     
+8  8 'Structure model' atom_site_anisotrop           
+9  8 'Structure model' chem_comp_atom                
+10 8 'Structure model' chem_comp_bond                
+11 8 'Structure model' database_2                    
+12 8 'Structure model' struct_conn                   
+13 8 'Structure model' struct_site                   
+14 9 'Structure model' chem_comp                     
+15 9 'Structure model' chem_comp_atom                
+16 9 'Structure model' chem_comp_bond                
+17 9 'Structure model' entity                        
+18 9 'Structure model' struct_conn                   
+# 
+loop_
+_pdbx_audit_revision_item.ordinal 
+_pdbx_audit_revision_item.revision_ordinal 
+_pdbx_audit_revision_item.data_content_type 
+_pdbx_audit_revision_item.item 
+1  6 'Structure model' '_diffrn_source.source'                   
+2  6 'Structure model' '_pdbx_database_status.process_site'      
+3  7 'Structure model' '_citation.journal_id_ASTM'               
+4  7 'Structure model' '_citation.journal_id_CSD'                
+5  7 'Structure model' '_citation.journal_id_ISSN'               
+6  7 'Structure model' '_citation.page_last'                     
+7  7 'Structure model' '_citation.pdbx_database_id_PubMed'       
+8  7 'Structure model' '_citation.title'                         
+9  7 'Structure model' '_citation_author.name'                   
+10 7 'Structure model' '_struct_conn.pdbx_leaving_atom_flag'     
+11 8 'Structure model' '_atom_site.auth_atom_id'                 
+12 8 'Structure model' '_atom_site.label_atom_id'                
+13 8 'Structure model' '_atom_site_anisotrop.pdbx_auth_atom_id'  
+14 8 'Structure model' '_atom_site_anisotrop.pdbx_label_atom_id' 
+15 8 'Structure model' '_database_2.pdbx_DOI'                    
+16 8 'Structure model' '_database_2.pdbx_database_accession'     
+17 8 'Structure model' '_struct_conn.pdbx_dist_value'            
+18 8 'Structure model' '_struct_conn.pdbx_leaving_atom_flag'     
+19 8 'Structure model' '_struct_conn.ptnr1_label_atom_id'        
+20 8 'Structure model' '_struct_conn.ptnr2_auth_comp_id'         
+21 8 'Structure model' '_struct_conn.ptnr2_auth_seq_id'          
+22 8 'Structure model' '_struct_conn.ptnr2_label_atom_id'        
+23 8 'Structure model' '_struct_conn.ptnr2_label_comp_id'        
+24 8 'Structure model' '_struct_conn.ptnr2_label_seq_id'         
+25 8 'Structure model' '_struct_site.pdbx_auth_asym_id'          
+26 8 'Structure model' '_struct_site.pdbx_auth_comp_id'          
+27 8 'Structure model' '_struct_site.pdbx_auth_seq_id'           
+28 9 'Structure model' '_chem_comp.formula'                      
+29 9 'Structure model' '_chem_comp.formula_weight'               
+30 9 'Structure model' '_entity.formula_weight'                  
+31 9 'Structure model' '_struct_conn.pdbx_leaving_atom_flag'     
+# 
+_pdbx_database_status.status_code                     REL 
+_pdbx_database_status.entry_id                        1A7Z 
+_pdbx_database_status.recvd_initial_deposition_date   1998-03-19 
+_pdbx_database_status.deposit_site                    ? 
+_pdbx_database_status.process_site                    BNL 
+_pdbx_database_status.status_code_sf                  REL 
+_pdbx_database_status.status_code_mr                  ? 
+_pdbx_database_status.SG_entry                        ? 
+_pdbx_database_status.pdb_format_compatible           Y 
+_pdbx_database_status.status_code_cs                  ? 
+_pdbx_database_status.methods_development_category    ? 
+_pdbx_database_status.status_code_nmr_data            ? 
+# 
+loop_
+_pdbx_database_related.db_name 
+_pdbx_database_related.db_id 
+_pdbx_database_related.content_type 
+_pdbx_database_related.details 
+PDB 209D unspecified 'CRYSTAL STRUCTURE OF N8-ACTINOMYCIN D COMPLEXED WITH D(GAAGCTTC)2'                          
+PDB 1UNM unspecified 'CRYSTAL STRUCTURE OF 7-AMINOACTINOMYCIN D COMPLEXED WITH NON-COMPLEMENTARY DNA'             
+PDB 1I3W unspecified 'CRYSTAL STRUCTURE OF ACTINOMYCIN D COMPLEXED WITH DNA (CGATCGATCG)2'                        
+PDB 1A7Y unspecified 'CRYSTAL STRUCTURE OF ACTINOMYCIN D'                                                         
+PDB 1FJA unspecified 'SOLUTION STRUCTURE OF ACTINOMYCIN D COMPLEXED WITH DNA (AAGCGCTT)2'                         
+PDB 173D unspecified 'CRYSTAL STRUCTURE OF ACTINOMYCIN D COMPLEXED WITH DNA (GAAGCTTC)2'                          
+PDB 2D55 unspecified 'CRYSTAL STRUCTURE OF ACTINOMYCIN D COMPLEXED WITH DNA (GAAGCTTC)2'                          
+PDB 1DSC unspecified 'SOLUTION STRUCTURE OF ACTINOMYCIN D COMPLEXED WITH DNA (GAAGCTTC)2'                         
+PDB 1L1V unspecified 'SOLUTION STRUCTURE OF ACTNIOMYCIN D COMPLEXED WITH MISMATCHED DNA (GTCACCGAC)'              
+PDB 316D unspecified 'CRYSTAL STRUCTURE OF F8-ACTINOMYCIN D COMPLEXED WITH DNA (GAAGCTTC)2'                       
+PDB 1DSD unspecified 'SOLUTION STRUCTURE OF ACTINOMYCIN D COMPLEXED WITH DNA (GATGCTTC)2'                         
+PDB 1MNV unspecified 'CRYSTAL STRUCTURE OF ACTINOMYCIN D COMPLEXED WITH DNA (ATGCTGCAT)2'                         
+PDB 1UNJ unspecified 'CRYSTAL STRUCTURE OF 7-AMINO-ACTINOMYCIN D COMPLEXED WITH A NON-COMPLEMENTARY DNA (TTAGT)2' 
+PDB 1OVF unspecified 'SOLUTIOM STRUCTURE OF ACTINOMYCIN D COMPLEXED WITH DNA (CCGTTTTGTGG)2'                      
+PDB 1QFI unspecified 'CRYSTAL STRUCTURE OF ACTINOMYCIN X2'                                                        
+# 
+_audit_author.name           'Schafer, M.' 
+_audit_author.pdbx_ordinal   1 
+# 
+_citation.id                        primary 
+_citation.title                     'Crystal Structures of Actinomycin D and Actinomycin Z3.' 
+_citation.journal_abbrev            Angew.Chem.Int.Ed.Engl. 
+_citation.journal_volume            37 
+_citation.page_first                2381 
+_citation.page_last                 2384 
+_citation.year                      1998 
+_citation.journal_id_ASTM           ACIEAY 
+_citation.country                   GE 
+_citation.journal_id_ISSN           1521-3773 
+_citation.journal_id_CSD            0179 
+_citation.book_publisher            ? 
+_citation.pdbx_database_id_PubMed   29710967 
+_citation.pdbx_database_id_DOI      '10.1002/(SICI)1521-3773(19980918)37:17<2381::AID-ANIE2381>3.0.CO;2-L' 
+# 
+loop_
+_citation_author.citation_id 
+_citation_author.name 
+_citation_author.ordinal 
+_citation_author.identifier_ORCID 
+primary 'Schafer, M.'     1 ? 
+primary 'Sheldrick, G.M.' 2 ? 
+primary 'Bahner, I.'      3 ? 
+primary 'Lackner, H.'     4 ? 
+# 
+loop_
+_entity.id 
+_entity.type 
+_entity.src_method 
+_entity.pdbx_description 
+_entity.formula_weight 
+_entity.pdbx_number_of_molecules 
+_entity.pdbx_ec 
+_entity.pdbx_mutation 
+_entity.pdbx_fragment 
+_entity.details 
+1 polymer     nat 'ACTINOMYCIN Z3' 1355.875 2  ? ? ? ? 
+2 non-polymer syn BENZENE          78.112   20 ? ? ? ? 
+3 water       nat water            18.015   1  ? ? ? ? 
+# 
+_entity_poly.entity_id                      1 
+_entity_poly.type                           'polypeptide(L)' 
+_entity_poly.nstd_linkage                   no 
+_entity_poly.nstd_monomer                   yes 
+_entity_poly.pdbx_seq_one_letter_code       '(CTH)(DVA)(POM)(SAR)(MAA)(PXZ)T(DVA)(H5M)(SAR)(MVA)' 
+_entity_poly.pdbx_seq_one_letter_code_can   TVPGAXTVPGV 
+_entity_poly.pdbx_strand_id                 A,B 
+_entity_poly.pdbx_target_identifier         ? 
+# 
+loop_
+_pdbx_entity_nonpoly.entity_id 
+_pdbx_entity_nonpoly.name 
+_pdbx_entity_nonpoly.comp_id 
+2 BENZENE BNZ 
+3 water   HOH 
+# 
+loop_
+_entity_poly_seq.entity_id 
+_entity_poly_seq.num 
+_entity_poly_seq.mon_id 
+_entity_poly_seq.hetero 
+1 1  CTH n 
+1 2  DVA n 
+1 3  POM n 
+1 4  SAR n 
+1 5  MAA n 
+1 6  PXZ n 
+1 7  THR n 
+1 8  DVA n 
+1 9  H5M n 
+1 10 SAR n 
+1 11 MVA n 
+# 
+_entity_src_nat.entity_id                  1 
+_entity_src_nat.pdbx_src_id                1 
+_entity_src_nat.pdbx_alt_source_flag       sample 
+_entity_src_nat.pdbx_beg_seq_num           ? 
+_entity_src_nat.pdbx_end_seq_num           ? 
+_entity_src_nat.common_name                ? 
+_entity_src_nat.pdbx_organism_scientific   'STREPTOMYCES FRADIAE' 
+_entity_src_nat.pdbx_ncbi_taxonomy_id      1906 
+_entity_src_nat.genus                      ? 
+_entity_src_nat.species                    ? 
+_entity_src_nat.strain                     ? 
+_entity_src_nat.tissue                     ? 
+_entity_src_nat.tissue_fraction            ? 
+_entity_src_nat.pdbx_secretion             ? 
+_entity_src_nat.pdbx_fragment              ? 
+_entity_src_nat.pdbx_variant               ? 
+_entity_src_nat.pdbx_cell_line             ? 
+_entity_src_nat.pdbx_atcc                  ? 
+_entity_src_nat.pdbx_cellular_location     ? 
+_entity_src_nat.pdbx_organ                 ? 
+_entity_src_nat.pdbx_organelle             ? 
+_entity_src_nat.pdbx_cell                  ? 
+_entity_src_nat.pdbx_plasmid_name          ? 
+_entity_src_nat.pdbx_plasmid_details       ? 
+_entity_src_nat.details                    ? 
+# 
+loop_
+_chem_comp.id 
+_chem_comp.type 
+_chem_comp.mon_nstd_flag 
+_chem_comp.name 
+_chem_comp.pdbx_synonyms 
+_chem_comp.formula 
+_chem_comp.formula_weight 
+BNZ non-polymer         . BENZENE                                                         ?           'C6 H6'         78.112  
+CTH 'L-peptide linking' n 4-CHLOROTHREONINE                                               ?           'C4 H8 Cl N O3' 153.564 
+DVA 'D-peptide linking' . D-VALINE                                                        ?           'C5 H11 N O2'   117.146 
+H5M 'L-peptide linking' n TRANS-3-HYDROXY-5-METHYLPROLINE                                 ?           'C6 H11 N O3'   145.156 
+HOH non-polymer         . WATER                                                           ?           'H2 O'          18.015  
+MAA 'L-peptide linking' n N-methyl-L-alanine                                              ?           'C4 H9 N O2'    103.120 
+MVA 'L-peptide linking' n N-METHYLVALINE                                                  ?           'C6 H13 N O2'   131.173 
+POM 'L-peptide linking' n CIS-5-METHYL-4-OXOPROLINE                                       ?           'C6 H9 N O3'    143.141 
+PXZ non-polymer         . 2-AMINO-1,9-DICARBONYL-4,6-DIMETHYL-10-DEHYDRO-PHENOXAZIN-3-ONE PHENOXAZINE 'C16 H12 N2 O6' 328.276 
+SAR 'peptide linking'   n SARCOSINE                                                       ?           'C3 H7 N O2'    89.093  
+THR 'L-peptide linking' y THREONINE                                                       ?           'C4 H9 N O3'    119.119 
+# 
+loop_
+_pdbx_poly_seq_scheme.asym_id 
+_pdbx_poly_seq_scheme.entity_id 
+_pdbx_poly_seq_scheme.seq_id 
+_pdbx_poly_seq_scheme.mon_id 
+_pdbx_poly_seq_scheme.ndb_seq_num 
+_pdbx_poly_seq_scheme.pdb_seq_num 
+_pdbx_poly_seq_scheme.auth_seq_num 
+_pdbx_poly_seq_scheme.pdb_mon_id 
+_pdbx_poly_seq_scheme.auth_mon_id 
+_pdbx_poly_seq_scheme.pdb_strand_id 
+_pdbx_poly_seq_scheme.pdb_ins_code 
+_pdbx_poly_seq_scheme.hetero 
+A 1 1  CTH 1  1  1  CTH CTH A . n 
+A 1 2  DVA 2  2  2  DVA DVA A . n 
+A 1 3  POM 3  3  3  POM POM A . n 
+A 1 4  SAR 4  4  4  SAR SAR A . n 
+A 1 5  MAA 5  5  5  MAA MAA A . n 
+A 1 6  PXZ 6  6  6  PXZ PXZ A . n 
+A 1 7  THR 7  7  7  THR THR A . n 
+A 1 8  DVA 8  8  8  DVA DVA A . n 
+A 1 9  H5M 9  9  9  H5M H5M A . n 
+A 1 10 SAR 10 10 10 SAR SAR A . n 
+A 1 11 MVA 11 11 11 MVA MVA A . n 
+B 1 1  CTH 1  1  1  CTH CTH B . n 
+B 1 2  DVA 2  2  2  DVA DVA B . n 
+B 1 3  POM 3  3  3  POM POM B . n 
+B 1 4  SAR 4  4  4  SAR SAR B . n 
+B 1 5  MAA 5  5  5  MAA MAA B . n 
+B 1 6  PXZ 6  6  6  PXZ PXZ B . n 
+B 1 7  THR 7  7  7  THR THR B . n 
+B 1 8  DVA 8  8  8  DVA DVA B . n 
+B 1 9  H5M 9  9  9  H5M H5M B . n 
+B 1 10 SAR 10 10 10 SAR SAR B . n 
+B 1 11 MVA 11 11 11 MVA MVA B . n 
+# 
+loop_
+_pdbx_nonpoly_scheme.asym_id 
+_pdbx_nonpoly_scheme.entity_id 
+_pdbx_nonpoly_scheme.mon_id 
+_pdbx_nonpoly_scheme.ndb_seq_num 
+_pdbx_nonpoly_scheme.pdb_seq_num 
+_pdbx_nonpoly_scheme.auth_seq_num 
+_pdbx_nonpoly_scheme.pdb_mon_id 
+_pdbx_nonpoly_scheme.auth_mon_id 
+_pdbx_nonpoly_scheme.pdb_strand_id 
+_pdbx_nonpoly_scheme.pdb_ins_code 
+C 2 BNZ 1 101  101  BNZ BNZ A . 
+D 2 BNZ 1 109  109  BNZ BNZ A . 
+E 2 BNZ 1 110  110  BNZ BNZ A . 
+F 2 BNZ 1 115  115  BNZ BNZ A . 
+G 2 BNZ 1 116  116  BNZ BNZ A . 
+H 2 BNZ 1 118  118  BNZ BNZ A . 
+I 2 BNZ 1 119  119  BNZ BNZ A . 
+J 2 BNZ 1 120  120  BNZ BNZ A . 
+K 2 BNZ 1 102  102  BNZ BNZ B . 
+L 2 BNZ 1 103  103  BNZ BNZ B . 
+M 2 BNZ 1 104  104  BNZ BNZ B . 
+N 2 BNZ 1 105  105  BNZ BNZ B . 
+O 2 BNZ 1 106  106  BNZ BNZ B . 
+P 2 BNZ 1 107  107  BNZ BNZ B . 
+Q 2 BNZ 1 108  108  BNZ BNZ B . 
+R 2 BNZ 1 111  111  BNZ BNZ B . 
+S 2 BNZ 1 112  112  BNZ BNZ B . 
+T 2 BNZ 1 113  113  BNZ BNZ B . 
+U 2 BNZ 1 114  114  BNZ BNZ B . 
+V 2 BNZ 1 117  117  BNZ BNZ B . 
+W 3 HOH 1 2001 2001 HOH HOH A . 
+# 
+loop_
+_software.name 
+_software.classification 
+_software.version 
+_software.citation_id 
+_software.pdbx_ordinal 
+SHELXL-97 'model building' . ? 1 
+SHELXL-97 refinement       . ? 2 
+SAINT     'data reduction' . ? 3 
+SADABS    'data scaling'   . ? 4 
+SHELXL-97 phasing          . ? 5 
+# 
+_cell.entry_id           1A7Z 
+_cell.length_a           14.803 
+_cell.length_b           24.780 
+_cell.length_c           65.059 
+_cell.angle_alpha        90.00 
+_cell.angle_beta         90.00 
+_cell.angle_gamma        90.00 
+_cell.Z_PDB              8 
+_cell.pdbx_unique_axis   ? 
+# 
+_symmetry.entry_id                         1A7Z 
+_symmetry.space_group_name_H-M             'P 21 21 21' 
+_symmetry.pdbx_full_space_group_name_H-M   ? 
+_symmetry.cell_setting                     ? 
+_symmetry.Int_Tables_number                19 
+# 
+_exptl.entry_id          1A7Z 
+_exptl.method            'X-RAY DIFFRACTION' 
+_exptl.crystals_number   1 
+# 
+_exptl_crystal.id                    1 
+_exptl_crystal.density_meas          ? 
+_exptl_crystal.density_Matthews      2.40 
+_exptl_crystal.density_percent_sol   49.00 
+_exptl_crystal.description           ? 
+# 
+_exptl_crystal_grow.crystal_id      1 
+_exptl_crystal_grow.method          ? 
+_exptl_crystal_grow.temp            ? 
+_exptl_crystal_grow.temp_details    ? 
+_exptl_crystal_grow.pH              7 
+_exptl_crystal_grow.pdbx_pH_range   ? 
+_exptl_crystal_grow.pdbx_details    'PH 7' 
+# 
+_diffrn.id                     1 
+_diffrn.ambient_temp           173 
+_diffrn.ambient_temp_details   ? 
+_diffrn.crystal_id             1 
+# 
+_diffrn_detector.diffrn_id              1 
+_diffrn_detector.detector               'AREA DETECTOR' 
+_diffrn_detector.type                   'SIEMENS HI-STAR' 
+_diffrn_detector.pdbx_collection_date   1997-09-22 
+_diffrn_detector.details                COLLIMATOR 
+# 
+_diffrn_radiation.diffrn_id                        1 
+_diffrn_radiation.wavelength_id                    1 
+_diffrn_radiation.pdbx_monochromatic_or_laue_m_l   M 
+_diffrn_radiation.monochromator                    'GRAPHITE(002)' 
+_diffrn_radiation.pdbx_diffrn_protocol             ? 
+_diffrn_radiation.pdbx_scattering_type             x-ray 
+# 
+_diffrn_radiation_wavelength.id           1 
+_diffrn_radiation_wavelength.wavelength   1.5418 
+_diffrn_radiation_wavelength.wt           1.0 
+# 
+_diffrn_source.diffrn_id                   1 
+_diffrn_source.source                      'ROTATING ANODE' 
+_diffrn_source.type                        SIEMENS 
+_diffrn_source.pdbx_synchrotron_site       ? 
+_diffrn_source.pdbx_synchrotron_beamline   ? 
+_diffrn_source.pdbx_wavelength             1.5418 
+_diffrn_source.pdbx_wavelength_list        ? 
+# 
+_reflns.pdbx_diffrn_id               1 
+_reflns.pdbx_ordinal                 1 
+_reflns.entry_id                     1A7Z 
+_reflns.observed_criterion_sigma_I   ? 
+_reflns.observed_criterion_sigma_F   ? 
+_reflns.d_resolution_low             32.450 
+_reflns.d_resolution_high            0.950 
+_reflns.number_obs                   15653 
+_reflns.number_all                   ? 
+_reflns.percent_possible_obs         99.5 
+_reflns.pdbx_Rmerge_I_obs            0.06000 
+_reflns.pdbx_Rsym_value              ? 
+_reflns.pdbx_netI_over_sigmaI        8.1700 
+_reflns.B_iso_Wilson_estimate        ? 
+_reflns.pdbx_redundancy              7.060 
+# 
+_reflns_shell.pdbx_diffrn_id         1 
+_reflns_shell.pdbx_ordinal           1 
+_reflns_shell.d_res_high             0.95 
+_reflns_shell.d_res_low              1.05 
+_reflns_shell.percent_possible_all   98.1 
+_reflns_shell.Rmerge_I_obs           0.35000 
+_reflns_shell.pdbx_Rsym_value        ? 
+_reflns_shell.meanI_over_sigI_obs    4.930 
+_reflns_shell.pdbx_redundancy        4.85 
+# 
+_refine.pdbx_refine_id                           'X-RAY DIFFRACTION' 
+_refine.entry_id                                 1A7Z 
+_refine.pdbx_diffrn_id                           1 
+_refine.pdbx_TLS_residual_ADP_flag               ? 
+_refine.ls_number_reflns_obs                     ? 
+_refine.ls_number_reflns_all                     15653 
+_refine.pdbx_ls_sigma_I                          ? 
+_refine.pdbx_ls_sigma_F                          0.000 
+_refine.pdbx_data_cutoff_high_absF               ? 
+_refine.pdbx_data_cutoff_low_absF                ? 
+_refine.pdbx_data_cutoff_high_rms_absF           ? 
+_refine.ls_d_res_low                             32.45 
+_refine.ls_d_res_high                            0.95 
+_refine.ls_percent_reflns_obs                    99.4 
+_refine.ls_R_factor_obs                          0.080 
+_refine.ls_R_factor_all                          0.081 
+_refine.ls_R_factor_R_work                       ? 
+_refine.ls_R_factor_R_free                       0.097 
+_refine.ls_R_factor_R_free_error                 ? 
+_refine.ls_R_factor_R_free_error_details         ? 
+_refine.ls_percent_reflns_R_free                 10.000 
+_refine.ls_number_reflns_R_free                  1568 
+_refine.ls_number_parameters                     3024 
+_refine.ls_number_restraints                     5470 
+_refine.occupancy_min                            ? 
+_refine.occupancy_max                            ? 
+_refine.correlation_coeff_Fo_to_Fc               ? 
+_refine.correlation_coeff_Fo_to_Fc_free          ? 
+_refine.B_iso_mean                               ? 
+_refine.aniso_B[1][1]                            ? 
+_refine.aniso_B[2][2]                            ? 
+_refine.aniso_B[3][3]                            ? 
+_refine.aniso_B[1][2]                            ? 
+_refine.aniso_B[1][3]                            ? 
+_refine.aniso_B[2][3]                            ? 
+_refine.solvent_model_details                    ? 
+_refine.solvent_model_param_ksol                 ? 
+_refine.solvent_model_param_bsol                 ? 
+_refine.pdbx_solvent_vdw_probe_radii             ? 
+_refine.pdbx_solvent_ion_probe_radii             ? 
+_refine.pdbx_solvent_shrinkage_radii             ? 
+_refine.pdbx_ls_cross_valid_method               'FREE R' 
+_refine.details                                  'ANISOTROPIC REFINEMENT REDUCED FREE R (NO CUTOFF) BY 0.026' 
+_refine.pdbx_starting_model                      ? 
+_refine.pdbx_method_to_determine_struct          'AB INITIO' 
+_refine.pdbx_isotropic_thermal_model             ? 
+_refine.pdbx_stereochemistry_target_values       'ENGH AND HUBER' 
+_refine.pdbx_stereochem_target_val_spec_case     'NO RESTRAINTS ON DISTANCES AND ANGLES' 
+_refine.pdbx_R_Free_selection_details            RANDOM 
+_refine.pdbx_overall_ESU_R                       ? 
+_refine.pdbx_overall_ESU_R_Free                  ? 
+_refine.overall_SU_ML                            ? 
+_refine.pdbx_overall_phase_error                 ? 
+_refine.overall_SU_B                             ? 
+_refine.overall_SU_R_Cruickshank_DPI             ? 
+_refine.pdbx_overall_SU_R_free_Cruickshank_DPI   ? 
+_refine.pdbx_overall_SU_R_Blow_DPI               ? 
+_refine.pdbx_overall_SU_R_free_Blow_DPI          ? 
+# 
+_refine_analyze.pdbx_refine_id                  'X-RAY DIFFRACTION' 
+_refine_analyze.entry_id                        1A7Z 
+_refine_analyze.Luzzati_coordinate_error_obs    ? 
+_refine_analyze.Luzzati_sigma_a_obs             ? 
+_refine_analyze.Luzzati_d_res_low_obs           ? 
+_refine_analyze.Luzzati_coordinate_error_free   ? 
+_refine_analyze.Luzzati_sigma_a_free            ? 
+_refine_analyze.Luzzati_d_res_low_free          ? 
+_refine_analyze.number_disordered_residues      5 
+_refine_analyze.occupancy_sum_hydrogen          286.00 
+_refine_analyze.occupancy_sum_non_hydrogen      307.00 
+# 
+_refine_hist.pdbx_refine_id                   'X-RAY DIFFRACTION' 
+_refine_hist.cycle_id                         LAST 
+_refine_hist.pdbx_number_atoms_protein        186 
+_refine_hist.pdbx_number_atoms_nucleic_acid   0 
+_refine_hist.pdbx_number_atoms_ligand         120 
+_refine_hist.number_atoms_solvent             1 
+_refine_hist.number_atoms_total               307 
+_refine_hist.d_res_high                       0.95 
+_refine_hist.d_res_low                        32.45 
+# 
+loop_
+_refine_ls_restr.type 
+_refine_ls_restr.dev_ideal 
+_refine_ls_restr.dev_ideal_target 
+_refine_ls_restr.weight 
+_refine_ls_restr.number 
+_refine_ls_restr.pdbx_refine_id 
+_refine_ls_restr.pdbx_restraint_function 
+s_bond_d               0.012 ? ? ? 'X-RAY DIFFRACTION' ? 
+s_angle_d              0.000 ? ? ? 'X-RAY DIFFRACTION' ? 
+s_similar_dist         0.000 ? ? ? 'X-RAY DIFFRACTION' ? 
+s_from_restr_planes    0.016 ? ? ? 'X-RAY DIFFRACTION' ? 
+s_zero_chiral_vol      0.000 ? ? ? 'X-RAY DIFFRACTION' ? 
+s_non_zero_chiral_vol  0.000 ? ? ? 'X-RAY DIFFRACTION' ? 
+s_anti_bump_dis_restr  0.000 ? ? ? 'X-RAY DIFFRACTION' ? 
+s_rigid_bond_adp_cmpnt 0.005 ? ? ? 'X-RAY DIFFRACTION' ? 
+s_similar_adp_cmpnt    0.024 ? ? ? 'X-RAY DIFFRACTION' ? 
+s_approx_iso_adps      0.032 ? ? ? 'X-RAY DIFFRACTION' ? 
+# 
+_pdbx_refine.pdbx_refine_id                              'X-RAY DIFFRACTION' 
+_pdbx_refine.entry_id                                    1A7Z 
+_pdbx_refine.R_factor_all_no_cutoff                      0.081 
+_pdbx_refine.R_factor_obs_no_cutoff                      0.080 
+_pdbx_refine.free_R_factor_no_cutoff                     0.097 
+_pdbx_refine.free_R_error_no_cutoff                      ? 
+_pdbx_refine.free_R_val_test_set_size_perc_no_cutoff     10.000 
+_pdbx_refine.free_R_val_test_set_ct_no_cutoff            1568 
+_pdbx_refine.R_factor_all_4sig_cutoff                    0.067 
+_pdbx_refine.R_factor_obs_4sig_cutoff                    0.067 
+_pdbx_refine.free_R_factor_4sig_cutoff                   0.082 
+_pdbx_refine.free_R_val_test_set_size_perc_4sig_cutoff   10.100 
+_pdbx_refine.free_R_val_test_set_ct_4sig_cutoff          1340 
+_pdbx_refine.number_reflns_obs_4sig_cutoff               13243 
+# 
+_database_PDB_matrix.entry_id          1A7Z 
+_database_PDB_matrix.origx[1][1]       1.000000 
+_database_PDB_matrix.origx[1][2]       0.000000 
+_database_PDB_matrix.origx[1][3]       0.000000 
+_database_PDB_matrix.origx[2][1]       0.000000 
+_database_PDB_matrix.origx[2][2]       1.000000 
+_database_PDB_matrix.origx[2][3]       0.000000 
+_database_PDB_matrix.origx[3][1]       0.000000 
+_database_PDB_matrix.origx[3][2]       0.000000 
+_database_PDB_matrix.origx[3][3]       1.000000 
+_database_PDB_matrix.origx_vector[1]   0.00000 
+_database_PDB_matrix.origx_vector[2]   0.00000 
+_database_PDB_matrix.origx_vector[3]   0.00000 
+# 
+_struct.entry_id                  1A7Z 
+_struct.title                     'CRYSTAL STRUCTURE OF ACTINOMYCIN Z3' 
+_struct.pdbx_model_details        ? 
+_struct.pdbx_CASP_flag            ? 
+_struct.pdbx_model_type_details   ? 
+# 
+_struct_keywords.entry_id        1A7Z 
+_struct_keywords.pdbx_keywords   ANTIBIOTIC 
+_struct_keywords.text            'ACTINOMYCIN D, ACTINOMYCIN, ANTICANCER, ANTITUMOR, CHROMOPHORE, DEPSIPEPTIDE, ANTIBIOTIC' 
+# 
+loop_
+_struct_asym.id 
+_struct_asym.pdbx_blank_PDB_chainid_flag 
+_struct_asym.pdbx_modified 
+_struct_asym.entity_id 
+_struct_asym.details 
+A N N 1 ? 
+B N N 1 ? 
+C N N 2 ? 
+D N N 2 ? 
+E N N 2 ? 
+F N N 2 ? 
+G N N 2 ? 
+H N N 2 ? 
+I N N 2 ? 
+J N N 2 ? 
+K N N 2 ? 
+L N N 2 ? 
+M N N 2 ? 
+N N N 2 ? 
+O N N 2 ? 
+P N N 2 ? 
+Q N N 2 ? 
+R N N 2 ? 
+S N N 2 ? 
+T N N 2 ? 
+U N N 2 ? 
+V N N 2 ? 
+W N N 3 ? 
+# 
+_struct_ref.id                         1 
+_struct_ref.db_name                    NOR 
+_struct_ref.db_code                    NOR00237 
+_struct_ref.entity_id                  1 
+_struct_ref.pdbx_seq_one_letter_code   ? 
+_struct_ref.pdbx_align_begin           ? 
+_struct_ref.pdbx_db_accession          NOR00237 
+_struct_ref.pdbx_db_isoform            ? 
+# 
+loop_
+_struct_ref_seq.align_id 
+_struct_ref_seq.ref_id 
+_struct_ref_seq.pdbx_PDB_id_code 
+_struct_ref_seq.pdbx_strand_id 
+_struct_ref_seq.seq_align_beg 
+_struct_ref_seq.pdbx_seq_align_beg_ins_code 
+_struct_ref_seq.seq_align_end 
+_struct_ref_seq.pdbx_seq_align_end_ins_code 
+_struct_ref_seq.pdbx_db_accession 
+_struct_ref_seq.db_align_beg 
+_struct_ref_seq.pdbx_db_align_beg_ins_code 
+_struct_ref_seq.db_align_end 
+_struct_ref_seq.pdbx_db_align_end_ins_code 
+_struct_ref_seq.pdbx_auth_seq_align_beg 
+_struct_ref_seq.pdbx_auth_seq_align_end 
+1 1 1A7Z A 1 ? 11 ? NOR00237 1 ? 11 ? 1 11 
+2 1 1A7Z B 1 ? 11 ? NOR00237 1 ? 11 ? 1 11 
+# 
+loop_
+_pdbx_struct_assembly.id 
+_pdbx_struct_assembly.details 
+_pdbx_struct_assembly.method_details 
+_pdbx_struct_assembly.oligomeric_details 
+_pdbx_struct_assembly.oligomeric_count 
+1 author_defined_assembly ? monomeric 1 
+2 author_defined_assembly ? monomeric 1 
+# 
+loop_
+_pdbx_struct_assembly_gen.assembly_id 
+_pdbx_struct_assembly_gen.oper_expression 
+_pdbx_struct_assembly_gen.asym_id_list 
+1 1 A,C,D,E,F,G,H,I,J,W       
+2 1 B,K,L,M,N,O,P,Q,R,S,T,U,V 
+# 
+_pdbx_struct_oper_list.id                   1 
+_pdbx_struct_oper_list.type                 'identity operation' 
+_pdbx_struct_oper_list.name                 1_555 
+_pdbx_struct_oper_list.symmetry_operation   x,y,z 
+_pdbx_struct_oper_list.matrix[1][1]         1.0000000000 
+_pdbx_struct_oper_list.matrix[1][2]         0.0000000000 
+_pdbx_struct_oper_list.matrix[1][3]         0.0000000000 
+_pdbx_struct_oper_list.vector[1]            0.0000000000 
+_pdbx_struct_oper_list.matrix[2][1]         0.0000000000 
+_pdbx_struct_oper_list.matrix[2][2]         1.0000000000 
+_pdbx_struct_oper_list.matrix[2][3]         0.0000000000 
+_pdbx_struct_oper_list.vector[2]            0.0000000000 
+_pdbx_struct_oper_list.matrix[3][1]         0.0000000000 
+_pdbx_struct_oper_list.matrix[3][2]         0.0000000000 
+_pdbx_struct_oper_list.matrix[3][3]         1.0000000000 
+_pdbx_struct_oper_list.vector[3]            0.0000000000 
+# 
+_struct_biol.id   1 
+# 
+loop_
+_struct_conn.id 
+_struct_conn.conn_type_id 
+_struct_conn.pdbx_leaving_atom_flag 
+_struct_conn.pdbx_PDB_id 
+_struct_conn.ptnr1_label_asym_id 
+_struct_conn.ptnr1_label_comp_id 
+_struct_conn.ptnr1_label_seq_id 
+_struct_conn.ptnr1_label_atom_id 
+_struct_conn.pdbx_ptnr1_label_alt_id 
+_struct_conn.pdbx_ptnr1_PDB_ins_code 
+_struct_conn.pdbx_ptnr1_standard_comp_id 
+_struct_conn.ptnr1_symmetry 
+_struct_conn.ptnr2_label_asym_id 
+_struct_conn.ptnr2_label_comp_id 
+_struct_conn.ptnr2_label_seq_id 
+_struct_conn.ptnr2_label_atom_id 
+_struct_conn.pdbx_ptnr2_label_alt_id 
+_struct_conn.pdbx_ptnr2_PDB_ins_code 
+_struct_conn.ptnr1_auth_asym_id 
+_struct_conn.ptnr1_auth_comp_id 
+_struct_conn.ptnr1_auth_seq_id 
+_struct_conn.ptnr2_auth_asym_id 
+_struct_conn.ptnr2_auth_comp_id 
+_struct_conn.ptnr2_auth_seq_id 
+_struct_conn.ptnr2_symmetry 
+_struct_conn.pdbx_ptnr3_label_atom_id 
+_struct_conn.pdbx_ptnr3_label_seq_id 
+_struct_conn.pdbx_ptnr3_label_comp_id 
+_struct_conn.pdbx_ptnr3_label_asym_id 
+_struct_conn.pdbx_ptnr3_label_alt_id 
+_struct_conn.pdbx_ptnr3_PDB_ins_code 
+_struct_conn.details 
+_struct_conn.pdbx_dist_value 
+_struct_conn.pdbx_value_order 
+_struct_conn.pdbx_role 
+covale1  covale both ? A CTH 1  C     ? ? ? 1_555 A DVA 2  N  ? ? A CTH 1  A DVA 2  1_555 ? ? ? ? ? ? ? 1.357 ? ? 
+covale2  covale one  ? A CTH 1  OG1   ? ? ? 1_555 A MAA 5  C  ? ? A CTH 1  A MAA 5  1_555 ? ? ? ? ? ? ? 1.375 ? ? 
+covale3  covale both ? A CTH 1  N     ? ? ? 1_555 A PXZ 6  C0 ? ? A CTH 1  A PXZ 6  1_555 ? ? ? ? ? ? ? 1.349 ? ? 
+covale4  covale both ? A DVA 2  C     ? ? ? 1_555 A POM 3  N  ? ? A DVA 2  A POM 3  1_555 ? ? ? ? ? ? ? 1.374 ? ? 
+covale5  covale both ? A POM 3  C     ? ? ? 1_555 A SAR 4  N  ? ? A POM 3  A SAR 4  1_555 ? ? ? ? ? ? ? 1.348 ? ? 
+covale6  covale both ? A SAR 4  C     ? ? ? 1_555 A MAA 5  N  ? ? A SAR 4  A MAA 5  1_555 ? ? ? ? ? ? ? 1.369 ? ? 
+covale7  covale both ? A PXZ 6  "C0'" ? ? ? 1_555 A THR 7  N  ? ? A PXZ 6  A THR 7  1_555 ? ? ? ? ? ? ? 1.339 ? ? 
+covale8  covale both ? A THR 7  C     ? ? ? 1_555 A DVA 8  N  ? ? A THR 7  A DVA 8  1_555 ? ? ? ? ? ? ? 1.342 ? ? 
+covale9  covale one  ? A THR 7  OG1   ? ? ? 1_555 A MVA 11 C  ? ? A THR 7  A MVA 11 1_555 ? ? ? ? ? ? ? 1.348 ? ? 
+covale10 covale both ? A DVA 8  C     ? ? ? 1_555 A H5M 9  N  ? ? A DVA 8  A H5M 9  1_555 ? ? ? ? ? ? ? 1.372 ? ? 
+covale11 covale both ? A H5M 9  C     ? ? ? 1_555 A SAR 10 N  ? ? A H5M 9  A SAR 10 1_555 ? ? ? ? ? ? ? 1.348 ? ? 
+covale12 covale both ? A SAR 10 C     ? ? ? 1_555 A MVA 11 N  ? ? A SAR 10 A MVA 11 1_555 ? ? ? ? ? ? ? 1.343 ? ? 
+covale13 covale both ? B CTH 1  C     ? ? ? 1_555 B DVA 2  N  ? ? B CTH 1  B DVA 2  1_555 ? ? ? ? ? ? ? 1.348 ? ? 
+covale14 covale one  ? B CTH 1  OG1   ? ? ? 1_555 B MAA 5  C  ? ? B CTH 1  B MAA 5  1_555 ? ? ? ? ? ? ? 1.368 ? ? 
+covale15 covale both ? B CTH 1  N     ? ? ? 1_555 B PXZ 6  C0 ? ? B CTH 1  B PXZ 6  1_555 ? ? ? ? ? ? ? 1.342 ? ? 
+covale16 covale both ? B DVA 2  C     ? ? ? 1_555 B POM 3  N  ? ? B DVA 2  B POM 3  1_555 ? ? ? ? ? ? ? 1.348 ? ? 
+covale17 covale both ? B POM 3  C     ? ? ? 1_555 B SAR 4  N  ? ? B POM 3  B SAR 4  1_555 ? ? ? ? ? ? ? 1.363 ? ? 
+covale18 covale both ? B SAR 4  C     ? ? ? 1_555 B MAA 5  N  ? ? B SAR 4  B MAA 5  1_555 ? ? ? ? ? ? ? 1.373 ? ? 
+covale19 covale both ? B PXZ 6  "C0'" ? ? ? 1_555 B THR 7  N  ? ? B PXZ 6  B THR 7  1_555 ? ? ? ? ? ? ? 1.351 ? ? 
+covale20 covale both ? B THR 7  C     ? ? ? 1_555 B DVA 8  N  ? ? B THR 7  B DVA 8  1_555 ? ? ? ? ? ? ? 1.321 ? ? 
+covale21 covale one  ? B THR 7  OG1   ? ? ? 1_555 B MVA 11 C  ? ? B THR 7  B MVA 11 1_555 ? ? ? ? ? ? ? 1.361 ? ? 
+covale22 covale both ? B DVA 8  C     ? ? ? 1_555 B H5M 9  N  ? ? B DVA 8  B H5M 9  1_555 ? ? ? ? ? ? ? 1.340 ? ? 
+covale23 covale both ? B H5M 9  C     ? ? ? 1_555 B SAR 10 N  ? ? B H5M 9  B SAR 10 1_555 ? ? ? ? ? ? ? 1.336 ? ? 
+covale24 covale both ? B SAR 10 C     ? ? ? 1_555 B MVA 11 N  ? ? B SAR 10 B MVA 11 1_555 ? ? ? ? ? ? ? 1.363 ? ? 
+# 
+_struct_conn_type.id          covale 
+_struct_conn_type.criteria    ? 
+_struct_conn_type.reference   ? 
+# 
+loop_
+_struct_mon_prot_cis.pdbx_id 
+_struct_mon_prot_cis.label_comp_id 
+_struct_mon_prot_cis.label_seq_id 
+_struct_mon_prot_cis.label_asym_id 
+_struct_mon_prot_cis.label_alt_id 
+_struct_mon_prot_cis.pdbx_PDB_ins_code 
+_struct_mon_prot_cis.auth_comp_id 
+_struct_mon_prot_cis.auth_seq_id 
+_struct_mon_prot_cis.auth_asym_id 
+_struct_mon_prot_cis.pdbx_label_comp_id_2 
+_struct_mon_prot_cis.pdbx_label_seq_id_2 
+_struct_mon_prot_cis.pdbx_label_asym_id_2 
+_struct_mon_prot_cis.pdbx_PDB_ins_code_2 
+_struct_mon_prot_cis.pdbx_auth_comp_id_2 
+_struct_mon_prot_cis.pdbx_auth_seq_id_2 
+_struct_mon_prot_cis.pdbx_auth_asym_id_2 
+_struct_mon_prot_cis.pdbx_PDB_model_num 
+_struct_mon_prot_cis.pdbx_omega_angle 
+1 DVA 2 A . ? DVA 2 A POM 3  A ? POM 3  A 1 21.50  
+2 POM 3 A . ? POM 3 A SAR 4  A ? SAR 4  A 1 -17.30 
+3 DVA 8 A . ? DVA 8 A H5M 9  A ? H5M 9  A 1 24.13  
+4 H5M 9 A . ? H5M 9 A SAR 10 A ? SAR 10 A 1 -12.45 
+5 DVA 2 B . ? DVA 2 B POM 3  B ? POM 3  B 1 20.03  
+6 POM 3 B . ? POM 3 B SAR 4  B ? SAR 4  B 1 -18.19 
+7 DVA 8 B . ? DVA 8 B H5M 9  B ? H5M 9  B 1 25.97  
+8 H5M 9 B . ? H5M 9 B SAR 10 B ? SAR 10 B 1 -14.68 
+# 
+loop_
+_struct_site.id 
+_struct_site.pdbx_evidence_code 
+_struct_site.pdbx_auth_asym_id 
+_struct_site.pdbx_auth_comp_id 
+_struct_site.pdbx_auth_seq_id 
+_struct_site.pdbx_auth_ins_code 
+_struct_site.pdbx_num_residues 
+_struct_site.details 
+AC1 Software A BNZ 101 ? 5  'BINDING SITE FOR RESIDUE BNZ A 101'         
+AC2 Software A BNZ 109 ? 6  'BINDING SITE FOR RESIDUE BNZ A 109'         
+AC3 Software A BNZ 110 ? 4  'BINDING SITE FOR RESIDUE BNZ A 110'         
+AC4 Software A BNZ 115 ? 1  'BINDING SITE FOR RESIDUE BNZ A 115'         
+AC5 Software A BNZ 116 ? 7  'BINDING SITE FOR RESIDUE BNZ A 116'         
+AC6 Software A BNZ 118 ? 7  'BINDING SITE FOR RESIDUE BNZ A 118'         
+AC7 Software A BNZ 119 ? 9  'BINDING SITE FOR RESIDUE BNZ A 119'         
+AC8 Software A BNZ 120 ? 1  'BINDING SITE FOR RESIDUE BNZ A 120'         
+AC9 Software B BNZ 102 ? 4  'BINDING SITE FOR RESIDUE BNZ B 102'         
+BC1 Software B BNZ 103 ? 5  'BINDING SITE FOR RESIDUE BNZ B 103'         
+BC2 Software B BNZ 104 ? 4  'BINDING SITE FOR RESIDUE BNZ B 104'         
+BC3 Software B BNZ 105 ? 4  'BINDING SITE FOR RESIDUE BNZ B 105'         
+BC4 Software B BNZ 106 ? 4  'BINDING SITE FOR RESIDUE BNZ B 106'         
+BC5 Software B BNZ 107 ? 1  'BINDING SITE FOR RESIDUE BNZ B 107'         
+BC6 Software B BNZ 108 ? 3  'BINDING SITE FOR RESIDUE BNZ B 108'         
+BC7 Software B BNZ 111 ? 1  'BINDING SITE FOR RESIDUE BNZ B 111'         
+BC8 Software B BNZ 112 ? 3  'BINDING SITE FOR RESIDUE BNZ B 112'         
+BC9 Software B BNZ 113 ? 3  'BINDING SITE FOR RESIDUE BNZ B 113'         
+CC1 Software B BNZ 114 ? 2  'BINDING SITE FOR RESIDUE BNZ B 114'         
+CC2 Software B BNZ 117 ? 8  'BINDING SITE FOR RESIDUE BNZ B 117'         
+CC3 Software ? ?   ?   ? 20 'BINDING SITE FOR CHAIN A OF ACTINOMYCIN Z3' 
+CC4 Software ? ?   ?   ? 16 'BINDING SITE FOR CHAIN B OF ACTINOMYCIN Z3' 
+# 
+loop_
+_struct_site_gen.id 
+_struct_site_gen.site_id 
+_struct_site_gen.pdbx_num_res 
+_struct_site_gen.label_comp_id 
+_struct_site_gen.label_asym_id 
+_struct_site_gen.label_seq_id 
+_struct_site_gen.pdbx_auth_ins_code 
+_struct_site_gen.auth_comp_id 
+_struct_site_gen.auth_asym_id 
+_struct_site_gen.auth_seq_id 
+_struct_site_gen.label_atom_id 
+_struct_site_gen.label_alt_id 
+_struct_site_gen.symmetry 
+_struct_site_gen.details 
+1   AC1 5  CTH A 1  ? CTH A 1    . ? 1_555 ? 
+2   AC1 5  PXZ A 6  ? PXZ A 6    . ? 1_555 ? 
+3   AC1 5  DVA A 8  ? DVA A 8    . ? 3_545 ? 
+4   AC1 5  H5M A 9  ? H5M A 9    . ? 3_545 ? 
+5   AC1 5  BNZ K .  ? BNZ B 102  . ? 1_555 ? 
+6   AC2 6  MAA A 5  ? MAA A 5    . ? 1_555 ? 
+7   AC2 6  BNZ H .  ? BNZ A 118  . ? 1_555 ? 
+8   AC2 6  BNZ I .  ? BNZ A 119  . ? 1_555 ? 
+9   AC2 6  CTH B 1  ? CTH B 1    . ? 1_555 ? 
+10  AC2 6  PXZ B 6  ? PXZ B 6    . ? 1_555 ? 
+11  AC2 6  BNZ V .  ? BNZ B 117  . ? 1_455 ? 
+12  AC3 4  CTH A 1  ? CTH A 1    . ? 1_555 ? 
+13  AC3 4  BNZ G .  ? BNZ A 116  . ? 3_655 ? 
+14  AC3 4  BNZ H .  ? BNZ A 118  . ? 1_655 ? 
+15  AC3 4  BNZ Q .  ? BNZ B 108  . ? 4_565 ? 
+16  AC4 1  BNZ V .  ? BNZ B 117  . ? 3_645 ? 
+17  AC5 7  SAR A 4  ? SAR A 4    . ? 3_545 ? 
+18  AC5 7  BNZ E .  ? BNZ A 110  . ? 3_645 ? 
+19  AC5 7  BNZ H .  ? BNZ A 118  . ? 3_545 ? 
+20  AC5 7  BNZ I .  ? BNZ A 119  . ? 3_545 ? 
+21  AC5 7  CTH B 1  ? CTH B 1    . ? 3_645 ? 
+22  AC5 7  MAA B 5  ? MAA B 5    . ? 3_645 ? 
+23  AC5 7  BNZ V .  ? BNZ B 117  . ? 3_745 ? 
+24  AC6 7  DVA A 2  ? DVA A 2    . ? 1_555 ? 
+25  AC6 7  MAA A 5  ? MAA A 5    . ? 1_555 ? 
+26  AC6 7  BNZ D .  ? BNZ A 109  . ? 1_555 ? 
+27  AC6 7  BNZ E .  ? BNZ A 110  . ? 1_455 ? 
+28  AC6 7  BNZ G .  ? BNZ A 116  . ? 3_555 ? 
+29  AC6 7  BNZ I .  ? BNZ A 119  . ? 1_555 ? 
+30  AC6 7  BNZ V .  ? BNZ B 117  . ? 1_455 ? 
+31  AC7 9  BNZ D .  ? BNZ A 109  . ? 1_555 ? 
+32  AC7 9  BNZ G .  ? BNZ A 116  . ? 3_555 ? 
+33  AC7 9  BNZ H .  ? BNZ A 118  . ? 1_555 ? 
+34  AC7 9  MAA B 5  ? MAA B 5    . ? 1_455 ? 
+35  AC7 9  PXZ B 6  ? PXZ B 6    . ? 1_555 ? 
+36  AC7 9  H5M B 9  ? H5M B 9    . ? 1_455 ? 
+37  AC7 9  SAR B 10 ? SAR B 10   . ? 4_465 ? 
+38  AC7 9  MVA B 11 ? MVA B 11   . ? 4_465 ? 
+39  AC7 9  BNZ S .  ? BNZ B 112  . ? 1_455 ? 
+40  AC8 1  SAR B 4  ? SAR B 4    . ? 3_655 ? 
+41  AC9 4  MAA A 5  ? MAA A 5    . ? 1_555 ? 
+42  AC9 4  DVA A 8  ? DVA A 8    . ? 3_545 ? 
+43  AC9 4  H5M A 9  ? H5M A 9    . ? 3_545 ? 
+44  AC9 4  BNZ C .  ? BNZ A 101  . ? 1_555 ? 
+45  BC1 5  POM A 3  ? POM A 3    . ? 3_545 ? 
+46  BC1 5  PXZ A 6  ? PXZ A 6    . ? 3_645 ? 
+47  BC1 5  THR A 7  ? THR A 7    . ? 3_645 ? 
+48  BC1 5  H5M A 9  ? H5M A 9    . ? 3_645 ? 
+49  BC1 5  BNZ T .  ? BNZ B 113  . ? 1_555 ? 
+50  BC2 4  PXZ B 6  ? PXZ B 6    . ? 4_565 ? 
+51  BC2 4  THR B 7  ? THR B 7    . ? 4_565 ? 
+52  BC2 4  H5M B 9  ? H5M B 9    . ? 4_565 ? 
+53  BC2 4  MVA B 11 ? MVA B 11   . ? 4_565 ? 
+54  BC3 4  MVA A 11 ? MVA A 11   . ? 3_545 ? 
+55  BC3 4  POM B 3  ? POM B 3    . ? 4_455 ? 
+56  BC3 4  POM B 3  ? POM B 3    . ? 1_555 ? 
+57  BC3 4  MVA B 11 ? MVA B 11   . ? 4_455 ? 
+58  BC4 4  SAR A 10 ? SAR A 10   . ? 3_645 ? 
+59  BC4 4  CTH B 1  ? CTH B 1    . ? 1_655 ? 
+60  BC4 4  MAA B 5  ? MAA B 5    . ? 1_655 ? 
+61  BC4 4  PXZ B 6  ? PXZ B 6    . ? 1_655 ? 
+62  BC5 1  POM B 3  ? POM B 3    . ? 1_555 ? 
+63  BC6 3  POM A 3  ? POM A 3    . ? 2_464 ? 
+64  BC6 3  THR A 7  ? THR A 7    . ? 2_464 ? 
+65  BC6 3  BNZ E .  ? BNZ A 110  . ? 4_465 ? 
+66  BC7 1  POM B 3  ? POM B 3    . ? 1_555 ? 
+67  BC8 3  BNZ I .  ? BNZ A 119  . ? 1_655 ? 
+68  BC8 3  H5M B 9  ? H5M B 9    . ? 4_465 ? 
+69  BC8 3  BNZ V .  ? BNZ B 117  . ? 1_455 ? 
+70  BC9 3  MVA A 11 ? MVA A 11   . ? 3_545 ? 
+71  BC9 3  SAR B 4  ? SAR B 4    . ? 1_555 ? 
+72  BC9 3  BNZ L .  ? BNZ B 103  . ? 1_555 ? 
+73  CC1 2  SAR A 4  ? SAR A 4    . ? 1_655 ? 
+74  CC1 2  PXZ A 6  ? PXZ A 6    . ? 1_555 ? 
+75  CC2 8  MAA A 5  ? MAA A 5    . ? 1_655 ? 
+76  CC2 8  PXZ A 6  ? PXZ A 6    . ? 3_655 ? 
+77  CC2 8  BNZ D .  ? BNZ A 109  . ? 1_655 ? 
+78  CC2 8  BNZ F .  ? BNZ A 115  . ? 3_655 ? 
+79  CC2 8  BNZ G .  ? BNZ A 116  . ? 3_755 ? 
+80  CC2 8  BNZ H .  ? BNZ A 118  . ? 1_655 ? 
+81  CC2 8  CTH B 1  ? CTH B 1    . ? 1_655 ? 
+82  CC2 8  BNZ S .  ? BNZ B 112  . ? 1_655 ? 
+83  CC3 20 BNZ C .  ? BNZ A 101  . ? 1_555 ? 
+84  CC3 20 BNZ C .  ? BNZ A 101  . ? 3_555 ? 
+85  CC3 20 BNZ D .  ? BNZ A 109  . ? 1_555 ? 
+86  CC3 20 BNZ E .  ? BNZ A 110  . ? 1_555 ? 
+87  CC3 20 BNZ G .  ? BNZ A 116  . ? 3_555 ? 
+88  CC3 20 BNZ H .  ? BNZ A 118  . ? 1_555 ? 
+89  CC3 20 HOH W .  ? HOH A 2001 . ? 1_555 ? 
+90  CC3 20 SAR B 4  ? SAR B 4    . ? 3_555 ? 
+91  CC3 20 BNZ K .  ? BNZ B 102  . ? 1_555 ? 
+92  CC3 20 BNZ K .  ? BNZ B 102  . ? 3_555 ? 
+93  CC3 20 BNZ L .  ? BNZ B 103  . ? 3_555 ? 
+94  CC3 20 BNZ L .  ? BNZ B 103  . ? 3_655 ? 
+95  CC3 20 BNZ N .  ? BNZ B 105  . ? 3_555 ? 
+96  CC3 20 BNZ O .  ? BNZ B 106  . ? 3_655 ? 
+97  CC3 20 BNZ Q .  ? BNZ B 108  . ? 2_465 ? 
+98  CC3 20 BNZ T .  ? BNZ B 113  . ? 3_555 ? 
+99  CC3 20 BNZ U .  ? BNZ B 114  . ? 1_555 ? 
+100 CC3 20 BNZ U .  ? BNZ B 114  . ? 1_455 ? 
+101 CC3 20 BNZ V .  ? BNZ B 117  . ? 3_645 ? 
+102 CC3 20 BNZ V .  ? BNZ B 117  . ? 1_455 ? 
+103 CC4 16 MVA A 11 ? MVA A 11   . ? 3_545 ? 
+104 CC4 16 BNZ D .  ? BNZ A 109  . ? 1_555 ? 
+105 CC4 16 BNZ G .  ? BNZ A 116  . ? 3_655 ? 
+106 CC4 16 BNZ I .  ? BNZ A 119  . ? 4_565 ? 
+107 CC4 16 BNZ I .  ? BNZ A 119  . ? 1_555 ? 
+108 CC4 16 BNZ I .  ? BNZ A 119  . ? 1_655 ? 
+109 CC4 16 BNZ J .  ? BNZ A 120  . ? 3_645 ? 
+110 CC4 16 BNZ M .  ? BNZ B 104  . ? 4_465 ? 
+111 CC4 16 BNZ N .  ? BNZ B 105  . ? 4_555 ? 
+112 CC4 16 BNZ N .  ? BNZ B 105  . ? 1_555 ? 
+113 CC4 16 BNZ O .  ? BNZ B 106  . ? 1_455 ? 
+114 CC4 16 BNZ P .  ? BNZ B 107  . ? 1_555 ? 
+115 CC4 16 BNZ R .  ? BNZ B 111  . ? 1_555 ? 
+116 CC4 16 BNZ S .  ? BNZ B 112  . ? 4_565 ? 
+117 CC4 16 BNZ T .  ? BNZ B 113  . ? 1_555 ? 
+118 CC4 16 BNZ V .  ? BNZ B 117  . ? 1_455 ? 
+# 
+_pdbx_molecule_features.prd_id    PRD_000009 
+_pdbx_molecule_features.name      'Actinomycin Z3' 
+_pdbx_molecule_features.type      Polypeptide 
+_pdbx_molecule_features.class     Antibiotic 
+_pdbx_molecule_features.details   
+;ACTINOMYCIN Z3 CONSISTS OF TWO PENTAMER               
+  RINGS LINKED BY THE CHROMOPHORE (PXZ)
+;
+# 
+loop_
+_pdbx_molecule.instance_id 
+_pdbx_molecule.prd_id 
+_pdbx_molecule.asym_id 
+1 PRD_000009 A 
+2 PRD_000009 B 
+# 
+_pdbx_entry_details.entry_id                 1A7Z 
+_pdbx_entry_details.compound_details         
+;ACTINOMYCIN Z3 IS A BICYCLIC PEPTIDE, A MEMBER OF THE                
+ ACTINOMYCIN FAMILY.                                                  
+ HERE, ACTINOMYCIN D IS REPRESENTED BY THE SEQUENCE (SEQRES)
+;
+_pdbx_entry_details.source_details           ? 
+_pdbx_entry_details.nonpolymer_details       ? 
+_pdbx_entry_details.sequence_details         ? 
+_pdbx_entry_details.has_ligand_of_interest   ? 
+# 
+loop_
+_chem_comp_atom.comp_id 
+_chem_comp_atom.atom_id 
+_chem_comp_atom.type_symbol 
+_chem_comp_atom.pdbx_aromatic_flag 
+_chem_comp_atom.pdbx_stereo_config 
+_chem_comp_atom.pdbx_ordinal 
+BNZ C1     C  Y N 1   
+BNZ C2     C  Y N 2   
+BNZ C3     C  Y N 3   
+BNZ C4     C  Y N 4   
+BNZ C5     C  Y N 5   
+BNZ C6     C  Y N 6   
+BNZ H1     H  N N 7   
+BNZ H2     H  N N 8   
+BNZ H3     H  N N 9   
+BNZ H4     H  N N 10  
+BNZ H5     H  N N 11  
+BNZ H6     H  N N 12  
+CTH N      N  N N 13  
+CTH CA     C  N S 14  
+CTH C      C  N N 15  
+CTH O      O  N N 16  
+CTH OXT    O  N N 17  
+CTH CB     C  N S 18  
+CTH CG2    C  N N 19  
+CTH CL2    CL N N 20  
+CTH OG1    O  N N 21  
+CTH H      H  N N 22  
+CTH H2     H  N N 23  
+CTH HA     H  N N 24  
+CTH HXT    H  N N 25  
+CTH HB     H  N N 26  
+CTH HG22   H  N N 27  
+CTH HG23   H  N N 28  
+CTH HG1    H  N N 29  
+DVA N      N  N N 30  
+DVA CA     C  N R 31  
+DVA CB     C  N N 32  
+DVA CG1    C  N N 33  
+DVA CG2    C  N N 34  
+DVA C      C  N N 35  
+DVA O      O  N N 36  
+DVA OXT    O  N N 37  
+DVA H      H  N N 38  
+DVA H2     H  N N 39  
+DVA HA     H  N N 40  
+DVA HB     H  N N 41  
+DVA HG11   H  N N 42  
+DVA HG12   H  N N 43  
+DVA HG13   H  N N 44  
+DVA HG21   H  N N 45  
+DVA HG22   H  N N 46  
+DVA HG23   H  N N 47  
+DVA HXT    H  N N 48  
+H5M N      N  N N 49  
+H5M CA     C  N S 50  
+H5M C      C  N N 51  
+H5M O      O  N N 52  
+H5M OXT    O  N N 53  
+H5M CB     C  N S 54  
+H5M CG     C  N N 55  
+H5M CD     C  N S 56  
+H5M OB     O  N N 57  
+H5M CD1    C  N N 58  
+H5M H      H  N N 59  
+H5M HA     H  N N 60  
+H5M HXT    H  N N 61  
+H5M HB     H  N N 62  
+H5M HG2    H  N N 63  
+H5M HG3    H  N N 64  
+H5M HD     H  N N 65  
+H5M HOB    H  N N 66  
+H5M HD11   H  N N 67  
+H5M HD12   H  N N 68  
+H5M HD13   H  N N 69  
+HOH O      O  N N 70  
+HOH H1     H  N N 71  
+HOH H2     H  N N 72  
+MAA N      N  N N 73  
+MAA CM     C  N N 74  
+MAA CA     C  N S 75  
+MAA CB     C  N N 76  
+MAA C      C  N N 77  
+MAA O      O  N N 78  
+MAA OXT    O  N N 79  
+MAA H      H  N N 80  
+MAA HM1    H  N N 81  
+MAA HM2    H  N N 82  
+MAA HM3    H  N N 83  
+MAA HA     H  N N 84  
+MAA HB1    H  N N 85  
+MAA HB2    H  N N 86  
+MAA HB3    H  N N 87  
+MAA HXT    H  N N 88  
+MVA N      N  N N 89  
+MVA CN     C  N N 90  
+MVA CA     C  N S 91  
+MVA CB     C  N N 92  
+MVA CG1    C  N N 93  
+MVA CG2    C  N N 94  
+MVA C      C  N N 95  
+MVA O      O  N N 96  
+MVA OXT    O  N N 97  
+MVA H      H  N N 98  
+MVA HN1    H  N N 99  
+MVA HN2    H  N N 100 
+MVA HN3    H  N N 101 
+MVA HA     H  N N 102 
+MVA HB     H  N N 103 
+MVA HG11   H  N N 104 
+MVA HG12   H  N N 105 
+MVA HG13   H  N N 106 
+MVA HG21   H  N N 107 
+MVA HG22   H  N N 108 
+MVA HG23   H  N N 109 
+MVA HXT    H  N N 110 
+POM N      N  N N 111 
+POM CA     C  N S 112 
+POM C      C  N N 113 
+POM O      O  N N 114 
+POM OXT    O  N N 115 
+POM CB     C  N N 116 
+POM CG     C  N N 117 
+POM CD     C  N S 118 
+POM OG     O  N N 119 
+POM CD1    C  N N 120 
+POM H      H  N N 121 
+POM HA     H  N N 122 
+POM HXT    H  N N 123 
+POM HB2    H  N N 124 
+POM HB3    H  N N 125 
+POM HD     H  N N 126 
+POM HD11   H  N N 127 
+POM HD12   H  N N 128 
+POM HD13   H  N N 129 
+PXZ C1     C  N N 130 
+PXZ C0     C  N N 131 
+PXZ O1     O  N N 132 
+PXZ C2     C  N N 133 
+PXZ N2     N  N N 134 
+PXZ C3     C  N N 135 
+PXZ O3     O  N N 136 
+PXZ C4     C  N N 137 
+PXZ O5     O  N N 138 
+PXZ C6     C  Y N 139 
+PXZ C7     C  Y N 140 
+PXZ C8     C  Y N 141 
+PXZ C9     C  Y N 142 
+PXZ "C0'"  C  N N 143 
+PXZ "O1'"  O  N N 144 
+PXZ N10    N  N N 145 
+PXZ C11    C  N N 146 
+PXZ C12    C  N N 147 
+PXZ C13    C  Y N 148 
+PXZ C14    C  Y N 149 
+PXZ C15    C  N N 150 
+PXZ C16    C  N N 151 
+PXZ HN21   H  N N 152 
+PXZ HN22   H  N N 153 
+PXZ H7     H  N N 154 
+PXZ H8     H  N N 155 
+PXZ H151   H  N N 156 
+PXZ H152   H  N N 157 
+PXZ H153   H  N N 158 
+PXZ H161   H  N N 159 
+PXZ H162   H  N N 160 
+PXZ H163   H  N N 161 
+PXZ "OXT'" O  N N 162 
+PXZ OXT    O  N N 163 
+PXZ "HXT'" H  N N 164 
+PXZ HXT    H  N N 165 
+SAR N      N  N N 166 
+SAR CA     C  N N 167 
+SAR C      C  N N 168 
+SAR O      O  N N 169 
+SAR CN     C  N N 170 
+SAR OXT    O  N N 171 
+SAR H      H  N N 172 
+SAR HA2    H  N N 173 
+SAR HA3    H  N N 174 
+SAR HN1    H  N N 175 
+SAR HN2    H  N N 176 
+SAR HN3    H  N N 177 
+SAR HXT    H  N N 178 
+THR N      N  N N 179 
+THR CA     C  N S 180 
+THR C      C  N N 181 
+THR O      O  N N 182 
+THR CB     C  N R 183 
+THR OG1    O  N N 184 
+THR CG2    C  N N 185 
+THR OXT    O  N N 186 
+THR H      H  N N 187 
+THR H2     H  N N 188 
+THR HA     H  N N 189 
+THR HB     H  N N 190 
+THR HG1    H  N N 191 
+THR HG21   H  N N 192 
+THR HG22   H  N N 193 
+THR HG23   H  N N 194 
+THR HXT    H  N N 195 
+# 
+loop_
+_chem_comp_bond.comp_id 
+_chem_comp_bond.atom_id_1 
+_chem_comp_bond.atom_id_2 
+_chem_comp_bond.value_order 
+_chem_comp_bond.pdbx_aromatic_flag 
+_chem_comp_bond.pdbx_stereo_config 
+_chem_comp_bond.pdbx_ordinal 
+BNZ C1     C2     doub Y N 1   
+BNZ C1     C6     sing Y N 2   
+BNZ C1     H1     sing N N 3   
+BNZ C2     C3     sing Y N 4   
+BNZ C2     H2     sing N N 5   
+BNZ C3     C4     doub Y N 6   
+BNZ C3     H3     sing N N 7   
+BNZ C4     C5     sing Y N 8   
+BNZ C4     H4     sing N N 9   
+BNZ C5     C6     doub Y N 10  
+BNZ C5     H5     sing N N 11  
+BNZ C6     H6     sing N N 12  
+CTH N      CA     sing N N 13  
+CTH N      H      sing N N 14  
+CTH N      H2     sing N N 15  
+CTH CA     C      sing N N 16  
+CTH CA     CB     sing N N 17  
+CTH CA     HA     sing N N 18  
+CTH C      O      doub N N 19  
+CTH C      OXT    sing N N 20  
+CTH OXT    HXT    sing N N 21  
+CTH CB     CG2    sing N N 22  
+CTH CB     OG1    sing N N 23  
+CTH CB     HB     sing N N 24  
+CTH CG2    CL2    sing N N 25  
+CTH CG2    HG22   sing N N 26  
+CTH CG2    HG23   sing N N 27  
+CTH OG1    HG1    sing N N 28  
+DVA N      CA     sing N N 29  
+DVA N      H      sing N N 30  
+DVA N      H2     sing N N 31  
+DVA CA     CB     sing N N 32  
+DVA CA     C      sing N N 33  
+DVA CA     HA     sing N N 34  
+DVA CB     CG1    sing N N 35  
+DVA CB     CG2    sing N N 36  
+DVA CB     HB     sing N N 37  
+DVA CG1    HG11   sing N N 38  
+DVA CG1    HG12   sing N N 39  
+DVA CG1    HG13   sing N N 40  
+DVA CG2    HG21   sing N N 41  
+DVA CG2    HG22   sing N N 42  
+DVA CG2    HG23   sing N N 43  
+DVA C      O      doub N N 44  
+DVA C      OXT    sing N N 45  
+DVA OXT    HXT    sing N N 46  
+H5M N      CA     sing N N 47  
+H5M N      CD     sing N N 48  
+H5M N      H      sing N N 49  
+H5M CA     C      sing N N 50  
+H5M CA     CB     sing N N 51  
+H5M CA     HA     sing N N 52  
+H5M C      O      doub N N 53  
+H5M C      OXT    sing N N 54  
+H5M OXT    HXT    sing N N 55  
+H5M CB     CG     sing N N 56  
+H5M CB     OB     sing N N 57  
+H5M CB     HB     sing N N 58  
+H5M CG     CD     sing N N 59  
+H5M CG     HG2    sing N N 60  
+H5M CG     HG3    sing N N 61  
+H5M CD     CD1    sing N N 62  
+H5M CD     HD     sing N N 63  
+H5M OB     HOB    sing N N 64  
+H5M CD1    HD11   sing N N 65  
+H5M CD1    HD12   sing N N 66  
+H5M CD1    HD13   sing N N 67  
+HOH O      H1     sing N N 68  
+HOH O      H2     sing N N 69  
+MAA N      CM     sing N N 70  
+MAA N      CA     sing N N 71  
+MAA N      H      sing N N 72  
+MAA CM     HM1    sing N N 73  
+MAA CM     HM2    sing N N 74  
+MAA CM     HM3    sing N N 75  
+MAA CA     CB     sing N N 76  
+MAA CA     C      sing N N 77  
+MAA CA     HA     sing N N 78  
+MAA CB     HB1    sing N N 79  
+MAA CB     HB2    sing N N 80  
+MAA CB     HB3    sing N N 81  
+MAA C      O      doub N N 82  
+MAA C      OXT    sing N N 83  
+MAA OXT    HXT    sing N N 84  
+MVA N      CN     sing N N 85  
+MVA N      CA     sing N N 86  
+MVA N      H      sing N N 87  
+MVA CN     HN1    sing N N 88  
+MVA CN     HN2    sing N N 89  
+MVA CN     HN3    sing N N 90  
+MVA CA     CB     sing N N 91  
+MVA CA     C      sing N N 92  
+MVA CA     HA     sing N N 93  
+MVA CB     CG1    sing N N 94  
+MVA CB     CG2    sing N N 95  
+MVA CB     HB     sing N N 96  
+MVA CG1    HG11   sing N N 97  
+MVA CG1    HG12   sing N N 98  
+MVA CG1    HG13   sing N N 99  
+MVA CG2    HG21   sing N N 100 
+MVA CG2    HG22   sing N N 101 
+MVA CG2    HG23   sing N N 102 
+MVA C      O      doub N N 103 
+MVA C      OXT    sing N N 104 
+MVA OXT    HXT    sing N N 105 
+POM N      CA     sing N N 106 
+POM N      CD     sing N N 107 
+POM N      H      sing N N 108 
+POM CA     C      sing N N 109 
+POM CA     CB     sing N N 110 
+POM CA     HA     sing N N 111 
+POM C      O      doub N N 112 
+POM C      OXT    sing N N 113 
+POM OXT    HXT    sing N N 114 
+POM CB     CG     sing N N 115 
+POM CB     HB2    sing N N 116 
+POM CB     HB3    sing N N 117 
+POM CG     CD     sing N N 118 
+POM CG     OG     doub N N 119 
+POM CD     CD1    sing N N 120 
+POM CD     HD     sing N N 121 
+POM CD1    HD11   sing N N 122 
+POM CD1    HD12   sing N N 123 
+POM CD1    HD13   sing N N 124 
+PXZ C1     C0     sing N N 125 
+PXZ C1     C2     doub N N 126 
+PXZ C1     C11    sing N N 127 
+PXZ C0     O1     doub N N 128 
+PXZ C2     N2     sing N N 129 
+PXZ C2     C3     sing N N 130 
+PXZ N2     HN21   sing N N 131 
+PXZ N2     HN22   sing N N 132 
+PXZ C3     O3     doub N N 133 
+PXZ C3     C4     sing N N 134 
+PXZ C4     C12    doub N N 135 
+PXZ C4     C15    sing N N 136 
+PXZ O5     C12    sing N N 137 
+PXZ O5     C13    sing N N 138 
+PXZ C6     C7     doub Y N 139 
+PXZ C6     C13    sing Y N 140 
+PXZ C6     C16    sing N N 141 
+PXZ C7     C8     sing Y N 142 
+PXZ C7     H7     sing N N 143 
+PXZ C8     C9     doub Y N 144 
+PXZ C8     H8     sing N N 145 
+PXZ C9     "C0'"  sing N N 146 
+PXZ C9     C14    sing Y N 147 
+PXZ "C0'"  "O1'"  doub N N 148 
+PXZ N10    C11    doub N N 149 
+PXZ N10    C14    sing N N 150 
+PXZ C11    C12    sing N N 151 
+PXZ C13    C14    doub Y N 152 
+PXZ C15    H151   sing N N 153 
+PXZ C15    H152   sing N N 154 
+PXZ C15    H153   sing N N 155 
+PXZ C16    H161   sing N N 156 
+PXZ C16    H162   sing N N 157 
+PXZ C16    H163   sing N N 158 
+PXZ "C0'"  "OXT'" sing N N 159 
+PXZ C0     OXT    sing N N 160 
+PXZ "OXT'" "HXT'" sing N N 161 
+PXZ OXT    HXT    sing N N 162 
+SAR N      CA     sing N N 163 
+SAR N      CN     sing N N 164 
+SAR N      H      sing N N 165 
+SAR CA     C      sing N N 166 
+SAR CA     HA2    sing N N 167 
+SAR CA     HA3    sing N N 168 
+SAR C      O      doub N N 169 
+SAR C      OXT    sing N N 170 
+SAR CN     HN1    sing N N 171 
+SAR CN     HN2    sing N N 172 
+SAR CN     HN3    sing N N 173 
+SAR OXT    HXT    sing N N 174 
+THR N      CA     sing N N 175 
+THR N      H      sing N N 176 
+THR N      H2     sing N N 177 
+THR CA     C      sing N N 178 
+THR CA     CB     sing N N 179 
+THR CA     HA     sing N N 180 
+THR C      O      doub N N 181 
+THR C      OXT    sing N N 182 
+THR CB     OG1    sing N N 183 
+THR CB     CG2    sing N N 184 
+THR CB     HB     sing N N 185 
+THR OG1    HG1    sing N N 186 
+THR CG2    HG21   sing N N 187 
+THR CG2    HG22   sing N N 188 
+THR CG2    HG23   sing N N 189 
+THR OXT    HXT    sing N N 190 
+# 
+_atom_sites.entry_id                    1A7Z 
+_atom_sites.fract_transf_matrix[1][1]   0.067554 
+_atom_sites.fract_transf_matrix[1][2]   0.000000 
+_atom_sites.fract_transf_matrix[1][3]   0.000000 
+_atom_sites.fract_transf_matrix[2][1]   0.000000 
+_atom_sites.fract_transf_matrix[2][2]   0.040355 
+_atom_sites.fract_transf_matrix[2][3]   0.000000 
+_atom_sites.fract_transf_matrix[3][1]   0.000000 
+_atom_sites.fract_transf_matrix[3][2]   0.000000 
+_atom_sites.fract_transf_matrix[3][3]   0.015371 
+_atom_sites.fract_transf_vector[1]      0.00000 
+_atom_sites.fract_transf_vector[2]      0.00000 
+_atom_sites.fract_transf_vector[3]      0.00000 
+# 
+loop_
+_atom_type.symbol 
+C  
+CL 
+N  
+O  
+# 
+loop_
+_atom_site.group_PDB 
+_atom_site.id 
+_atom_site.type_symbol 
+_atom_site.label_atom_id 
+_atom_site.label_alt_id 
+_atom_site.label_comp_id 
+_atom_site.label_asym_id 
+_atom_site.label_entity_id 
+_atom_site.label_seq_id 
+_atom_site.pdbx_PDB_ins_code 
+_atom_site.Cartn_x 
+_atom_site.Cartn_y 
+_atom_site.Cartn_z 
+_atom_site.occupancy 
+_atom_site.B_iso_or_equiv 
+_atom_site.pdbx_formal_charge 
+_atom_site.auth_seq_id 
+_atom_site.auth_comp_id 
+_atom_site.auth_asym_id 
+_atom_site.auth_atom_id 
+_atom_site.pdbx_PDB_model_num 
+HETATM 1   N  N     . CTH A 1 1  ? 0.304  16.057 16.865  1.00 2.82  ? 1    CTH A N     1 
+HETATM 2   C  CA    . CTH A 1 1  ? -0.516 17.206 16.475  1.00 3.04  ? 1    CTH A CA    1 
+HETATM 3   C  C     . CTH A 1 1  ? -1.988 16.916 16.836  1.00 2.71  ? 1    CTH A C     1 
+HETATM 4   O  O     . CTH A 1 1  ? -2.425 15.765 16.931  1.00 3.33  ? 1    CTH A O     1 
+HETATM 5   C  CB    . CTH A 1 1  ? -0.518 17.462 14.950  1.00 3.16  ? 1    CTH A CB    1 
+HETATM 6   C  CG2   . CTH A 1 1  ? 0.862  17.713 14.363  1.00 4.94  ? 1    CTH A CG2   1 
+HETATM 7   CL CL2   . CTH A 1 1  ? 1.431  19.340 14.667  1.00 7.39  ? 1    CTH A CL2   1 
+HETATM 8   O  OG1   . CTH A 1 1  ? -1.117 16.320 14.292  1.00 3.26  ? 1    CTH A OG1   1 
+HETATM 9   N  N     . DVA A 1 2  ? -2.761 18.023 16.973  1.00 3.19  ? 2    DVA A N     1 
+HETATM 10  C  CA    . DVA A 1 2  ? -4.231 17.910 16.864  1.00 3.28  ? 2    DVA A CA    1 
+HETATM 11  C  CB    . DVA A 1 2  ? -4.859 19.248 16.448  1.00 4.60  ? 2    DVA A CB    1 
+HETATM 12  C  CG1   . DVA A 1 2  ? -4.534 19.524 14.981  1.00 6.38  ? 2    DVA A CG1   1 
+HETATM 13  C  CG2   . DVA A 1 2  ? -4.583 20.413 17.283  1.00 6.68  ? 2    DVA A CG2   1 
+HETATM 14  C  C     . DVA A 1 2  ? -4.836 17.417 18.199  1.00 3.29  ? 2    DVA A C     1 
+HETATM 15  O  O     . DVA A 1 2  ? -4.674 18.001 19.273  1.00 3.82  ? 2    DVA A O     1 
+HETATM 16  N  N     . POM A 1 3  ? -5.641 16.306 18.128  1.00 3.46  ? 3    POM A N     1 
+HETATM 17  C  CA    . POM A 1 3  ? -5.626 15.302 17.036  1.00 3.35  ? 3    POM A CA    1 
+HETATM 18  C  C     . POM A 1 3  ? -6.554 15.688 15.875  1.00 3.25  ? 3    POM A C     1 
+HETATM 19  O  O     . POM A 1 3  ? -7.446 16.550 16.039  1.00 3.93  ? 3    POM A O     1 
+HETATM 20  C  CB    . POM A 1 3  ? -6.036 14.000 17.690  1.00 4.06  ? 3    POM A CB    1 
+HETATM 21  C  CG    . POM A 1 3  ? -6.610 14.374 19.025  1.00 4.93  ? 3    POM A CG    1 
+HETATM 22  C  CD    . POM A 1 3  ? -6.417 15.886 19.308  1.00 4.23  ? 3    POM A CD    1 
+HETATM 23  O  OG    . POM A 1 3  ? -7.170 13.608 19.802  1.00 8.00  ? 3    POM A OG    1 
+HETATM 24  C  CD1   . POM A 1 3  ? -7.729 16.653 19.444  1.00 5.76  ? 3    POM A CD1   1 
+HETATM 25  N  N     . SAR A 1 4  ? -6.433 15.001 14.721  1.00 3.86  ? 4    SAR A N     1 
+HETATM 26  C  CA    . SAR A 1 4  ? -5.259 14.200 14.414  1.00 3.91  ? 4    SAR A CA    1 
+HETATM 27  C  C     . SAR A 1 4  ? -4.143 15.107 13.820  1.00 3.72  ? 4    SAR A C     1 
+HETATM 28  O  O     . SAR A 1 4  ? -4.246 16.337 13.858  1.00 4.02  ? 4    SAR A O     1 
+HETATM 29  C  CN    . SAR A 1 4  ? -7.322 15.360 13.612  1.00 5.59  ? 4    SAR A CN    1 
+HETATM 30  N  N     . MAA A 1 5  ? -3.054 14.496 13.259  1.00 3.69  ? 5    MAA A N     1 
+HETATM 31  C  CM    . MAA A 1 5  ? -2.898 13.046 13.172  1.00 4.96  ? 5    MAA A CM    1 
+HETATM 32  C  CA    . MAA A 1 5  ? -2.203 15.328 12.404  1.00 3.99  ? 5    MAA A CA    1 
+HETATM 33  C  CB    . MAA A 1 5  ? -2.911 15.670 11.074  1.00 5.09  ? 5    MAA A CB    1 
+HETATM 34  C  C     . MAA A 1 5  ? -1.700 16.595 13.077  1.00 3.49  ? 5    MAA A C     1 
+HETATM 35  O  O     . MAA A 1 5  ? -1.691 17.690 12.565  1.00 4.53  ? 5    MAA A O     1 
+HETATM 36  C  C1    . PXZ A 1 6  ? 2.451  15.032 17.456  1.00 2.80  ? 6    PXZ A C1    1 
+HETATM 37  C  C0    . PXZ A 1 6  ? 1.589  16.240 17.233  1.00 3.06  ? 6    PXZ A C0    1 
+HETATM 38  O  O1    . PXZ A 1 6  ? 2.103  17.377 17.226  1.00 3.80  ? 6    PXZ A O1    1 
+HETATM 39  C  C2    . PXZ A 1 6  ? 3.791  15.097 17.111  1.00 2.99  ? 6    PXZ A C2    1 
+HETATM 40  N  N2    . PXZ A 1 6  ? 4.432  16.186 16.656  1.00 3.59  ? 6    PXZ A N2    1 
+HETATM 41  C  C3    . PXZ A 1 6  ? 4.653  13.874 17.165  1.00 3.33  ? 6    PXZ A C3    1 
+HETATM 42  O  O3    . PXZ A 1 6  ? 5.813  13.964 16.738  1.00 4.61  ? 6    PXZ A O3    1 
+HETATM 43  C  C4    . PXZ A 1 6  ? 4.124  12.649 17.670  1.00 3.27  ? 6    PXZ A C4    1 
+HETATM 44  O  O5    . PXZ A 1 6  ? 2.302  11.441 18.434  1.00 3.64  ? 6    PXZ A O5    1 
+HETATM 45  C  C6    . PXZ A 1 6  ? 0.564  10.089 19.290  1.00 4.63  ? 6    PXZ A C6    1 
+HETATM 46  C  C7    . PXZ A 1 6  ? -0.758 10.015 19.762  1.00 5.37  ? 6    PXZ A C7    1 
+HETATM 47  C  C8    . PXZ A 1 6  ? -1.573 11.155 19.832  1.00 4.45  ? 6    PXZ A C8    1 
+HETATM 48  C  C9    . PXZ A 1 6  ? -1.130 12.406 19.380  1.00 3.37  ? 6    PXZ A C9    1 
+HETATM 49  C  "C0'" . PXZ A 1 6  ? -2.037 13.574 19.555  1.00 3.01  ? 6    PXZ A "C0'" 1 
+HETATM 50  O  "O1'" . PXZ A 1 6  ? -3.244 13.474 19.257  1.00 3.64  ? 6    PXZ A "O1'" 1 
+HETATM 51  N  N10   . PXZ A 1 6  ? 0.646  13.714 18.373  1.00 2.78  ? 6    PXZ A N10   1 
+HETATM 52  C  C11   . PXZ A 1 6  ? 1.908  13.796 17.958  1.00 2.57  ? 6    PXZ A C11   1 
+HETATM 53  C  C12   . PXZ A 1 6  ? 2.813  12.619 18.016  1.00 2.83  ? 6    PXZ A C12   1 
+HETATM 54  C  C13   . PXZ A 1 6  ? 0.990  11.349 18.873  1.00 3.46  ? 6    PXZ A C13   1 
+HETATM 55  C  C14   . PXZ A 1 6  ? 0.187  12.503 18.885  1.00 2.89  ? 6    PXZ A C14   1 
+HETATM 56  C  C15   . PXZ A 1 6  ? 5.006  11.431 17.777  1.00 4.51  ? 6    PXZ A C15   1 
+HETATM 57  C  C16   . PXZ A 1 6  ? 1.485  8.904  19.203  1.00 6.42  ? 6    PXZ A C16   1 
+ATOM   58  N  N     . THR A 1 7  ? -1.524 14.660 20.147  1.00 3.39  ? 7    THR A N     1 
+ATOM   59  C  CA    . THR A 1 7  ? -2.318 15.873 20.373  1.00 3.09  ? 7    THR A CA    1 
+ATOM   60  C  C     . THR A 1 7  ? -1.363 17.078 20.314  1.00 3.43  ? 7    THR A C     1 
+ATOM   61  O  O     . THR A 1 7  ? -0.130 16.939 20.470  1.00 4.14  ? 7    THR A O     1 
+ATOM   62  C  CB    . THR A 1 7  ? -3.026 15.900 21.686  1.00 3.38  ? 7    THR A CB    1 
+ATOM   63  O  OG1   . THR A 1 7  ? -2.042 16.128 22.747  1.00 3.93  ? 7    THR A OG1   1 
+ATOM   64  C  CG2   . THR A 1 7  ? -3.813 14.619 22.067  1.00 4.05  ? 7    THR A CG2   1 
+HETATM 65  N  N     . DVA A 1 8  ? -1.957 18.273 20.175  1.00 3.69  ? 8    DVA A N     1 
+HETATM 66  C  CA    . DVA A 1 8  ? -1.259 19.544 20.379  1.00 3.55  ? 8    DVA A CA    1 
+HETATM 67  C  CB    . DVA A 1 8  ? -2.293 20.672 20.526  1.00 3.47  ? 8    DVA A CB    1 
+HETATM 68  C  CG1   . DVA A 1 8  ? -3.296 20.395 21.686  1.00 4.49  ? 8    DVA A CG1   1 
+HETATM 69  C  CG2   . DVA A 1 8  ? -1.558 21.987 20.788  1.00 3.97  ? 8    DVA A CG2   1 
+HETATM 70  C  C     . DVA A 1 8  ? -0.335 19.842 19.198  1.00 3.52  ? 8    DVA A C     1 
+HETATM 71  O  O     . DVA A 1 8  ? -0.797 19.995 18.062  1.00 3.53  ? 8    DVA A O     1 
+HETATM 72  N  N     . H5M A 1 9  ? 0.995  20.053 19.459  1.00 4.28  ? 9    H5M A N     1 
+HETATM 73  C  CA    . H5M A 1 9  ? 1.692  19.530 20.659  1.00 4.78  ? 9    H5M A CA    1 
+HETATM 74  C  C     . H5M A 1 9  ? 1.738  20.534 21.811  1.00 5.14  ? 9    H5M A C     1 
+HETATM 75  O  O     . H5M A 1 9  ? 1.781  21.742 21.567  1.00 6.44  ? 9    H5M A O     1 
+HETATM 76  C  CB    . H5M A 1 9  ? 3.135  19.271 20.160  1.00 5.63  ? 9    H5M A CB    1 
+HETATM 77  C  CG    . H5M A 1 9  ? 3.309  20.326 19.071  1.00 6.15  ? 9    H5M A CG    1 
+HETATM 78  C  CD    . H5M A 1 9  ? 1.931  20.488 18.413  1.00 4.82  ? 9    H5M A CD    1 
+HETATM 79  O  OB    . H5M A 1 9  ? 3.300  17.946 19.713  1.00 6.05  ? 9    H5M A OB    1 
+HETATM 80  C  CD1   . H5M A 1 9  ? 1.651  21.908 17.955  1.00 6.88  ? 9    H5M A CD1   1 
+HETATM 81  N  N     . SAR A 1 10 ? 1.847  20.053 23.066  1.00 5.53  ? 10   SAR A N     1 
+HETATM 82  C  CA    . SAR A 1 10 ? 1.667  18.656 23.437  1.00 5.53  ? 10   SAR A CA    1 
+HETATM 83  C  C     . SAR A 1 10 ? 0.214  18.321 23.837  1.00 4.78  ? 10   SAR A C     1 
+HETATM 84  O  O     . SAR A 1 10 ? -0.673 19.167 23.648  1.00 5.33  ? 10   SAR A O     1 
+HETATM 85  C  CN    . SAR A 1 10 ? 1.898  20.977 24.220  1.00 7.00  ? 10   SAR A CN    1 
+HETATM 86  N  N     . MVA A 1 11 ? -0.032 17.129 24.404  1.00 4.95  ? 11   MVA A N     1 
+HETATM 87  C  CN    . MVA A 1 11 ? 1.005  16.072 24.568  1.00 6.71  ? 11   MVA A CN    1 
+HETATM 88  C  CA    . MVA A 1 11 ? -1.397 16.873 24.907  1.00 4.65  ? 11   MVA A CA    1 
+HETATM 89  C  CB    . MVA A 1 11 ? -1.860 17.761 26.113  1.00 5.91  ? 11   MVA A CB    1 
+HETATM 90  C  CG1   . MVA A 1 11 ? -0.677 18.114 27.001  1.00 8.10  ? 11   MVA A CG1   1 
+HETATM 91  C  CG2   . MVA A 1 11 ? -2.978 17.022 26.863  1.00 7.22  ? 11   MVA A CG2   1 
+HETATM 92  C  C     . MVA A 1 11 ? -2.429 16.886 23.793  1.00 4.22  ? 11   MVA A C     1 
+HETATM 93  O  O     . MVA A 1 11 ? -3.503 17.447 23.864  1.00 5.52  ? 11   MVA A O     1 
+HETATM 94  N  N     . CTH B 1 1  ? 1.519  13.805 3.109   1.00 3.02  ? 1    CTH B N     1 
+HETATM 95  C  CA    . CTH B 1 1  ? 2.930  13.904 3.452   1.00 2.92  ? 1    CTH B CA    1 
+HETATM 96  C  C     . CTH B 1 1  ? 3.579  12.502 3.323   1.00 3.08  ? 1    CTH B C     1 
+HETATM 97  O  O     . CTH B 1 1  ? 2.937  11.482 3.476   1.00 3.79  ? 1    CTH B O     1 
+HETATM 98  C  CB    . CTH B 1 1  ? 3.206  14.372 4.896   1.00 3.27  ? 1    CTH B CB    1 
+HETATM 99  C  CG2   . CTH B 1 1  ? 2.630  15.707 5.274   1.00 4.93  ? 1    CTH B CG2   1 
+HETATM 100 CL CL2   A CTH B 1 1  ? 0.944  15.721 5.686   0.85 5.49  ? 1    CTH B CL2   1 
+HETATM 101 CL CL2   B CTH B 1 1  ? 2.625  16.406 6.834   0.15 6.50  ? 1    CTH B CL2   1 
+HETATM 102 O  OG1   . CTH B 1 1  ? 2.823  13.342 5.834   1.00 3.51  ? 1    CTH B OG1   1 
+HETATM 103 N  N     . DVA B 1 2  ? 4.913  12.569 3.144   1.00 3.26  ? 2    DVA B N     1 
+HETATM 104 C  CA    . DVA B 1 2  ? 5.802  11.445 3.465   1.00 3.54  ? 2    DVA B CA    1 
+HETATM 105 C  CB    . DVA B 1 2  ? 7.235  11.970 3.759   1.00 4.29  ? 2    DVA B CB    1 
+HETATM 106 C  CG1   . DVA B 1 2  ? 8.113  10.826 4.260   1.00 5.51  ? 2    DVA B CG1   1 
+HETATM 107 C  CG2   . DVA B 1 2  ? 7.216  13.099 4.766   1.00 5.29  ? 2    DVA B CG2   1 
+HETATM 108 C  C     . DVA B 1 2  ? 5.846  10.456 2.279   1.00 3.70  ? 2    DVA B C     1 
+HETATM 109 O  O     . DVA B 1 2  ? 6.329  10.792 1.181   1.00 4.02  ? 2    DVA B O     1 
+HETATM 110 N  N     . POM B 1 3  ? 5.411  9.194  2.468   1.00 3.91  ? 3    POM B N     1 
+HETATM 111 C  CA    . POM B 1 3  ? 4.496  8.745  3.583   1.00 4.12  ? 3    POM B CA    1 
+HETATM 112 C  C     . POM B 1 3  ? 5.286  8.270  4.799   1.00 4.01  ? 3    POM B C     1 
+HETATM 113 O  O     . POM B 1 3  ? 6.452  7.882  4.674   1.00 6.06  ? 3    POM B O     1 
+HETATM 114 C  CB    . POM B 1 3  ? 3.754  7.560  2.975   1.00 4.66  ? 3    POM B CB    1 
+HETATM 115 C  CG    . POM B 1 3  ? 4.497  7.182  1.715   1.00 5.13  ? 3    POM B CG    1 
+HETATM 116 C  CD    . POM B 1 3  ? 5.568  8.193  1.415   1.00 4.61  ? 3    POM B CD    1 
+HETATM 117 O  OG    . POM B 1 3  ? 4.313  6.212  1.034   1.00 8.63  ? 3    POM B OG    1 
+HETATM 118 C  CD1   . POM B 1 3  ? 6.962  7.577  1.422   1.00 6.18  ? 3    POM B CD1   1 
+HETATM 119 N  N     . SAR B 1 4  ? 4.631  8.213  5.993   1.00 3.95  ? 4    SAR B N     1 
+HETATM 120 C  CA    . SAR B 1 4  ? 3.373  8.920  6.271   1.00 3.75  ? 4    SAR B CA    1 
+HETATM 121 C  C     . SAR B 1 4  ? 3.639  10.351 6.728   1.00 3.74  ? 4    SAR B C     1 
+HETATM 122 O  O     . SAR B 1 4  ? 4.715  10.908 6.511   1.00 3.89  ? 4    SAR B O     1 
+HETATM 123 C  CN    . SAR B 1 4  ? 5.330  7.702  7.160   1.00 5.16  ? 4    SAR B CN    1 
+HETATM 124 N  N     . MAA B 1 5  ? 2.625  10.999 7.389   1.00 3.74  ? 5    MAA B N     1 
+HETATM 125 C  CM    . MAA B 1 5  ? 1.354  10.333 7.762   1.00 4.78  ? 5    MAA B CM    1 
+HETATM 126 C  CA    . MAA B 1 5  ? 2.905  12.296 7.989   1.00 3.78  ? 5    MAA B CA    1 
+HETATM 127 C  CB    . MAA B 1 5  ? 3.786  12.165 9.236   1.00 4.96  ? 5    MAA B CB    1 
+HETATM 128 C  C     . MAA B 1 5  ? 3.526  13.293 7.007   1.00 3.55  ? 5    MAA B C     1 
+HETATM 129 O  O     . MAA B 1 5  ? 4.427  14.046 7.264   1.00 4.92  ? 5    MAA B O     1 
+HETATM 130 C  C1    . PXZ B 1 6  ? -0.600 14.756 2.327   1.00 3.16  ? 6    PXZ B C1    1 
+HETATM 131 C  C0    . PXZ B 1 6  ? 0.884  14.859 2.574   1.00 2.96  ? 6    PXZ B C0    1 
+HETATM 132 O  O1    . PXZ B 1 6  ? 1.492  15.938 2.374   1.00 3.64  ? 6    PXZ B O1    1 
+HETATM 133 C  C2    . PXZ B 1 6  ? -1.353 15.933 2.393   1.00 3.58  ? 6    PXZ B C2    1 
+HETATM 134 N  N2    . PXZ B 1 6  ? -0.887 17.152 2.550   1.00 4.46  ? 6    PXZ B N2    1 
+HETATM 135 C  C3    . PXZ B 1 6  ? -2.879 15.853 2.345   1.00 4.30  ? 6    PXZ B C3    1 
+HETATM 136 O  O3    . PXZ B 1 6  ? -3.520 16.925 2.506   1.00 5.66  ? 6    PXZ B O3    1 
+HETATM 137 C  C4    . PXZ B 1 6  ? -3.514 14.579 2.142   1.00 4.31  ? 6    PXZ B C4    1 
+HETATM 138 O  O5    . PXZ B 1 6  ? -3.342 12.315 1.725   1.00 4.57  ? 6    PXZ B O5    1 
+HETATM 139 C  C6    . PXZ B 1 6  ? -3.303 10.058 1.031   1.00 5.05  ? 6    PXZ B C6    1 
+HETATM 140 C  C7    . PXZ B 1 6  ? -2.568 8.919  0.699   1.00 5.48  ? 6    PXZ B C7    1 
+HETATM 141 C  C8    . PXZ B 1 6  ? -1.172 8.954  0.715   1.00 4.68  ? 6    PXZ B C8    1 
+HETATM 142 C  C9    . PXZ B 1 6  ? -0.460 10.129 1.044   1.00 3.65  ? 6    PXZ B C9    1 
+HETATM 143 C  "C0'" . PXZ B 1 6  ? 1.019  10.074 0.876   1.00 3.82  ? 6    PXZ B "C0'" 1 
+HETATM 144 O  "O1'" . PXZ B 1 6  ? 1.671  9.098  1.246   1.00 4.76  ? 6    PXZ B "O1'" 1 
+HETATM 145 N  N10   . PXZ B 1 6  ? -0.525 12.428 1.764   1.00 3.32  ? 6    PXZ B N10   1 
+HETATM 146 C  C11   . PXZ B 1 6  ? -1.240 13.524 2.028   1.00 3.28  ? 6    PXZ B C11   1 
+HETATM 147 C  C12   . PXZ B 1 6  ? -2.718 13.507 1.970   1.00 3.74  ? 6    PXZ B C12   1 
+HETATM 148 C  C13   . PXZ B 1 6  ? -2.600 11.208 1.379   1.00 4.06  ? 6    PXZ B C13   1 
+HETATM 149 C  C14   . PXZ B 1 6  ? -1.192 11.270 1.396   1.00 3.40  ? 6    PXZ B C14   1 
+HETATM 150 C  C15   . PXZ B 1 6  ? -5.013 14.532 2.101   1.00 6.66  ? 6    PXZ B C15   1 
+HETATM 151 C  C16   . PXZ B 1 6  ? -4.841 10.107 0.982   1.00 6.80  ? 6    PXZ B C16   1 
+ATOM   152 N  N     . THR B 1 7  ? 1.572  11.099 0.192   1.00 3.40  ? 7    THR B N     1 
+ATOM   153 C  CA    . THR B 1 7  ? 2.984  11.141 -0.133  1.00 3.23  ? 7    THR B CA    1 
+ATOM   154 C  C     . THR B 1 7  ? 3.425  12.628 -0.226  1.00 3.22  ? 7    THR B C     1 
+ATOM   155 O  O     . THR B 1 7  ? 2.595  13.516 -0.409  1.00 4.37  ? 7    THR B O     1 
+ATOM   156 C  CB    . THR B 1 7  ? 3.320  10.481 -1.494  1.00 3.94  ? 7    THR B CB    1 
+ATOM   157 O  OG1   . THR B 1 7  ? 2.769  11.330 -2.541  1.00 3.98  ? 7    THR B OG1   1 
+ATOM   158 C  CG2   . THR B 1 7  ? 2.763  9.061  -1.642  1.00 4.83  ? 7    THR B CG2   1 
+HETATM 159 N  N     . DVA B 1 8  ? 4.729  12.824 -0.156  1.00 3.49  ? 8    DVA B N     1 
+HETATM 160 C  CA    . DVA B 1 8  ? 5.356  14.121 -0.477  1.00 3.58  ? 8    DVA B CA    1 
+HETATM 161 C  CB    . DVA B 1 8  ? 6.907  13.936 -0.565  1.00 4.15  ? 8    DVA B CB    1 
+HETATM 162 C  CG1   . DVA B 1 8  ? 7.255  12.914 -1.630  1.00 6.33  ? 8    DVA B CG1   1 
+HETATM 163 C  CG2   . DVA B 1 8  ? 7.592  15.284 -0.797  1.00 5.49  ? 8    DVA B CG2   1 
+HETATM 164 C  C     . DVA B 1 8  ? 5.013  15.190 0.541   1.00 3.38  ? 8    DVA B C     1 
+HETATM 165 O  O     . DVA B 1 8  ? 5.389  15.057 1.729   1.00 4.02  ? 8    DVA B O     1 
+HETATM 166 N  N     . H5M B 1 9  ? 4.404  16.307 0.119   1.00 3.56  ? 9    H5M B N     1 
+HETATM 167 C  CA    . H5M B 1 9  ? 3.555  16.406 -1.092  1.00 3.53  ? 9    H5M B CA    1 
+HETATM 168 C  C     . H5M B 1 9  ? 4.354  16.801 -2.356  1.00 3.93  ? 9    H5M B C     1 
+HETATM 169 O  O     . H5M B 1 9  ? 5.447  17.392 -2.237  1.00 4.67  ? 9    H5M B O     1 
+HETATM 170 C  CB    . H5M B 1 9  ? 2.529  17.521 -0.738  1.00 4.26  ? 9    H5M B CB    1 
+HETATM 171 C  CG    . H5M B 1 9  ? 3.265  18.397 0.249   1.00 4.91  ? 9    H5M B CG    1 
+HETATM 172 C  CD    . H5M B 1 9  ? 4.206  17.472 1.050   1.00 4.23  ? 9    H5M B CD    1 
+HETATM 173 O  OB    . H5M B 1 9  ? 1.320  16.948 -0.253  1.00 5.03  ? 9    H5M B OB    1 
+HETATM 174 C  CD1   . H5M B 1 9  ? 5.530  18.130 1.398   1.00 5.63  ? 9    H5M B CD1   1 
+HETATM 175 N  N     . SAR B 1 10 ? 3.797  16.545 -3.543  1.00 4.92  ? 10   SAR B N     1 
+HETATM 176 C  CA    . SAR B 1 10 ? 2.645  15.647 -3.705  1.00 4.97  ? 10   SAR B CA    1 
+HETATM 177 C  C     . SAR B 1 10 ? 3.105  14.197 -3.942  1.00 4.37  ? 10   SAR B C     1 
+HETATM 178 O  O     . SAR B 1 10 ? 4.284  13.866 -3.799  1.00 5.21  ? 10   SAR B O     1 
+HETATM 179 C  CN    . SAR B 1 10 ? 4.532  16.916 -4.763  1.00 6.89  ? 10   SAR B CN    1 
+HETATM 180 N  N     . MVA B 1 11 ? 2.155  13.310 -4.352  1.00 4.32  ? 11   MVA B N     1 
+HETATM 181 C  CN    . MVA B 1 11 ? 0.738  13.660 -4.508  1.00 5.46  ? 11   MVA B CN    1 
+HETATM 182 C  CA    . MVA B 1 11 ? 2.609  11.994 -4.835  1.00 4.27  ? 11   MVA B CA    1 
+HETATM 183 C  CB    . MVA B 1 11 ? 3.391  12.062 -6.166  1.00 5.14  ? 11   MVA B CB    1 
+HETATM 184 C  CG1   . MVA B 1 11 ? 3.344  10.709 -6.880  1.00 7.44  ? 11   MVA B CG1   1 
+HETATM 185 C  CG2   . MVA B 1 11 ? 2.838  13.139 -7.101  1.00 8.17  ? 11   MVA B CG2   1 
+HETATM 186 C  C     . MVA B 1 11 ? 3.388  11.263 -3.751  1.00 4.05  ? 11   MVA B C     1 
+HETATM 187 O  O     . MVA B 1 11 ? 4.382  10.604 -3.964  1.00 5.31  ? 11   MVA B O     1 
+HETATM 188 C  C1    . BNZ C 2 .  ? 3.075  11.581 14.438  1.00 7.35  ? 101  BNZ A C1    1 
+HETATM 189 C  C2    . BNZ C 2 .  ? 1.847  11.208 14.994  1.00 7.11  ? 101  BNZ A C2    1 
+HETATM 190 C  C3    . BNZ C 2 .  ? 0.815  12.146 15.099  1.00 6.99  ? 101  BNZ A C3    1 
+HETATM 191 C  C4    . BNZ C 2 .  ? 1.017  13.435 14.643  1.00 8.16  ? 101  BNZ A C4    1 
+HETATM 192 C  C5    . BNZ C 2 .  ? 2.254  13.811 14.131  1.00 8.83  ? 101  BNZ A C5    1 
+HETATM 193 C  C6    . BNZ C 2 .  ? 3.273  12.878 14.007  1.00 7.99  ? 101  BNZ A C6    1 
+HETATM 194 C  C1    . BNZ D 2 .  ? -4.457 15.096 6.919   1.00 14.44 ? 109  BNZ A C1    1 
+HETATM 195 C  C2    . BNZ D 2 .  ? -4.510 16.062 7.902   1.00 14.84 ? 109  BNZ A C2    1 
+HETATM 196 C  C3    . BNZ D 2 .  ? -3.583 17.113 7.907   1.00 14.67 ? 109  BNZ A C3    1 
+HETATM 197 C  C4    . BNZ D 2 .  ? -2.583 17.150 6.937   1.00 13.56 ? 109  BNZ A C4    1 
+HETATM 198 C  C5    . BNZ D 2 .  ? -2.556 16.210 5.947   1.00 13.58 ? 109  BNZ A C5    1 
+HETATM 199 C  C6    . BNZ D 2 .  ? -3.485 15.179 5.917   1.00 13.57 ? 109  BNZ A C6    1 
+HETATM 200 C  C1    . BNZ E 2 .  ? 4.853  20.335 15.168  1.00 12.24 ? 110  BNZ A C1    1 
+HETATM 201 C  C2    . BNZ E 2 .  ? 4.279  21.563 14.910  1.00 10.55 ? 110  BNZ A C2    1 
+HETATM 202 C  C3    . BNZ E 2 .  ? 4.986  22.540 14.236  1.00 9.37  ? 110  BNZ A C3    1 
+HETATM 203 C  C4    . BNZ E 2 .  ? 6.266  22.288 13.815  1.00 11.11 ? 110  BNZ A C4    1 
+HETATM 204 C  C5    . BNZ E 2 .  ? 6.850  21.053 14.039  1.00 13.45 ? 110  BNZ A C5    1 
+HETATM 205 C  C6    . BNZ E 2 .  ? 6.147  20.067 14.728  1.00 13.53 ? 110  BNZ A C6    1 
+HETATM 206 C  C1    . BNZ F 2 .  ? -1.236 13.058 27.036  1.00 16.02 ? 115  BNZ A C1    1 
+HETATM 207 C  C2    . BNZ F 2 .  ? 0.007  12.557 26.634  1.00 12.72 ? 115  BNZ A C2    1 
+HETATM 208 C  C3    . BNZ F 2 .  ? 0.186  12.093 25.378  1.00 14.17 ? 115  BNZ A C3    1 
+HETATM 209 C  C4    . BNZ F 2 .  ? -0.877 12.068 24.458  1.00 16.33 ? 115  BNZ A C4    1 
+HETATM 210 C  C5    . BNZ F 2 .  ? -2.106 12.586 24.852  1.00 14.67 ? 115  BNZ A C5    1 
+HETATM 211 C  C6    . BNZ F 2 .  ? -2.311 13.001 26.132  1.00 16.23 ? 115  BNZ A C6    1 
+HETATM 212 C  C1    A BNZ G 2 .  ? 11.070 6.195  22.164  0.63 17.61 ? 116  BNZ A C1    1 
+HETATM 213 C  C1    B BNZ G 2 .  ? 9.157  5.997  21.328  0.37 16.93 ? 116  BNZ A C1    1 
+HETATM 214 C  C2    A BNZ G 2 .  ? 10.887 6.074  20.785  0.63 14.51 ? 116  BNZ A C2    1 
+HETATM 215 C  C2    B BNZ G 2 .  ? 10.093 5.675  20.358  0.37 14.75 ? 116  BNZ A C2    1 
+HETATM 216 C  C3    A BNZ G 2 .  ? 10.419 4.885  20.253  0.63 12.85 ? 116  BNZ A C3    1 
+HETATM 217 C  C3    B BNZ G 2 .  ? 10.675 4.407  20.347  0.37 13.68 ? 116  BNZ A C3    1 
+HETATM 218 C  C4    A BNZ G 2 .  ? 10.149 3.795  21.088  0.63 12.71 ? 116  BNZ A C4    1 
+HETATM 219 C  C4    B BNZ G 2 .  ? 10.315 3.474  21.313  0.37 13.16 ? 116  BNZ A C4    1 
+HETATM 220 C  C5    A BNZ G 2 .  ? 10.289 3.933  22.466  0.63 13.54 ? 116  BNZ A C5    1 
+HETATM 221 C  C5    B BNZ G 2 .  ? 9.379  3.795  22.287  0.37 14.79 ? 116  BNZ A C5    1 
+HETATM 222 C  C6    A BNZ G 2 .  ? 10.787 5.116  22.992  0.63 16.58 ? 116  BNZ A C6    1 
+HETATM 223 C  C6    B BNZ G 2 .  ? 8.788  5.057  22.290  0.37 17.85 ? 116  BNZ A C6    1 
+HETATM 224 C  C1    A BNZ H 2 .  ? -6.109 21.079 10.062  0.57 12.67 ? 118  BNZ A C1    1 
+HETATM 225 C  C1    B BNZ H 2 .  ? -5.491 21.213 9.438   0.43 12.51 ? 118  BNZ A C1    1 
+HETATM 226 C  C2    A BNZ H 2 .  ? -4.836 20.744 10.552  0.57 13.13 ? 118  BNZ A C2    1 
+HETATM 227 C  C2    B BNZ H 2 .  ? -6.344 20.781 10.444  0.43 12.83 ? 118  BNZ A C2    1 
+HETATM 228 C  C3    A BNZ H 2 .  ? -4.651 19.519 11.179  0.57 10.80 ? 118  BNZ A C3    1 
+HETATM 229 C  C3    B BNZ H 2 .  ? -5.880 19.873 11.405  0.43 12.60 ? 118  BNZ A C3    1 
+HETATM 230 C  C4    A BNZ H 2 .  ? -5.703 18.634 11.318  0.57 10.53 ? 118  BNZ A C4    1 
+HETATM 231 C  C4    B BNZ H 2 .  ? -4.589 19.389 11.332  0.43 11.95 ? 118  BNZ A C4    1 
+HETATM 232 C  C5    A BNZ H 2 .  ? -6.973 18.979 10.863  0.57 11.61 ? 118  BNZ A C5    1 
+HETATM 233 C  C5    B BNZ H 2 .  ? -3.717 19.863 10.341  0.43 12.84 ? 118  BNZ A C5    1 
+HETATM 234 C  C6    A BNZ H 2 .  ? -7.149 20.181 10.173  0.57 12.64 ? 118  BNZ A C6    1 
+HETATM 235 C  C6    B BNZ H 2 .  ? -4.173 20.761 9.395   0.43 12.88 ? 118  BNZ A C6    1 
+HETATM 236 C  C1    A BNZ I 2 .  ? -8.623 17.564 6.774   0.55 14.80 ? 119  BNZ A C1    1 
+HETATM 237 C  C1    B BNZ I 2 .  ? -6.384 19.044 6.482   0.45 11.03 ? 119  BNZ A C1    1 
+HETATM 238 C  C2    A BNZ I 2 .  ? -7.934 18.783 6.897   0.55 13.34 ? 119  BNZ A C2    1 
+HETATM 239 C  C2    B BNZ I 2 .  ? -5.851 18.285 5.459   0.45 10.32 ? 119  BNZ A C2    1 
+HETATM 240 C  C3    A BNZ I 2 .  ? -6.994 19.135 5.954   0.55 13.25 ? 119  BNZ A C3    1 
+HETATM 241 C  C3    B BNZ I 2 .  ? -6.299 18.436 4.153   0.45 9.74  ? 119  BNZ A C3    1 
+HETATM 242 C  C4    A BNZ I 2 .  ? -6.700 18.269 4.887   0.55 12.85 ? 119  BNZ A C4    1 
+HETATM 243 C  C4    B BNZ I 2 .  ? -7.281 19.384 3.877   0.45 9.36  ? 119  BNZ A C4    1 
+HETATM 244 C  C5    A BNZ I 2 .  ? -7.446 17.118 4.721   0.55 12.81 ? 119  BNZ A C5    1 
+HETATM 245 C  C5    B BNZ I 2 .  ? -7.840 20.132 4.899   0.45 9.12  ? 119  BNZ A C5    1 
+HETATM 246 C  C6    A BNZ I 2 .  ? -8.328 16.714 5.750   0.55 13.67 ? 119  BNZ A C6    1 
+HETATM 247 C  C6    B BNZ I 2 .  ? -7.414 19.965 6.210   0.45 11.23 ? 119  BNZ A C6    1 
+HETATM 248 C  C1    . BNZ J 2 .  ? 5.627  24.920 22.828  1.00 18.75 ? 120  BNZ A C1    1 
+HETATM 249 C  C2    . BNZ J 2 .  ? 4.842  23.777 22.694  1.00 16.75 ? 120  BNZ A C2    1 
+HETATM 250 C  C3    . BNZ J 2 .  ? 5.189  22.596 23.321  1.00 14.93 ? 120  BNZ A C3    1 
+HETATM 251 C  C4    . BNZ J 2 .  ? 6.329  22.533 24.082  1.00 13.91 ? 120  BNZ A C4    1 
+HETATM 252 C  C5    . BNZ J 2 .  ? 7.120  23.680 24.242  1.00 12.42 ? 120  BNZ A C5    1 
+HETATM 253 C  C6    . BNZ J 2 .  ? 6.774  24.861 23.649  1.00 15.67 ? 120  BNZ A C6    1 
+HETATM 254 C  C1    . BNZ K 2 .  ? 0.537  13.066 10.977  1.00 5.85  ? 102  BNZ B C1    1 
+HETATM 255 C  C2    . BNZ K 2 .  ? -0.489 12.434 10.309  1.00 5.51  ? 102  BNZ B C2    1 
+HETATM 256 C  C3    . BNZ K 2 .  ? -1.058 13.028 9.183   1.00 6.27  ? 102  BNZ B C3    1 
+HETATM 257 C  C4    . BNZ K 2 .  ? -0.608 14.261 8.767   1.00 7.49  ? 102  BNZ B C4    1 
+HETATM 258 C  C5    . BNZ K 2 .  ? 0.442  14.896 9.434   1.00 7.64  ? 102  BNZ B C5    1 
+HETATM 259 C  C6    . BNZ K 2 .  ? 1.026  14.286 10.527  1.00 6.66  ? 102  BNZ B C6    1 
+HETATM 260 C  C1    . BNZ L 2 .  ? 12.267 -0.171 10.612  1.00 7.94  ? 103  BNZ B C1    1 
+HETATM 261 C  C2    . BNZ L 2 .  ? 10.938 -0.131 10.981  1.00 8.55  ? 103  BNZ B C2    1 
+HETATM 262 C  C3    . BNZ L 2 .  ? 10.387 1.046  11.462  1.00 8.28  ? 103  BNZ B C3    1 
+HETATM 263 C  C4    . BNZ L 2 .  ? 11.168 2.178  11.563  1.00 7.17  ? 103  BNZ B C4    1 
+HETATM 264 C  C5    . BNZ L 2 .  ? 12.503 2.144  11.199  1.00 7.07  ? 103  BNZ B C5    1 
+HETATM 265 C  C6    . BNZ L 2 .  ? 13.052 0.971  10.703  1.00 7.63  ? 103  BNZ B C6    1 
+HETATM 266 C  C1    . BNZ M 2 .  ? 4.570  21.971 1.549   1.00 6.75  ? 104  BNZ B C1    1 
+HETATM 267 C  C2    . BNZ M 2 .  ? 3.941  23.164 1.882   1.00 8.10  ? 104  BNZ B C2    1 
+HETATM 268 C  C3    . BNZ M 2 .  ? 4.662  24.352 1.889   1.00 6.78  ? 104  BNZ B C3    1 
+HETATM 269 C  C4    . BNZ M 2 .  ? 6.026  24.319 1.587   1.00 5.70  ? 104  BNZ B C4    1 
+HETATM 270 C  C5    . BNZ M 2 .  ? 6.643  23.128 1.254   1.00 5.37  ? 104  BNZ B C5    1 
+HETATM 271 C  C6    . BNZ M 2 .  ? 5.908  21.952 1.218   1.00 5.11  ? 104  BNZ B C6    1 
+HETATM 272 C  C1    . BNZ N 2 .  ? -0.371 5.255  2.050   1.00 8.42  ? 105  BNZ B C1    1 
+HETATM 273 C  C2    . BNZ N 2 .  ? 1.001  5.354  1.816   1.00 8.72  ? 105  BNZ B C2    1 
+HETATM 274 C  C3    . BNZ N 2 .  ? 1.826  4.271  2.058   1.00 8.82  ? 105  BNZ B C3    1 
+HETATM 275 C  C4    . BNZ N 2 .  ? 1.285  3.085  2.537   1.00 9.46  ? 105  BNZ B C4    1 
+HETATM 276 C  C5    . BNZ N 2 .  ? -0.081 2.990  2.788   1.00 9.01  ? 105  BNZ B C5    1 
+HETATM 277 C  C6    . BNZ N 2 .  ? -0.908 4.074  2.531   1.00 7.89  ? 105  BNZ B C6    1 
+HETATM 278 C  C1    . BNZ O 2 .  ? 14.433 9.972  4.476   1.00 10.08 ? 106  BNZ B C1    1 
+HETATM 279 C  C2    . BNZ O 2 .  ? 13.152 9.438  4.594   1.00 9.30  ? 106  BNZ B C2    1 
+HETATM 280 C  C3    . BNZ O 2 .  ? 12.129 10.200 5.154   1.00 9.47  ? 106  BNZ B C3    1 
+HETATM 281 C  C4    . BNZ O 2 .  ? 12.386 11.472 5.634   1.00 10.77 ? 106  BNZ B C4    1 
+HETATM 282 C  C5    . BNZ O 2 .  ? 13.663 12.020 5.481   1.00 10.98 ? 106  BNZ B C5    1 
+HETATM 283 C  C6    . BNZ O 2 .  ? 14.670 11.242 4.934   1.00 10.87 ? 106  BNZ B C6    1 
+HETATM 284 C  C1    . BNZ P 2 .  ? 7.050  3.731  5.581   1.00 9.89  ? 107  BNZ B C1    1 
+HETATM 285 C  C2    . BNZ P 2 .  ? 6.362  2.523  5.651   1.00 10.23 ? 107  BNZ B C2    1 
+HETATM 286 C  C3    . BNZ P 2 .  ? 5.682  2.062  4.505   1.00 10.01 ? 107  BNZ B C3    1 
+HETATM 287 C  C4    . BNZ P 2 .  ? 5.674  2.839  3.365   1.00 9.86  ? 107  BNZ B C4    1 
+HETATM 288 C  C5    . BNZ P 2 .  ? 6.414  3.998  3.289   1.00 10.15 ? 107  BNZ B C5    1 
+HETATM 289 C  C6    . BNZ P 2 .  ? 7.088  4.450  4.408   1.00 10.70 ? 107  BNZ B C6    1 
+HETATM 290 C  C1    . BNZ Q 2 .  ? -1.127 12.747 -9.583  1.00 12.86 ? 108  BNZ B C1    1 
+HETATM 291 C  C2    . BNZ Q 2 .  ? -1.901 13.520 -10.466 1.00 13.04 ? 108  BNZ B C2    1 
+HETATM 292 C  C3    . BNZ Q 2 .  ? -2.662 14.558 -10.005 1.00 14.13 ? 108  BNZ B C3    1 
+HETATM 293 C  C4    . BNZ Q 2 .  ? -2.701 14.833 -8.607  1.00 13.27 ? 108  BNZ B C4    1 
+HETATM 294 C  C5    . BNZ Q 2 .  ? -1.910 14.093 -7.767  1.00 12.49 ? 108  BNZ B C5    1 
+HETATM 295 C  C6    . BNZ Q 2 .  ? -1.114 13.055 -8.242  1.00 12.37 ? 108  BNZ B C6    1 
+HETATM 296 C  C1    . BNZ R 2 .  ? 11.144 6.267  3.968   1.00 10.30 ? 111  BNZ B C1    1 
+HETATM 297 C  C2    . BNZ R 2 .  ? 11.350 5.375  5.043   1.00 8.67  ? 111  BNZ B C2    1 
+HETATM 298 C  C3    . BNZ R 2 .  ? 10.581 5.502  6.185   1.00 7.48  ? 111  BNZ B C3    1 
+HETATM 299 C  C4    . BNZ R 2 .  ? 9.653  6.533  6.289   1.00 9.35  ? 111  BNZ B C4    1 
+HETATM 300 C  C5    . BNZ R 2 .  ? 9.459  7.399  5.248   1.00 11.22 ? 111  BNZ B C5    1 
+HETATM 301 C  C6    . BNZ R 2 .  ? 10.180 7.242  4.053   1.00 10.68 ? 111  BNZ B C6    1 
+HETATM 302 C  C1    . BNZ S 2 .  ? 3.585  20.771 5.108   1.00 15.06 ? 112  BNZ B C1    1 
+HETATM 303 C  C2    . BNZ S 2 .  ? 2.552  21.727 5.079   1.00 13.91 ? 112  BNZ B C2    1 
+HETATM 304 C  C3    . BNZ S 2 .  ? 1.338  21.415 4.495   1.00 11.52 ? 112  BNZ B C3    1 
+HETATM 305 C  C4    . BNZ S 2 .  ? 1.140  20.123 3.957   1.00 9.78  ? 112  BNZ B C4    1 
+HETATM 306 C  C5    . BNZ S 2 .  ? 2.175  19.238 3.941   1.00 9.08  ? 112  BNZ B C5    1 
+HETATM 307 C  C6    . BNZ S 2 .  ? 3.377  19.530 4.564   1.00 10.18 ? 112  BNZ B C6    1 
+HETATM 308 C  C1    . BNZ T 2 .  ? 8.700  6.285  9.952   1.00 12.71 ? 113  BNZ B C1    1 
+HETATM 309 C  C2    . BNZ T 2 .  ? 7.300  6.276  9.813   1.00 11.78 ? 113  BNZ B C2    1 
+HETATM 310 C  C3    . BNZ T 2 .  ? 6.684  5.110  9.490   1.00 11.07 ? 113  BNZ B C3    1 
+HETATM 311 C  C4    . BNZ T 2 .  ? 7.384  3.922  9.314   1.00 11.95 ? 113  BNZ B C4    1 
+HETATM 312 C  C5    . BNZ T 2 .  ? 8.758  3.923  9.459   1.00 10.80 ? 113  BNZ B C5    1 
+HETATM 313 C  C6    . BNZ T 2 .  ? 9.397  5.110  9.779   1.00 11.34 ? 113  BNZ B C6    1 
+HETATM 314 C  C1    . BNZ U 2 .  ? 7.795  9.286  12.909  1.00 19.24 ? 114  BNZ B C1    1 
+HETATM 315 C  C2    . BNZ U 2 .  ? 7.084  10.252 12.187  1.00 15.53 ? 114  BNZ B C2    1 
+HETATM 316 C  C3    . BNZ U 2 .  ? 6.663  11.408 12.797  1.00 11.47 ? 114  BNZ B C3    1 
+HETATM 317 C  C4    . BNZ U 2 .  ? 6.915  11.620 14.163  1.00 10.31 ? 114  BNZ B C4    1 
+HETATM 318 C  C5    . BNZ U 2 .  ? 7.664  10.698 14.858  1.00 11.17 ? 114  BNZ B C5    1 
+HETATM 319 C  C6    . BNZ U 2 .  ? 8.052  9.508  14.263  1.00 16.98 ? 114  BNZ B C6    1 
+HETATM 320 C  C1    A BNZ V 2 .  ? 13.513 20.562 8.857   0.44 22.41 ? 117  BNZ B C1    1 
+HETATM 321 C  C1    B BNZ V 2 .  ? 14.917 18.663 9.592   0.56 20.77 ? 117  BNZ B C1    1 
+HETATM 322 C  C2    A BNZ V 2 .  ? 13.738 19.777 9.978   0.44 21.23 ? 117  BNZ B C2    1 
+HETATM 323 C  C2    B BNZ V 2 .  ? 14.894 19.891 10.198  0.56 20.97 ? 117  BNZ B C2    1 
+HETATM 324 C  C3    A BNZ V 2 .  ? 14.893 19.001 10.062  0.44 20.55 ? 117  BNZ B C3    1 
+HETATM 325 C  C3    B BNZ V 2 .  ? 15.275 21.042 9.495   0.56 21.16 ? 117  BNZ B C3    1 
+HETATM 326 C  C4    A BNZ V 2 .  ? 15.818 19.012 9.038   0.44 21.20 ? 117  BNZ B C4    1 
+HETATM 327 C  C4    B BNZ V 2 .  ? 15.669 20.945 8.179   0.56 21.82 ? 117  BNZ B C4    1 
+HETATM 328 C  C5    A BNZ V 2 .  ? 15.569 19.753 7.879   0.44 21.73 ? 117  BNZ B C5    1 
+HETATM 329 C  C5    B BNZ V 2 .  ? 15.730 19.668 7.559   0.56 21.13 ? 117  BNZ B C5    1 
+HETATM 330 C  C6    A BNZ V 2 .  ? 14.459 20.610 7.842   0.44 23.01 ? 117  BNZ B C6    1 
+HETATM 331 C  C6    B BNZ V 2 .  ? 15.298 18.558 8.239   0.56 20.57 ? 117  BNZ B C6    1 
+HETATM 332 O  O     . HOH W 3 .  ? -2.715 12.980 16.356  1.00 6.91  ? 2001 HOH A O     1 
+# 
+loop_
+_atom_site_anisotrop.id 
+_atom_site_anisotrop.type_symbol 
+_atom_site_anisotrop.pdbx_label_atom_id 
+_atom_site_anisotrop.pdbx_label_alt_id 
+_atom_site_anisotrop.pdbx_label_comp_id 
+_atom_site_anisotrop.pdbx_label_asym_id 
+_atom_site_anisotrop.pdbx_label_seq_id 
+_atom_site_anisotrop.pdbx_PDB_ins_code 
+_atom_site_anisotrop.U[1][1] 
+_atom_site_anisotrop.U[2][2] 
+_atom_site_anisotrop.U[3][3] 
+_atom_site_anisotrop.U[1][2] 
+_atom_site_anisotrop.U[1][3] 
+_atom_site_anisotrop.U[2][3] 
+_atom_site_anisotrop.pdbx_auth_seq_id 
+_atom_site_anisotrop.pdbx_auth_comp_id 
+_atom_site_anisotrop.pdbx_auth_asym_id 
+_atom_site_anisotrop.pdbx_auth_atom_id 
+1   N  N     . CTH A 1  ? 0.0170 0.0344 0.0557 0.0020  -0.0025 -0.0012 1    CTH A N     
+2   C  CA    . CTH A 1  ? 0.0185 0.0379 0.0592 0.0040  -0.0029 -0.0015 1    CTH A CA    
+3   C  C     . CTH A 1  ? 0.0205 0.0350 0.0474 0.0038  -0.0008 0.0035  1    CTH A C     
+4   O  O     . CTH A 1  ? 0.0221 0.0404 0.0641 -0.0058 0.0013  0.0000  1    CTH A O     
+5   C  CB    . CTH A 1  ? 0.0270 0.0372 0.0560 -0.0001 0.0030  0.0072  1    CTH A CB    
+6   C  CG2   . CTH A 1  ? 0.0360 0.0747 0.0771 -0.0092 0.0123  0.0228  1    CTH A CG2   
+7   CL CL2   . CTH A 1  ? 0.0732 0.0914 0.1164 -0.0391 -0.0045 0.0317  1    CTH A CL2   
+8   O  OG1   . CTH A 1  ? 0.0349 0.0422 0.0468 0.0019  0.0011  0.0070  1    CTH A OG1   
+9   N  N     . DVA A 2  ? 0.0184 0.0370 0.0659 -0.0024 0.0038  0.0007  2    DVA A N     
+10  C  CA    . DVA A 2  ? 0.0204 0.0410 0.0631 0.0034  0.0042  0.0066  2    DVA A CA    
+11  C  CB    . DVA A 2  ? 0.0321 0.0509 0.0919 0.0114  0.0148  0.0170  2    DVA A CB    
+12  C  CG1   . DVA A 2  ? 0.0701 0.0795 0.0929 0.0169  0.0092  0.0321  2    DVA A CG1   
+13  C  CG2   . DVA A 2  ? 0.0618 0.0745 0.1176 0.0128  -0.0100 -0.0092 2    DVA A CG2   
+14  C  C     . DVA A 2  ? 0.0236 0.0423 0.0589 -0.0002 -0.0021 -0.0014 2    DVA A C     
+15  O  O     . DVA A 2  ? 0.0300 0.0554 0.0596 -0.0013 0.0022  -0.0137 2    DVA A O     
+16  N  N     . POM A 3  ? 0.0281 0.0524 0.0511 -0.0046 0.0002  0.0012  3    POM A N     
+17  C  CA    . POM A 3  ? 0.0284 0.0404 0.0583 -0.0057 -0.0014 -0.0035 3    POM A CA    
+18  C  C     . POM A 3  ? 0.0244 0.0461 0.0527 -0.0096 0.0053  0.0006  3    POM A C     
+19  O  O     . POM A 3  ? 0.0302 0.0516 0.0674 0.0005  -0.0012 0.0011  3    POM A O     
+20  C  CB    . POM A 3  ? 0.0406 0.0474 0.0662 0.0004  -0.0070 0.0099  3    POM A CB    
+21  C  CG    . POM A 3  ? 0.0453 0.0721 0.0698 -0.0218 -0.0020 0.0163  3    POM A CG    
+22  C  CD    . POM A 3  ? 0.0399 0.0703 0.0505 -0.0147 0.0039  0.0013  3    POM A CD    
+23  O  OG    . POM A 3  ? 0.1208 0.0986 0.0844 -0.0528 0.0210  0.0206  3    POM A OG    
+24  C  CD1   . POM A 3  ? 0.0458 0.1135 0.0597 0.0021  0.0126  -0.0101 3    POM A CD1   
+25  N  N     . SAR A 4  ? 0.0290 0.0638 0.0537 0.0016  -0.0018 -0.0008 4    SAR A N     
+26  C  CA    . SAR A 4  ? 0.0373 0.0564 0.0549 0.0003  0.0082  -0.0083 4    SAR A CA    
+27  C  C     . SAR A 4  ? 0.0360 0.0532 0.0523 0.0007  -0.0038 -0.0057 4    SAR A C     
+28  O  O     . SAR A 4  ? 0.0390 0.0487 0.0649 0.0052  0.0105  -0.0026 4    SAR A O     
+29  C  CN    . SAR A 4  ? 0.0510 0.1019 0.0594 0.0004  -0.0174 0.0041  4    SAR A CN    
+30  N  N     . MAA A 5  ? 0.0400 0.0489 0.0514 0.0007  0.0071  -0.0072 5    MAA A N     
+31  C  CM    . MAA A 5  ? 0.0613 0.0460 0.0811 0.0029  0.0133  -0.0088 5    MAA A CM    
+32  C  CA    . MAA A 5  ? 0.0435 0.0576 0.0505 0.0009  0.0079  -0.0025 5    MAA A CA    
+33  C  CB    . MAA A 5  ? 0.0676 0.0798 0.0461 -0.0017 -0.0019 -0.0029 5    MAA A CB    
+34  C  C     . MAA A 5  ? 0.0294 0.0599 0.0434 0.0045  0.0107  0.0045  5    MAA A C     
+35  O  O     . MAA A 5  ? 0.0602 0.0578 0.0539 -0.0004 -0.0031 0.0182  5    MAA A O     
+36  C  C1    . PXZ A 6  ? 0.0229 0.0367 0.0468 0.0009  -0.0006 -0.0024 6    PXZ A C1    
+37  C  C0    . PXZ A 6  ? 0.0211 0.0385 0.0565 0.0007  0.0015  -0.0019 6    PXZ A C0    
+38  O  O1    . PXZ A 6  ? 0.0259 0.0408 0.0776 -0.0033 -0.0014 -0.0047 6    PXZ A O1    
+39  C  C2    . PXZ A 6  ? 0.0226 0.0395 0.0516 -0.0022 -0.0031 -0.0045 6    PXZ A C2    
+40  N  N2    . PXZ A 6  ? 0.0199 0.0445 0.0719 0.0050  0.0090  0.0046  6    PXZ A N2    
+41  C  C3    . PXZ A 6  ? 0.0250 0.0468 0.0547 0.0057  0.0042  -0.0077 6    PXZ A C3    
+42  O  O3    . PXZ A 6  ? 0.0265 0.0487 0.1000 0.0041  0.0102  -0.0018 6    PXZ A O3    
+43  C  C4    . PXZ A 6  ? 0.0282 0.0435 0.0526 0.0083  0.0010  -0.0042 6    PXZ A C4    
+44  O  O5    . PXZ A 6  ? 0.0312 0.0314 0.0757 0.0049  0.0084  -0.0006 6    PXZ A O5    
+45  C  C6    . PXZ A 6  ? 0.0488 0.0348 0.0925 0.0001  0.0158  0.0053  6    PXZ A C6    
+46  C  C7    . PXZ A 6  ? 0.0515 0.0380 0.1144 -0.0130 0.0198  0.0012  6    PXZ A C7    
+47  C  C8    . PXZ A 6  ? 0.0433 0.0430 0.0827 -0.0121 0.0145  -0.0060 6    PXZ A C8    
+48  C  C9    . PXZ A 6  ? 0.0382 0.0389 0.0508 0.0006  0.0015  -0.0021 6    PXZ A C9    
+49  C  "C0'" . PXZ A 6  ? 0.0347 0.0337 0.0461 -0.0007 0.0020  0.0012  6    PXZ A "C0'" 
+50  O  "O1'" . PXZ A 6  ? 0.0308 0.0448 0.0628 -0.0040 0.0008  -0.0018 6    PXZ A "O1'" 
+51  N  N10   . PXZ A 6  ? 0.0248 0.0344 0.0467 0.0036  0.0021  -0.0080 6    PXZ A N10   
+52  C  C11   . PXZ A 6  ? 0.0221 0.0324 0.0432 0.0015  -0.0029 -0.0042 6    PXZ A C11   
+53  C  C12   . PXZ A 6  ? 0.0262 0.0318 0.0494 0.0060  0.0021  -0.0010 6    PXZ A C12   
+54  C  C13   . PXZ A 6  ? 0.0382 0.0354 0.0579 -0.0014 0.0075  -0.0032 6    PXZ A C13   
+55  C  C14   . PXZ A 6  ? 0.0349 0.0315 0.0434 -0.0012 0.0037  -0.0040 6    PXZ A C14   
+56  C  C15   . PXZ A 6  ? 0.0258 0.0500 0.0957 0.0118  0.0019  0.0041  6    PXZ A C15   
+57  C  C16   . PXZ A 6  ? 0.0610 0.0342 0.1489 0.0014  0.0304  0.0057  6    PXZ A C16   
+58  N  N     . THR A 7  ? 0.0292 0.0463 0.0534 0.0063  0.0001  -0.0068 7    THR A N     
+59  C  CA    . THR A 7  ? 0.0299 0.0374 0.0503 0.0018  0.0023  -0.0084 7    THR A CA    
+60  C  C     . THR A 7  ? 0.0347 0.0423 0.0533 0.0009  -0.0034 -0.0096 7    THR A C     
+61  O  O     . THR A 7  ? 0.0307 0.0479 0.0786 -0.0001 -0.0035 -0.0127 7    THR A O     
+62  C  CB    . THR A 7  ? 0.0359 0.0382 0.0544 0.0071  -0.0015 -0.0061 7    THR A CB    
+63  O  OG1   . THR A 7  ? 0.0476 0.0542 0.0475 0.0093  -0.0050 -0.0126 7    THR A OG1   
+64  C  CG2   . THR A 7  ? 0.0439 0.0481 0.0618 -0.0062 0.0056  0.0017  7    THR A CG2   
+65  N  N     . DVA A 8  ? 0.0286 0.0399 0.0717 -0.0005 -0.0035 -0.0090 8    DVA A N     
+66  C  CA    . DVA A 8  ? 0.0351 0.0391 0.0609 0.0023  -0.0060 -0.0077 8    DVA A CA    
+67  C  CB    . DVA A 8  ? 0.0386 0.0401 0.0532 0.0051  0.0015  -0.0036 8    DVA A CB    
+68  C  CG1   . DVA A 8  ? 0.0452 0.0522 0.0733 0.0045  0.0065  -0.0055 8    DVA A CG1   
+69  C  CG2   . DVA A 8  ? 0.0536 0.0399 0.0574 0.0025  0.0081  -0.0110 8    DVA A CG2   
+70  C  C     . DVA A 8  ? 0.0322 0.0341 0.0674 0.0028  0.0036  -0.0096 8    DVA A C     
+71  O  O     . DVA A 8  ? 0.0357 0.0399 0.0585 -0.0012 0.0068  -0.0050 8    DVA A O     
+72  N  N     . H5M A 9  ? 0.0371 0.0476 0.0781 -0.0065 -0.0001 -0.0068 9    H5M A N     
+73  C  CA    . H5M A 9  ? 0.0402 0.0612 0.0804 0.0028  -0.0086 -0.0184 9    H5M A CA    
+74  C  C     . H5M A 9  ? 0.0351 0.0653 0.0947 0.0041  -0.0100 -0.0233 9    H5M A C     
+75  O  O     . H5M A 9  ? 0.0748 0.0597 0.1102 -0.0057 -0.0252 -0.0243 9    H5M A O     
+76  C  CB    . H5M A 9  ? 0.0377 0.0671 0.1091 0.0075  -0.0150 -0.0330 9    H5M A CB    
+77  C  CG    . H5M A 9  ? 0.0403 0.0651 0.1284 -0.0148 0.0084  -0.0369 9    H5M A CG    
+78  C  CD    . H5M A 9  ? 0.0371 0.0527 0.0935 -0.0145 0.0107  -0.0120 9    H5M A CD    
+79  O  OB    . H5M A 9  ? 0.0568 0.0749 0.0982 0.0208  -0.0165 -0.0275 9    H5M A OB    
+80  C  CD1   . H5M A 9  ? 0.0695 0.0518 0.1402 -0.0097 0.0330  0.0035  9    H5M A CD1   
+81  N  N     . SAR A 10 ? 0.0449 0.0763 0.0889 -0.0019 -0.0105 -0.0274 10   SAR A N     
+82  C  CA    . SAR A 10 ? 0.0469 0.0804 0.0830 0.0181  -0.0091 -0.0073 10   SAR A CA    
+83  C  C     . SAR A 10 ? 0.0515 0.0679 0.0623 0.0047  -0.0118 -0.0168 10   SAR A C     
+84  O  O     . SAR A 10 ? 0.0501 0.0741 0.0781 0.0156  -0.0108 -0.0010 10   SAR A O     
+85  C  CN    . SAR A 10 ? 0.0566 0.1068 0.1024 0.0069  -0.0089 -0.0448 10   SAR A CN    
+86  N  N     . MVA A 11 ? 0.0593 0.0657 0.0632 0.0124  -0.0160 -0.0101 11   MVA A N     
+87  C  CN    . MVA A 11 ? 0.0823 0.0733 0.0995 0.0299  -0.0148 -0.0077 11   MVA A CN    
+88  C  CA    . MVA A 11 ? 0.0595 0.0634 0.0536 0.0061  -0.0046 -0.0166 11   MVA A CA    
+89  C  CB    . MVA A 11 ? 0.0878 0.0799 0.0571 0.0022  -0.0042 -0.0181 11   MVA A CB    
+90  C  CG1   . MVA A 11 ? 0.1210 0.1241 0.0630 -0.0022 -0.0208 -0.0325 11   MVA A CG1   
+91  C  CG2   . MVA A 11 ? 0.1115 0.0965 0.0665 -0.0005 0.0210  -0.0227 11   MVA A CG2   
+92  C  C     . MVA A 11 ? 0.0536 0.0509 0.0558 0.0153  -0.0063 -0.0158 11   MVA A C     
+93  O  O     . MVA A 11 ? 0.0527 0.0911 0.0658 0.0254  0.0044  -0.0257 11   MVA A O     
+94  N  N     . CTH B 1  ? 0.0306 0.0314 0.0528 -0.0044 -0.0017 0.0027  1    CTH B N     
+95  C  CA    . CTH B 1  ? 0.0274 0.0345 0.0490 -0.0024 -0.0032 0.0036  1    CTH B CA    
+96  C  C     . CTH B 1  ? 0.0382 0.0408 0.0379 0.0052  -0.0017 -0.0021 1    CTH B C     
+97  O  O     . CTH B 1  ? 0.0370 0.0327 0.0744 -0.0002 -0.0024 -0.0027 1    CTH B O     
+98  C  CB    . CTH B 1  ? 0.0400 0.0350 0.0492 -0.0012 -0.0072 0.0039  1    CTH B CB    
+99  C  CG2   . CTH B 1  ? 0.0782 0.0530 0.0559 0.0156  0.0008  0.0020  1    CTH B CG2   
+100 CL CL2   A CTH B 1  ? 0.0710 0.0689 0.0689 0.0204  0.0102  -0.0054 1    CTH B CL2   
+101 CL CL2   B CTH B 1  ? 0.1107 0.0694 0.0670 0.0183  0.0113  -0.0036 1    CTH B CL2   
+102 O  OG1   . CTH B 1  ? 0.0435 0.0414 0.0484 -0.0031 -0.0041 0.0052  1    CTH B OG1   
+103 N  N     . DVA B 2  ? 0.0333 0.0381 0.0526 0.0050  0.0000  0.0036  2    DVA B N     
+104 C  CA    . DVA B 2  ? 0.0340 0.0453 0.0552 0.0049  0.0008  0.0084  2    DVA B CA    
+105 C  CB    . DVA B 2  ? 0.0370 0.0689 0.0572 0.0044  -0.0048 0.0090  2    DVA B CB    
+106 C  CG1   . DVA B 2  ? 0.0473 0.0765 0.0854 0.0155  -0.0109 -0.0024 2    DVA B CG1   
+107 C  CG2   . DVA B 2  ? 0.0438 0.0733 0.0838 -0.0045 -0.0135 -0.0057 2    DVA B CG2   
+108 C  C     . DVA B 2  ? 0.0397 0.0404 0.0607 0.0058  0.0036  0.0145  2    DVA B C     
+109 O  O     . DVA B 2  ? 0.0543 0.0469 0.0516 0.0066  0.0071  0.0103  2    DVA B O     
+110 N  N     . POM B 3  ? 0.0474 0.0481 0.0529 0.0034  0.0042  0.0083  3    POM B N     
+111 C  CA    . POM B 3  ? 0.0525 0.0499 0.0543 0.0085  0.0080  0.0140  3    POM B CA    
+112 C  C     . POM B 3  ? 0.0468 0.0449 0.0608 0.0020  0.0045  0.0134  3    POM B C     
+113 O  O     . POM B 3  ? 0.0588 0.0920 0.0794 0.0283  0.0086  0.0284  3    POM B O     
+114 C  CB    . POM B 3  ? 0.0540 0.0546 0.0683 -0.0019 -0.0057 0.0143  3    POM B CB    
+115 C  CG    . POM B 3  ? 0.0680 0.0523 0.0746 0.0034  0.0022  -0.0068 3    POM B CG    
+116 C  CD    . POM B 3  ? 0.0625 0.0515 0.0612 0.0022  0.0115  -0.0023 3    POM B CD    
+117 O  OG    . POM B 3  ? 0.1100 0.0882 0.1298 -0.0333 0.0382  -0.0464 3    POM B OG    
+118 C  CD1   . POM B 3  ? 0.0751 0.0709 0.0889 0.0099  0.0288  -0.0054 3    POM B CD1   
+119 N  N     . SAR B 4  ? 0.0556 0.0449 0.0497 0.0045  0.0066  0.0019  4    SAR B N     
+120 C  CA    . SAR B 4  ? 0.0425 0.0474 0.0526 0.0024  0.0061  0.0013  4    SAR B CA    
+121 C  C     . SAR B 4  ? 0.0465 0.0510 0.0447 0.0042  0.0029  -0.0021 4    SAR B C     
+122 O  O     . SAR B 4  ? 0.0395 0.0527 0.0556 -0.0040 0.0047  0.0012  4    SAR B O     
+123 C  CN    . SAR B 4  ? 0.0648 0.0786 0.0526 0.0030  -0.0072 0.0101  4    SAR B CN    
+124 N  N     . MAA B 5  ? 0.0452 0.0437 0.0530 0.0000  0.0062  0.0067  5    MAA B N     
+125 C  CM    . MAA B 5  ? 0.0486 0.0729 0.0599 -0.0074 0.0140  0.0052  5    MAA B CM    
+126 C  CA    . MAA B 5  ? 0.0543 0.0446 0.0447 0.0047  0.0036  -0.0022 5    MAA B CA    
+127 C  CB    . MAA B 5  ? 0.0848 0.0594 0.0444 0.0018  -0.0023 0.0013  5    MAA B CB    
+128 C  C     . MAA B 5  ? 0.0514 0.0342 0.0493 0.0066  -0.0134 0.0007  5    MAA B C     
+129 O  O     . MAA B 5  ? 0.0683 0.0622 0.0563 -0.0124 -0.0222 0.0061  5    MAA B O     
+130 C  C1    . PXZ B 6  ? 0.0335 0.0440 0.0427 -0.0022 -0.0042 0.0065  6    PXZ B C1    
+131 C  C0    . PXZ B 6  ? 0.0296 0.0354 0.0474 0.0002  -0.0009 0.0047  6    PXZ B C0    
+132 O  O1    . PXZ B 6  ? 0.0404 0.0361 0.0615 0.0000  -0.0025 0.0084  6    PXZ B O1    
+133 C  C2    . PXZ B 6  ? 0.0378 0.0427 0.0554 0.0047  -0.0038 0.0121  6    PXZ B C2    
+134 N  N2    . PXZ B 6  ? 0.0413 0.0392 0.0890 0.0085  0.0004  0.0124  6    PXZ B N2    
+135 C  C3    . PXZ B 6  ? 0.0458 0.0611 0.0564 0.0055  0.0006  0.0203  6    PXZ B C3    
+136 O  O3    . PXZ B 6  ? 0.0480 0.0716 0.0953 0.0222  -0.0022 0.0204  6    PXZ B O3    
+137 C  C4    . PXZ B 6  ? 0.0345 0.0687 0.0604 -0.0004 -0.0016 0.0118  6    PXZ B C4    
+138 O  O5    . PXZ B 6  ? 0.0402 0.0721 0.0613 -0.0150 0.0011  -0.0032 6    PXZ B O5    
+139 C  C6    . PXZ B 6  ? 0.0573 0.0769 0.0578 -0.0362 0.0089  -0.0100 6    PXZ B C6    
+140 C  C7    . PXZ B 6  ? 0.0705 0.0707 0.0670 -0.0420 0.0161  -0.0204 6    PXZ B C7    
+141 C  C8    . PXZ B 6  ? 0.0730 0.0470 0.0576 -0.0223 0.0086  -0.0048 6    PXZ B C8    
+142 C  C9    . PXZ B 6  ? 0.0509 0.0423 0.0457 -0.0206 0.0082  0.0048  6    PXZ B C9    
+143 C  "C0'" . PXZ B 6  ? 0.0596 0.0382 0.0471 -0.0097 -0.0021 -0.0002 6    PXZ B "C0'" 
+144 O  "O1'" . PXZ B 6  ? 0.0674 0.0405 0.0730 -0.0050 -0.0008 0.0134  6    PXZ B "O1'" 
+145 N  N10   . PXZ B 6  ? 0.0378 0.0426 0.0457 -0.0088 0.0004  0.0026  6    PXZ B N10   
+146 C  C11   . PXZ B 6  ? 0.0380 0.0506 0.0362 -0.0080 0.0025  0.0050  6    PXZ B C11   
+147 C  C12   . PXZ B 6  ? 0.0366 0.0608 0.0446 -0.0110 -0.0019 -0.0001 6    PXZ B C12   
+148 C  C13   . PXZ B 6  ? 0.0461 0.0616 0.0467 -0.0186 0.0067  -0.0081 6    PXZ B C13   
+149 C  C14   . PXZ B 6  ? 0.0427 0.0436 0.0431 -0.0205 0.0010  0.0059  6    PXZ B C14   
+150 C  C15   . PXZ B 6  ? 0.0388 0.1110 0.1033 -0.0019 -0.0001 0.0232  6    PXZ B C15   
+151 C  C16   . PXZ B 6  ? 0.0521 0.1206 0.0857 -0.0399 0.0101  -0.0289 6    PXZ B C16   
+152 N  N     . THR B 7  ? 0.0387 0.0370 0.0537 -0.0077 0.0036  0.0052  7    THR B N     
+153 C  CA    . THR B 7  ? 0.0369 0.0377 0.0483 -0.0062 -0.0036 0.0062  7    THR B CA    
+154 C  C     . THR B 7  ? 0.0444 0.0339 0.0441 -0.0104 -0.0061 0.0060  7    THR B C     
+155 O  O     . THR B 7  ? 0.0472 0.0396 0.0792 -0.0058 -0.0015 0.0122  7    THR B O     
+156 C  CB    . THR B 7  ? 0.0453 0.0477 0.0567 0.0006  0.0022  0.0037  7    THR B CB    
+157 O  OG1   . THR B 7  ? 0.0461 0.0577 0.0475 -0.0010 -0.0015 0.0012  7    THR B OG1   
+158 C  CG2   . THR B 7  ? 0.0697 0.0468 0.0668 -0.0026 0.0044  -0.0090 7    THR B CG2   
+159 N  N     . DVA B 8  ? 0.0342 0.0414 0.0572 -0.0062 -0.0021 0.0089  8    DVA B N     
+160 C  CA    . DVA B 8  ? 0.0387 0.0436 0.0539 -0.0089 -0.0027 0.0135  8    DVA B CA    
+161 C  CB    . DVA B 8  ? 0.0387 0.0542 0.0648 -0.0078 -0.0015 0.0061  8    DVA B CB    
+162 C  CG1   . DVA B 8  ? 0.0609 0.0798 0.0999 -0.0059 0.0272  -0.0008 8    DVA B CG1   
+163 C  CG2   . DVA B 8  ? 0.0469 0.0743 0.0873 -0.0209 0.0061  0.0157  8    DVA B CG2   
+164 C  C     . DVA B 8  ? 0.0368 0.0399 0.0519 -0.0171 -0.0074 0.0161  8    DVA B C     
+165 O  O     . DVA B 8  ? 0.0553 0.0478 0.0495 -0.0113 -0.0040 0.0104  8    DVA B O     
+166 N  N     . H5M B 9  ? 0.0550 0.0383 0.0418 -0.0120 -0.0076 0.0049  9    H5M B N     
+167 C  CA    . H5M B 9  ? 0.0557 0.0357 0.0429 -0.0093 -0.0080 0.0079  9    H5M B CA    
+168 C  C     . H5M B 9  ? 0.0559 0.0383 0.0553 -0.0024 0.0005  0.0134  9    H5M B C     
+169 O  O     . H5M B 9  ? 0.0631 0.0506 0.0639 -0.0207 0.0053  0.0093  9    H5M B O     
+170 C  CB    . H5M B 9  ? 0.0630 0.0437 0.0551 -0.0053 -0.0001 0.0128  9    H5M B CB    
+171 C  CG    . H5M B 9  ? 0.0783 0.0421 0.0661 0.0040  0.0039  0.0019  9    H5M B CG    
+172 C  CD    . H5M B 9  ? 0.0650 0.0404 0.0552 -0.0082 0.0011  0.0028  9    H5M B CD    
+173 O  OB    . H5M B 9  ? 0.0537 0.0705 0.0668 0.0054  0.0006  0.0117  9    H5M B OB    
+174 C  CD1   . H5M B 9  ? 0.0668 0.0558 0.0914 -0.0213 -0.0055 -0.0179 9    H5M B CD1   
+175 N  N     . SAR B 10 ? 0.0852 0.0525 0.0491 -0.0197 -0.0029 0.0037  10   SAR B N     
+176 C  CA    . SAR B 10 ? 0.0741 0.0643 0.0506 -0.0063 -0.0108 0.0072  10   SAR B CA    
+177 C  C     . SAR B 10 ? 0.0628 0.0576 0.0457 -0.0150 -0.0083 0.0099  10   SAR B C     
+178 O  O     . SAR B 10 ? 0.0597 0.0728 0.0656 -0.0147 -0.0167 0.0053  10   SAR B O     
+179 C  CN    . SAR B 10 ? 0.1158 0.0968 0.0493 -0.0381 -0.0024 0.0184  10   SAR B CN    
+180 N  N     . MVA B 11 ? 0.0557 0.0585 0.0499 -0.0052 -0.0009 0.0040  11   MVA B N     
+181 C  CN    . MVA B 11 ? 0.0622 0.0789 0.0662 -0.0076 -0.0036 -0.0030 11   MVA B CN    
+182 C  CA    . MVA B 11 ? 0.0545 0.0582 0.0497 -0.0129 -0.0031 0.0002  11   MVA B CA    
+183 C  CB    . MVA B 11 ? 0.0645 0.0802 0.0505 -0.0024 0.0038  0.0033  11   MVA B CB    
+184 C  CG1   . MVA B 11 ? 0.1039 0.1059 0.0729 0.0033  0.0162  -0.0226 11   MVA B CG1   
+185 C  CG2   . MVA B 11 ? 0.1359 0.1122 0.0623 0.0230  0.0224  0.0179  11   MVA B CG2   
+186 C  C     . MVA B 11 ? 0.0490 0.0525 0.0524 -0.0015 0.0092  0.0005  11   MVA B C     
+187 O  O     . MVA B 11 ? 0.0577 0.0832 0.0609 0.0111  0.0133  0.0111  11   MVA B O     
+188 C  C1    . BNZ C .  ? 0.0901 0.0849 0.1044 0.0109  -0.0307 -0.0111 101  BNZ A C1    
+189 C  C2    . BNZ C .  ? 0.0951 0.0655 0.1096 0.0123  -0.0351 -0.0167 101  BNZ A C2    
+190 C  C3    . BNZ C .  ? 0.0915 0.0863 0.0877 0.0200  -0.0312 -0.0379 101  BNZ A C3    
+191 C  C4    . BNZ C .  ? 0.1423 0.0816 0.0860 0.0445  -0.0450 -0.0392 101  BNZ A C4    
+192 C  C5    . BNZ C .  ? 0.1698 0.0757 0.0900 0.0150  -0.0420 -0.0179 101  BNZ A C5    
+193 C  C6    . BNZ C .  ? 0.1204 0.0869 0.0964 -0.0024 -0.0251 -0.0128 101  BNZ A C6    
+194 C  C1    . BNZ D .  ? 0.2102 0.2139 0.1247 -0.0261 -0.0345 0.0195  109  BNZ A C1    
+195 C  C2    . BNZ D .  ? 0.2010 0.2491 0.1138 0.0121  0.0083  0.0099  109  BNZ A C2    
+196 C  C3    . BNZ D .  ? 0.2666 0.1725 0.1182 0.0243  -0.0404 0.0071  109  BNZ A C3    
+197 C  C4    . BNZ D .  ? 0.2201 0.1541 0.1410 -0.0053 -0.0585 0.0866  109  BNZ A C4    
+198 C  C5    . BNZ D .  ? 0.1661 0.2427 0.1071 0.0438  -0.0133 0.0657  109  BNZ A C5    
+199 C  C6    . BNZ D .  ? 0.2251 0.1981 0.0923 0.0442  -0.0337 0.0016  109  BNZ A C6    
+200 C  C1    . BNZ E .  ? 0.1523 0.1525 0.1601 -0.0422 -0.0454 0.0317  110  BNZ A C1    
+201 C  C2    . BNZ E .  ? 0.1031 0.1655 0.1321 -0.0065 0.0217  -0.0179 110  BNZ A C2    
+202 C  C3    . BNZ E .  ? 0.1002 0.1182 0.1378 -0.0023 -0.0312 -0.0107 110  BNZ A C3    
+203 C  C4    . BNZ E .  ? 0.0740 0.2085 0.1398 -0.0293 -0.0342 0.0458  110  BNZ A C4    
+204 C  C5    . BNZ E .  ? 0.0713 0.2408 0.1988 0.0302  -0.0383 -0.0022 110  BNZ A C5    
+205 C  C6    . BNZ E .  ? 0.1362 0.1369 0.2410 0.0180  -0.1018 -0.0097 110  BNZ A C6    
+206 C  C1    . BNZ F .  ? 0.1105 0.2647 0.2336 -0.0043 -0.0047 -0.0524 115  BNZ A C1    
+207 C  C2    . BNZ F .  ? 0.0871 0.2360 0.1602 -0.0422 0.0022  -0.0201 115  BNZ A C2    
+208 C  C3    . BNZ F .  ? 0.1010 0.3088 0.1287 -0.0464 0.0106  0.0094  115  BNZ A C3    
+209 C  C4    . BNZ F .  ? 0.1395 0.3317 0.1491 -0.0633 -0.0266 0.0595  115  BNZ A C4    
+210 C  C5    . BNZ F .  ? 0.1516 0.1971 0.2087 -0.0283 -0.0592 0.1060  115  BNZ A C5    
+211 C  C6    . BNZ F .  ? 0.1280 0.2077 0.2808 0.0075  -0.0412 0.0176  115  BNZ A C6    
+212 C  C1    A BNZ G .  ? 0.2717 0.2030 0.1946 -0.0005 -0.0401 -0.0035 116  BNZ A C1    
+213 C  C1    B BNZ G .  ? 0.2255 0.1901 0.2274 0.0942  -0.0351 0.0229  116  BNZ A C1    
+214 C  C2    A BNZ G .  ? 0.1763 0.1905 0.1845 -0.0023 -0.0177 0.0210  116  BNZ A C2    
+215 C  C2    B BNZ G .  ? 0.1844 0.1715 0.2048 0.0544  -0.0521 0.0321  116  BNZ A C2    
+216 C  C3    A BNZ G .  ? 0.1356 0.1786 0.1740 0.0438  -0.0590 0.0248  116  BNZ A C3    
+217 C  C3    B BNZ G .  ? 0.1519 0.1809 0.1870 0.0603  -0.0504 0.0336  116  BNZ A C3    
+218 C  C4    A BNZ G .  ? 0.1508 0.1557 0.1762 0.0540  -0.0746 0.0186  116  BNZ A C4    
+219 C  C4    B BNZ G .  ? 0.1547 0.1732 0.1723 0.0634  -0.0642 0.0273  116  BNZ A C4    
+220 C  C5    A BNZ G .  ? 0.1797 0.1690 0.1658 0.0781  -0.0441 0.0200  116  BNZ A C5    
+221 C  C5    B BNZ G .  ? 0.1820 0.1923 0.1877 0.0559  -0.0381 0.0237  116  BNZ A C5    
+222 C  C6    A BNZ G .  ? 0.2718 0.2045 0.1537 0.0500  -0.0410 -0.0042 116  BNZ A C6    
+223 C  C6    B BNZ G .  ? 0.2342 0.2047 0.2393 0.0754  0.0081  0.0105  116  BNZ A C6    
+224 C  C1    A BNZ H .  ? 0.1590 0.1263 0.1961 0.0283  -0.0064 0.0508  118  BNZ A C1    
+225 C  C1    B BNZ H .  ? 0.1691 0.1199 0.1864 -0.0071 -0.0150 0.0198  118  BNZ A C1    
+226 C  C2    A BNZ H .  ? 0.1627 0.1323 0.2040 0.0044  -0.0343 0.0205  118  BNZ A C2    
+227 C  C2    B BNZ H .  ? 0.1489 0.1355 0.2032 0.0268  -0.0023 0.0339  118  BNZ A C2    
+228 C  C3    A BNZ H .  ? 0.1477 0.1354 0.1272 0.0191  -0.0545 -0.0009 118  BNZ A C3    
+229 C  C3    B BNZ H .  ? 0.1671 0.1437 0.1679 0.0269  -0.0066 0.0182  118  BNZ A C3    
+230 C  C4    A BNZ H .  ? 0.1572 0.1176 0.1253 0.0261  0.0001  -0.0028 118  BNZ A C4    
+231 C  C4    B BNZ H .  ? 0.1674 0.1289 0.1579 0.0296  -0.0309 -0.0063 118  BNZ A C4    
+232 C  C5    A BNZ H .  ? 0.1335 0.1345 0.1733 0.0020  0.0104  0.0091  118  BNZ A C5    
+233 C  C5    B BNZ H .  ? 0.1646 0.1493 0.1739 0.0227  -0.0122 -0.0303 118  BNZ A C5    
+234 C  C6    A BNZ H .  ? 0.1504 0.1515 0.1783 0.0168  -0.0345 0.0127  118  BNZ A C6    
+235 C  C6    B BNZ H .  ? 0.1728 0.1390 0.1777 -0.0014 0.0148  -0.0100 118  BNZ A C6    
+236 C  C1    A BNZ I .  ? 0.1510 0.1889 0.2225 -0.0347 0.0253  -0.0287 119  BNZ A C1    
+237 C  C1    B BNZ I .  ? 0.1844 0.1263 0.1082 0.0176  -0.0121 0.0374  119  BNZ A C1    
+238 C  C2    A BNZ I .  ? 0.1865 0.1527 0.1677 -0.0131 0.0274  -0.0277 119  BNZ A C2    
+239 C  C2    B BNZ I .  ? 0.1461 0.1210 0.1250 0.0370  -0.0056 0.0477  119  BNZ A C2    
+240 C  C3    A BNZ I .  ? 0.2122 0.1348 0.1566 -0.0223 0.0199  -0.0018 119  BNZ A C3    
+241 C  C3    B BNZ I .  ? 0.1380 0.1205 0.1114 0.0059  0.0071  0.0234  119  BNZ A C3    
+242 C  C4    A BNZ I .  ? 0.2098 0.1381 0.1404 -0.0115 0.0299  0.0143  119  BNZ A C4    
+243 C  C4    B BNZ I .  ? 0.1181 0.1088 0.1286 -0.0164 -0.0386 0.0209  119  BNZ A C4    
+244 C  C5    A BNZ I .  ? 0.2162 0.1157 0.1551 0.0134  -0.0229 -0.0003 119  BNZ A C5    
+245 C  C5    B BNZ I .  ? 0.0643 0.1116 0.1707 -0.0144 -0.0034 0.0303  119  BNZ A C5    
+246 C  C6    A BNZ I .  ? 0.1238 0.1653 0.2304 -0.0446 -0.0173 -0.0439 119  BNZ A C6    
+247 C  C6    B BNZ I .  ? 0.1484 0.1401 0.1380 0.0224  0.0420  0.0191  119  BNZ A C6    
+248 C  C1    . BNZ J .  ? 0.2147 0.2249 0.2729 0.1141  -0.0642 -0.0432 120  BNZ A C1    
+249 C  C2    . BNZ J .  ? 0.1519 0.2749 0.2095 0.1032  -0.0786 -0.0625 120  BNZ A C2    
+250 C  C3    . BNZ J .  ? 0.1177 0.2795 0.1701 0.0107  -0.0060 -0.0154 120  BNZ A C3    
+251 C  C4    . BNZ J .  ? 0.1286 0.2774 0.1226 0.0266  0.0007  0.0196  120  BNZ A C4    
+252 C  C5    . BNZ J .  ? 0.1002 0.2702 0.1014 0.0518  -0.0129 -0.0592 120  BNZ A C5    
+253 C  C6    . BNZ J .  ? 0.1443 0.2246 0.2263 0.0634  -0.0047 -0.0761 120  BNZ A C6    
+254 C  C1    . BNZ K .  ? 0.0855 0.0805 0.0565 0.0263  0.0090  -0.0131 102  BNZ B C1    
+255 C  C2    . BNZ K .  ? 0.0842 0.0539 0.0712 0.0103  0.0275  -0.0044 102  BNZ B C2    
+256 C  C3    . BNZ K .  ? 0.0589 0.1017 0.0777 0.0117  0.0073  -0.0101 102  BNZ B C3    
+257 C  C4    . BNZ K .  ? 0.1072 0.0997 0.0776 0.0317  0.0096  0.0258  102  BNZ B C4    
+258 C  C5    . BNZ K .  ? 0.1140 0.0689 0.1074 0.0061  0.0483  0.0066  102  BNZ B C5    
+259 C  C6    . BNZ K .  ? 0.0700 0.0974 0.0857 -0.0030 0.0196  -0.0362 102  BNZ B C6    
+260 C  C1    . BNZ L .  ? 0.1364 0.1049 0.0604 0.0184  -0.0311 -0.0083 103  BNZ B C1    
+261 C  C2    . BNZ L .  ? 0.1404 0.1122 0.0723 -0.0454 -0.0232 0.0132  103  BNZ B C2    
+262 C  C3    . BNZ L .  ? 0.0937 0.1523 0.0685 -0.0220 -0.0026 0.0099  103  BNZ B C3    
+263 C  C4    . BNZ L .  ? 0.0896 0.1030 0.0797 0.0201  -0.0224 0.0137  103  BNZ B C4    
+264 C  C5    . BNZ L .  ? 0.0964 0.0977 0.0746 -0.0196 -0.0191 0.0154  103  BNZ B C5    
+265 C  C6    . BNZ L .  ? 0.0696 0.1494 0.0710 0.0116  -0.0170 0.0040  103  BNZ B C6    
+266 C  C1    . BNZ M .  ? 0.0634 0.0700 0.1232 -0.0107 -0.0013 -0.0125 104  BNZ B C1    
+267 C  C2    . BNZ M .  ? 0.0531 0.0991 0.1554 0.0007  -0.0040 -0.0334 104  BNZ B C2    
+268 C  C3    . BNZ M .  ? 0.0790 0.0723 0.1062 0.0109  -0.0108 -0.0217 104  BNZ B C3    
+269 C  C4    . BNZ M .  ? 0.0785 0.0704 0.0676 -0.0096 0.0024  -0.0013 104  BNZ B C4    
+270 C  C5    . BNZ M .  ? 0.0645 0.0803 0.0593 -0.0028 0.0113  0.0068  104  BNZ B C5    
+271 C  C6    . BNZ M .  ? 0.0649 0.0696 0.0596 0.0082  -0.0049 0.0019  104  BNZ B C6    
+272 C  C1    . BNZ N .  ? 0.1041 0.1493 0.0665 -0.0591 -0.0141 0.0076  105  BNZ B C1    
+273 C  C2    . BNZ N .  ? 0.1092 0.1559 0.0661 -0.0700 -0.0127 0.0033  105  BNZ B C2    
+274 C  C3    . BNZ N .  ? 0.1013 0.1454 0.0886 -0.0638 0.0211  -0.0257 105  BNZ B C3    
+275 C  C4    . BNZ N .  ? 0.1127 0.1290 0.1178 -0.0414 0.0371  -0.0278 105  BNZ B C4    
+276 C  C5    . BNZ N .  ? 0.1125 0.1166 0.1131 -0.0463 0.0353  -0.0294 105  BNZ B C5    
+277 C  C6    . BNZ N .  ? 0.0971 0.1257 0.0771 -0.0577 0.0082  -0.0204 105  BNZ B C6    
+278 C  C1    . BNZ O .  ? 0.1060 0.1965 0.0804 0.0214  0.0045  0.0395  106  BNZ B C1    
+279 C  C2    . BNZ O .  ? 0.1236 0.1211 0.1088 0.0004  -0.0330 0.0192  106  BNZ B C2    
+280 C  C3    . BNZ O .  ? 0.0947 0.1551 0.1102 -0.0187 -0.0040 0.0235  106  BNZ B C3    
+281 C  C4    . BNZ O .  ? 0.1517 0.1544 0.1033 0.0152  -0.0089 0.0076  106  BNZ B C4    
+282 C  C5    . BNZ O .  ? 0.1975 0.1224 0.0971 -0.0405 -0.0522 0.0355  106  BNZ B C5    
+283 C  C6    . BNZ O .  ? 0.1235 0.1907 0.0988 -0.0574 -0.0246 0.0796  106  BNZ B C6    
+284 C  C1    . BNZ P .  ? 0.1288 0.1223 0.1245 -0.0172 -0.0245 0.0061  107  BNZ B C1    
+285 C  C2    . BNZ P .  ? 0.1297 0.1239 0.1349 -0.0077 0.0118  0.0030  107  BNZ B C2    
+286 C  C3    . BNZ P .  ? 0.1214 0.1092 0.1497 -0.0143 -0.0008 -0.0007 107  BNZ B C3    
+287 C  C4    . BNZ P .  ? 0.1438 0.1033 0.1276 0.0001  -0.0051 -0.0227 107  BNZ B C4    
+288 C  C5    . BNZ P .  ? 0.1764 0.1074 0.1017 -0.0069 -0.0092 0.0002  107  BNZ B C5    
+289 C  C6    . BNZ P .  ? 0.1499 0.1333 0.1233 -0.0288 -0.0279 0.0087  107  BNZ B C6    
+290 C  C1    . BNZ Q .  ? 0.1626 0.1422 0.1839 -0.0443 0.0030  -0.0486 108  BNZ B C1    
+291 C  C2    . BNZ Q .  ? 0.2090 0.1585 0.1282 -0.0703 0.0118  -0.0174 108  BNZ B C2    
+292 C  C3    . BNZ Q .  ? 0.1698 0.1995 0.1676 -0.0256 -0.0485 -0.0140 108  BNZ B C3    
+293 C  C4    . BNZ Q .  ? 0.1027 0.2203 0.1811 -0.0066 -0.0183 -0.0544 108  BNZ B C4    
+294 C  C5    . BNZ Q .  ? 0.1110 0.2373 0.1264 -0.0182 -0.0074 -0.0504 108  BNZ B C5    
+295 C  C6    . BNZ Q .  ? 0.1228 0.1772 0.1699 -0.0292 -0.0208 -0.0202 108  BNZ B C6    
+296 C  C1    . BNZ R .  ? 0.1776 0.0861 0.1276 -0.0019 -0.0219 0.0069  111  BNZ B C1    
+297 C  C2    . BNZ R .  ? 0.1370 0.0835 0.1090 0.0293  -0.0148 -0.0071 111  BNZ B C2    
+298 C  C3    . BNZ R .  ? 0.0821 0.0862 0.1161 0.0079  -0.0197 -0.0089 111  BNZ B C3    
+299 C  C4    . BNZ R .  ? 0.0720 0.0904 0.1927 0.0082  -0.0022 0.0063  111  BNZ B C4    
+300 C  C5    . BNZ R .  ? 0.0736 0.1116 0.2410 0.0102  -0.0313 0.0411  111  BNZ B C5    
+301 C  C6    . BNZ R .  ? 0.1375 0.0925 0.1758 -0.0057 -0.0702 0.0413  111  BNZ B C6    
+302 C  C1    . BNZ S .  ? 0.1743 0.1751 0.2228 -0.0139 -0.0336 -0.0747 112  BNZ B C1    
+303 C  C2    . BNZ S .  ? 0.2297 0.1173 0.1816 -0.0166 -0.0369 -0.0417 112  BNZ B C2    
+304 C  C3    . BNZ S .  ? 0.2084 0.1120 0.1172 0.0169  -0.0266 -0.0012 112  BNZ B C3    
+305 C  C4    . BNZ S .  ? 0.1616 0.0933 0.1166 0.0048  -0.0439 -0.0018 112  BNZ B C4    
+306 C  C5    . BNZ S .  ? 0.1389 0.0964 0.1095 -0.0099 -0.0171 0.0023  112  BNZ B C5    
+307 C  C6    . BNZ S .  ? 0.1037 0.1314 0.1516 -0.0180 0.0100  -0.0374 112  BNZ B C6    
+308 C  C1    . BNZ T .  ? 0.1461 0.1483 0.1884 -0.0394 -0.0489 0.0300  113  BNZ B C1    
+309 C  C2    . BNZ T .  ? 0.1390 0.1847 0.1238 0.0448  -0.0426 0.0369  113  BNZ B C2    
+310 C  C3    . BNZ T .  ? 0.0735 0.2490 0.0982 -0.0277 -0.0170 0.0760  113  BNZ B C3    
+311 C  C4    . BNZ T .  ? 0.1797 0.1736 0.1008 -0.0719 -0.0401 0.0366  113  BNZ B C4    
+312 C  C5    . BNZ T .  ? 0.1781 0.1577 0.0744 0.0324  -0.0041 -0.0129 113  BNZ B C5    
+313 C  C6    . BNZ T .  ? 0.0619 0.2160 0.1531 -0.0217 0.0002  0.0367  113  BNZ B C6    
+314 C  C1    . BNZ U .  ? 0.2272 0.3411 0.1626 0.1746  -0.0003 -0.0634 114  BNZ B C1    
+315 C  C2    . BNZ U .  ? 0.1797 0.3038 0.1066 0.1012  0.0150  -0.0397 114  BNZ B C2    
+316 C  C3    . BNZ U .  ? 0.1331 0.1868 0.1158 0.0047  0.0311  0.0046  114  BNZ B C3    
+317 C  C4    . BNZ U .  ? 0.1186 0.1448 0.1284 -0.0544 0.0167  -0.0063 114  BNZ B C4    
+318 C  C5    . BNZ U .  ? 0.0585 0.2552 0.1107 -0.0075 0.0181  -0.0116 114  BNZ B C5    
+319 C  C6    . BNZ U .  ? 0.1646 0.3429 0.1377 0.1389  0.0274  -0.0052 114  BNZ B C6    
+320 C  C1    A BNZ V .  ? 0.4225 0.2804 0.1488 -0.0989 0.0661  -0.0778 117  BNZ B C1    
+321 C  C1    B BNZ V .  ? 0.4073 0.2140 0.1679 -0.1204 0.1447  -0.0286 117  BNZ B C1    
+322 C  C2    A BNZ V .  ? 0.4184 0.2247 0.1636 -0.1162 0.1144  -0.0655 117  BNZ B C2    
+323 C  C2    B BNZ V .  ? 0.3919 0.2291 0.1757 -0.1342 0.1308  -0.0509 117  BNZ B C2    
+324 C  C3    A BNZ V .  ? 0.4204 0.2186 0.1417 -0.1151 0.1359  -0.0436 117  BNZ B C3    
+325 C  C3    B BNZ V .  ? 0.3879 0.2165 0.1997 -0.1433 0.1076  -0.0572 117  BNZ B C3    
+326 C  C4    A BNZ V .  ? 0.4156 0.2245 0.1654 -0.1222 0.1380  -0.0021 117  BNZ B C4    
+327 C  C4    B BNZ V .  ? 0.4164 0.2269 0.1856 -0.1446 0.0925  -0.0210 117  BNZ B C4    
+328 C  C5    A BNZ V .  ? 0.4124 0.2420 0.1712 -0.1376 0.1186  0.0096  117  BNZ B C5    
+329 C  C5    B BNZ V .  ? 0.4155 0.2320 0.1553 -0.1248 0.1158  -0.0189 117  BNZ B C5    
+330 C  C6    A BNZ V .  ? 0.4137 0.2729 0.1879 -0.1266 0.0813  -0.0068 117  BNZ B C6    
+331 C  C6    B BNZ V .  ? 0.4169 0.2114 0.1533 -0.1158 0.1109  -0.0285 117  BNZ B C6    
+332 O  O     . HOH W .  ? 0.0951 0.0784 0.0890 0.0067  -0.0104 -0.0073 2001 HOH A O     
+# 

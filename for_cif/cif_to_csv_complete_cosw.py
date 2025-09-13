@@ -44,7 +44,7 @@ for cif_path in cif_files:
         for row in table:
             if (row[6] == "ATOM") and ((row[2] == "C") or (row[2] == "CA") or (row[2] == "N")):
                 rows.append([row[0],row[1],row[2],[row[3],row[4],row[5]]])
-                all_list = rows
+        all_list = rows
     
     #分解能の抽出
     try:
@@ -118,7 +118,7 @@ for cif_path in cif_files:
     #抜き出した原子の個数(all_listの要素数)分ループする
     for i in range(0,len(all_list)-3):
         #CA,C,Nの順に並んでいるもののみに条件を絞る
-        if all_list[i][2] == 'CA' and  all_list[i + 1][2] == 'C' and all_list[i + 2][2] == 'N' and all_list[i + 3][2] == 'CA' and abs(int(all_list[i + 1][1]) - int(all_list[i][1])) <= 1 and abs(int(all_list[i + 2][1]) - int(all_list[i + 1][1])) <= 1 and abs(int(all_list[i + 3][1]) - int(all_list[i + 2][1])) <= 1:
+        if all_list[i][2] == 'CA' and  all_list[i + 1][2] == 'C' and all_list[i + 2][2] == 'N' and all_list[i + 3][2] == 'CA' and all_list[i][0] == all_list[i+1][0] and all_list[i+1][0] == all_list[i+2][0] and all_list[i+2][0] == all_list[i+3][0]:
             #各ペプチド結合の「ユニット」「アミノ酸番号」「x,y,z座標」をリスト'new_list'に追加
             temp = [all_list[i][0],all_list[i][1]]
             new_list.append(temp)

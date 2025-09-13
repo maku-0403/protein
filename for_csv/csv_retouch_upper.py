@@ -7,7 +7,7 @@ import numpy as np
 
 # sphereルートディレクトリと出力ディレクトリ
 root_dir = "/Volumes/pdb_res/CIF/cif_to_csv/all_csv_temperature/sphere"
-out_dir = "/Volumes/pdb_res/CIF/allcsv_to_retouch/upper_25"
+out_dir = "/Volumes/pdb_res/CIF/csv_to_graph_data/tempreture/upper_test"
 
 # 全ての.csvファイルのフルパスを再帰的に取得
 csv_files = glob.glob(os.path.join(root_dir, '**', '*.csv'), recursive=True)
@@ -50,7 +50,7 @@ for csv_path in csv_files:
                 break
 
             #####ここで残すパーセントを指定（75を入力したら25%切り捨てという意味）#####
-            threshold = np.percentile(sort_list,75)
+            threshold = np.percentile(sort_list,60)
             
             for i in range(0,len(sort_list)):
                 if sort_list[i] > threshold:
@@ -59,7 +59,7 @@ for csv_path in csv_files:
 
             data_list = list()
 
-            cos_path = "/Volumes/pdb_res/CIF/cif_to_csv/all_csv_cosw/"+pdb_id+".csv"
+            cos_path = "/Volumes/pdb_res/CIF/cif_to_csv/all_csv_cosw_DELETE2/"+pdb_id+".csv"
 
             try:
                 with open(cos_path,"r") as f:
