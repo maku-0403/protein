@@ -20,9 +20,5 @@ for csv_path in csv_files:
     with open(csv_path) as f:
         reader = csv.reader(f)
         l = [row for row in reader]
-        if len(l) != 0:
-            if (len(l[0]) == 2) and (len(l) > 2):
-                #search here
-                if "ELEC" in l[3][1]:
-                    count += 1
+    print(csv_path,len(l))
 print(count)

@@ -64,19 +64,19 @@ for csv_path in csv_files:
                         date = int(l[2][1][0:4])
                     if date == int(input_year_str):
                         multi_unit_name = [l[9][0]]
-                        multi_unit_number = [9]
+                        multi_unit_number_index = [9]
                         for i in range(10,len(l)):
                             if l[i][0] != l[i-1][0]:
                                 multi_unit_name.append(l[i][0])
-                                multi_unit_number.append(i)
-                        multi_unit_number.append(len(l))
+                                multi_unit_number_index.append(i)
+                        multi_unit_number_index.append(len(l))
                         for i in range(0,len(multi_unit_name)):
                             count = 0
                             w_res = list()
                             unit_name = multi_unit_name[i]
-                            amino_number = multi_unit_number[i+1] - multi_unit_number[i]
+                            amino_number = int(l[multi_unit_number_index[i+1]-1][1])
                             if  amino_number >= input_amino_number:
-                                for j in range(multi_unit_number[i], multi_unit_number[i+1]):
+                                for j in range(multi_unit_number_index[i], multi_unit_number_index[i+1]):
                                     if float(l[j][3]) > degree:
                                         count += 1
                                 if amino_number <= 9:
