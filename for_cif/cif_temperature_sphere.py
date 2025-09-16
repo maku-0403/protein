@@ -59,7 +59,7 @@ for cif_path in cif_files:
     #抜き出した原子の個数(all_listの要素数)分ループする
     for i in range(0,len(all_list)-3):
         #CA,C,Nの順に並んでいるもののみに条件を絞る
-        if all_list[i][2] == 'CA' and  all_list[i + 1][2] == 'C' and all_list[i + 2][2] == 'N' and all_list[i + 3][2] == 'CA' and all_list[i][0] == all_list[i+1][0] and all_list[i+1][0] == all_list[i+2][0] and all_list[i+2][0] == all_list[i+3][0] and min(all_list[i][3],all_list[i+1][3],all_list[i+2][3],all_list[i+3][3]) >= 0:
+        if all_list[i][2] == 'CA' and  all_list[i + 1][2] == 'C' and all_list[i + 2][2] == 'N' and all_list[i + 3][2] == 'CA' and all_list[i][0] == all_list[i+1][0] and all_list[i+1][0] == all_list[i+2][0] and all_list[i+2][0] == all_list[i+3][0] and min(float(all_list[i][3]),float(all_list[i+1][3]),float(all_list[i+2][3]),float(all_list[i+3][3])) >= 0:
             sphere_list.append(all_list[i])
             sphere_list.append(all_list[i+1])
             sphere_list.append(all_list[i+2])
