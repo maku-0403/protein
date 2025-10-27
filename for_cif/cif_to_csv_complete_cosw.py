@@ -5,8 +5,8 @@ import glob
 import gemmi
 
 # mmCIFルートディレクトリ（あなたの環境に合わせて変更）
-root_dir = "/Volumes/pdb_res/CIF/mmCIF"
-out_dir = "/Volumes/pdb_res/CIF/cif_to_csv/all_csv_cosw"
+root_dir = "/home/mahan_kunii/mmCIF"
+out_dir = "/home/mahan_kunii/all_csv_cosw"
 
 # 全ての.cifファイルのフルパスを再帰的に取得
 cif_files = glob.glob(os.path.join(root_dir, '**', '*.cif'), recursive=True)
