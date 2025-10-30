@@ -5,8 +5,8 @@ import glob
 import gemmi
 
 # mmCIFルートディレクトリ（あなたの環境に合わせて変更）
-root_dir = "/home/mahan_kunii/mmCIF"
-out_dir = "/home/mahan_kunii/all_csv_cosw"
+root_dir = "/Volumes/pdb_res/CIF/mmCIF/00"
+out_dir = "/Users/kuniimahan/Desktop/school/研究関係/千葉研/sample_files"
 
 # 全ての.cifファイルのフルパスを再帰的に取得
 cif_files = glob.glob(os.path.join(root_dir, '**', '*.cif'), recursive=True)
@@ -38,12 +38,12 @@ for cif_path in cif_files:
     pdb_id = blk.find_value('_entry.id')
     
     #C,CA,Nの座標を抜き出し、「ユニット」「アミノ酸番号」「元素」「x,y,z座標」をリスト'all_list'に追加
-    table = blk.find('_atom_site.', ['label_asym_id','label_seq_id','label_atom_id','Cartn_x', 'Cartn_y', 'Cartn_z','group_PDB'])
+    table = blk.find('_atom_site.', ['label_asym_id','label_seq_id','label_atom_id','Cartn_x', 'Cartn_y', 'Cartn_z','group_PDB','label_comp_id'])
     if table:  # 見つかったとき
         rows = list()
         for row in table:
             if (row[6] == "ATOM") and ((row[2] == "C") or (row[2] == "CA") or (row[2] == "N")):
-                rows.append([row[0],row[1],row[2],[row[3],row[4],row[5]]])
+                rows.append([row[0],row[1],row[2],[row[3],row[4],row[5]],row[7]])
         all_list = rows
     
     #分解能の抽出
@@ -120,7 +120,7 @@ for cif_path in cif_files:
         #CA,C,Nの順に並んでいるもののみに条件を絞る
         if all_list[i][2] == 'CA' and  all_list[i + 1][2] == 'C' and all_list[i + 2][2] == 'N' and all_list[i + 3][2] == 'CA' and all_list[i][0] == all_list[i+1][0] and all_list[i+1][0] == all_list[i+2][0] and all_list[i+2][0] == all_list[i+3][0]:
             #各ペプチド結合の「ユニット」「アミノ酸番号」「x,y,z座標」をリスト'new_list'に追加
-            temp = [all_list[i][0],all_list[i][1]]
+            temp = [all_list[i][0],all_list[i][1],all_list[i][4],all_list[i+2][4]]
             new_list.append(temp)
             #前3つと後3つの原子座標から外積を算出
             ax = float(all_list[i][3][0]) - float(all_list[i + 1][3][0])
@@ -171,7 +171,7 @@ for cif_path in cif_files:
             writer.writerow(['R_VALUE(WORK+TEST)',r_work_test])
             writer.writerow(['R_VALUE(WORK)',r_work])
             writer.writerow(['R_VALUE(FREE)',r_free])
-            writer.writerow(['unit','amino_number','cos_w','w'])
+            writer.writerow(['unit','amino_number','aa_before','aa_after','cos_w','w'])
             for i in range(0,count):
-                temp_list = [new_list[i][0],new_list[i][1],cos_list[i],w_list[i]]
+                temp_list = [new_list[i][0],new_list[i][1],new_list[i][2],new_list[i][3],cos_list[i],w_list[i],]
                 writer.writerow(temp_list)

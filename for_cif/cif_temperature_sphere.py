@@ -5,8 +5,8 @@ import math
 import gemmi
 
 # mmCIFルートディレクトリ（あなたの環境に合わせて変更）
-root_dir = "/Users/kuniimahan/Desktop/school/研究関係/千葉研/protein-1/for_cif"
-out_dir = "/Users/kuniimahan/Desktop/school/研究関係/千葉研/protein-1/for_cif"
+root_dir = "/home/mahan_kunii/all_csv_cosw"
+out_dir = "/home/mahan_kunii/sphere"
 
 # 全ての.cifファイルのフルパスを再帰的に取得
 cif_files = glob.glob(os.path.join(root_dir, '**', '*.cif'), recursive=True)
