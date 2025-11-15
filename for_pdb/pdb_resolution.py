@@ -3,8 +3,8 @@ import os
 import glob
 import csv
 
-root_dir = "/Volumes/pdb_res/PDB/pdb"
-out_dir = "/Volumes/pdb_res/PDB/"
+root_dir = "/srv/shared/PDB"
+out_dir = "/srv/shared/"
 
 # 全ての.entファイルのフルパスを再帰的に取得
 pdb_files = glob.glob(os.path.join(root_dir, '**', '*.ent'), recursive=True)
