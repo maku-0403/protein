@@ -4,7 +4,7 @@ import glob
 import pandas as pd
 
 # CSVを読み込み（ヘッダーなし）
-df = pd.read_csv("/Volumes/pdb_res/PDB/pdb_resolution_list.csv", header=None)
+df = pd.read_csv("/srv/shared/pdb_resolution_list.csv", header=None)
 
 # 1列目をキー、2列目を値として辞書に変換
 mapping = pd.Series(df[1].values, index=df[0]).to_dict()
@@ -14,7 +14,7 @@ degree = int(input('How many degree(s)? : '))
 input_amino_number = int(input('How many number(s) of amino acid? : '))
 
 # mmCIFルートディレクトリ（あなたの環境に合わせて変更）
-root_dir = "/Volumes/pdb_res/CIF/cif_to_csv/all_csv_cosw"
+root_dir = "/srv/shared/all_csv_cosw"
 
 # 全ての.cifファイルのフルパスを再帰的に取得
 csv_files = glob.glob(os.path.join(root_dir, '**', '*.csv'), recursive=True)
@@ -22,7 +22,7 @@ csv_files = glob.glob(os.path.join(root_dir, '**', '*.csv'), recursive=True)
 save_path_pool = ['0.5-1.0Å', '1.0-1.5Å', '1.5-2.0Å', '2.0-2.5Å', '2.5-3.0Å', '3.0-3.5Å', '3.5-4.0Å', '4.0-4.5Å', '4.5-5.0Å', '5.0Å-']
 save_file_pool = ['0-5%', '5-10%', '10-15%', '15-20%', '20-40%', '40-60%', '60-80%', '80-100%']
 
-save_path_name = '/Volumes/pdb_res/CIF/csv_to_graph_data/x-ray_neutron'
+save_path_name = '/srv/shared/graph/x-ray'
 
 # 各PDB ID用のCSVファイルを作成
 for save_path in save_path_pool:
