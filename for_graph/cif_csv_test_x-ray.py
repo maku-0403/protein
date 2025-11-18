@@ -46,7 +46,7 @@ for csv_path in csv_files:
         if len(l) != 0:
             if (len(l[0]) == 2) and (len(l) > 8):
                 #search here
-                if 'X-RAY' in l[3][1]:
+                if 'X-RAY' in l[3][1] or 'NEUTRON' in l[3][1]:
                     surch_count += 1
                     file_name = l[0][1]
                     if l[1][1] == '?' or l[1][1] == '' or l[1][1] == '.' or l[1][1] == 'unknown':
