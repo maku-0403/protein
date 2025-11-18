@@ -12,7 +12,7 @@ mapping = pd.Series(df[1].values, index=df[0]).to_dict()
 w_res = list()
 degree = int(input('How many degree(s)? : '))
 input_amino_number = int(input('How many number(s) of amino acid? : '))
-input_exptype = input('Experiment Type： ')
+input_program_name = input('Experiment Type： ')
 
 # mmCIFルートディレクトリ（あなたの環境に合わせて変更）
 root_dir = "/srv/shared/all_csv_cosw"
@@ -23,7 +23,7 @@ csv_files = glob.glob(os.path.join(root_dir, '**', '*.csv'), recursive=True)
 save_path_pool = ['0.5-1.0Å', '1.0-1.5Å', '1.5-2.0Å', '2.0-2.5Å', '2.5-3.0Å', '3.0-3.5Å', '3.5-4.0Å', '4.0-4.5Å', '4.5-5.0Å', '5.0Å-']
 save_file_pool = ['0-5%', '5-10%', '10-15%', '15-20%', '20-40%', '40-60%', '60-80%', '80-100%']
 
-save_path_name = '/srv/shared/graph/exp_type/' + input_exptype
+save_path_name = '/srv/shared/graph/program/' + input_program_name
 
 # 各PDB ID用のCSVファイルを作成
 for save_path in save_path_pool:
@@ -47,7 +47,7 @@ for csv_path in csv_files:
         if len(l) != 0:
             if (len(l[0]) == 2) and (len(l) > 8):
                 #search here
-                if input_exptype in l[4][1]:
+                if input_program_name in l[4][1]:
                     surch_count += 1
                     file_name = l[0][1]
                     if l[1][1] == '?' or l[1][1] == '' or l[1][1] == '.' or l[1][1] == 'unknown':
