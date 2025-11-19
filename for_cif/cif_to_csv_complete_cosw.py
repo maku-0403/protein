@@ -5,8 +5,10 @@ import glob
 import gemmi
 
 # mmCIFルートディレクトリ（あなたの環境に合わせて変更）
-root_dir = "/Volumes/pdb_res/CIF/mmCIF/00"
-out_dir = "/Users/kuniimahan/Desktop/school/研究関係/千葉研/sample_files"
+root_dir = "/Users/kuniimahan/Desktop/school/研究関係/千葉研/protein-1/for_cif"
+out_dir = "/Users/kuniimahan/Desktop/school/研究関係/千葉研/protein-1/for_cif"
+# root_dir = "/srv/shared/mmCIF"
+# out_dir = "/srv/shared/all_csv_cosw"
 
 # 全ての.cifファイルのフルパスを再帰的に取得
 cif_files = glob.glob(os.path.join(root_dir, '**', '*.cif'), recursive=True)
@@ -26,6 +28,7 @@ for cif_path in cif_files:
     new_list = list()
     cos_list = list()
     w_list = list()
+    program_name_list = list()
 
     #計算可能なペプチド結合の数の変数'count'の定義
     count = 0
@@ -78,12 +81,12 @@ for cif_path in cif_files:
         if table:  # 見つかったとき
             for row in table:
                 if row[1] == "refinement":
-                    program_name = row[0]
+                    program_name_list.append(row[0])
     except:
         try:
-            program_name = blk.find_value("_software.name")
+            program_name_list.append(blk.find_value("_software.name"))
         except:
-            program_name = "?"
+            program_name_list[0] = "?"
     
     #R(WORK+TEST)
     try:
@@ -167,7 +170,10 @@ for cif_path in cif_files:
             writer.writerow(['RESOLUTION',resolution])
             writer.writerow(['FINAL_DATE',final_date])
             writer.writerow(['EXPERIMENT_TYPE',exp_type])
-            writer.writerow(['PROGRAM',program_name])
+            row = ['PROGRAM']
+            for i in range(0,len(program_name_list)):
+                row.append(program_name_list[i])
+            writer.writerow(row)
             writer.writerow(['R_VALUE(WORK+TEST)',r_work_test])
             writer.writerow(['R_VALUE(WORK)',r_work])
             writer.writerow(['R_VALUE(FREE)',r_free])
