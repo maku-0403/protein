@@ -11,6 +11,8 @@ out_dir = "/srv/shared/sphere"
 # 全ての.cifファイルのフルパスを再帰的に取得
 cif_files = glob.glob(os.path.join(root_dir, '**', '*.cif'), recursive=True)
 
+process_count = 0
+
 #１つのCIFファイルごとに再帰的に繰り返し
 for cif_path in cif_files:
     process_count += 1
