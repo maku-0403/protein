@@ -56,7 +56,7 @@ for csv_path in csv_files:
                         for i in range(1,len(l[4])):
                             if "SHELX" in l[4][i]:
                                 csv_program_name = l[4][i]
-                    else:
+                    elif len(l[4]) == 2:
                         csv_program_name = l[4][1]
                     print(csv_path)
                     if input_program_name in csv_program_name:
