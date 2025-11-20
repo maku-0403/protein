@@ -24,7 +24,7 @@ while(True):
         break
 
 # mmCIFルートディレクトリ（あなたの環境に合わせて変更）
-root_dir = input("CIF root directory: ")
+root_dir = input("CSV root directory: ")
 
 # 全ての.cifファイルのフルパスを再帰的に取得
 csv_files = glob.glob(os.path.join(root_dir, '**', '*.csv'), recursive=True)
