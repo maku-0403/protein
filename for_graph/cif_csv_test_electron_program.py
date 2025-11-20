@@ -86,7 +86,7 @@ for csv_path in csv_files:
                             amino_number = int(l[multi_unit_number_index[i+1]-1][1])
                             if  amino_number >= input_amino_number:
                                 for j in range(multi_unit_number_index[i], multi_unit_number_index[i+1]):
-                                    if float(l[j][3]) > degree:
+                                    if float(l[j][5]) > degree:
                                         count += 1
                                 if amino_number <= 9:
                                     break
