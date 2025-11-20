@@ -80,6 +80,8 @@ for cif_path in cif_files:
             for row in table:
                 if row[1] == "refinement":
                     program_name_list.append(row[0])
+            if len(program_name_list) == 0:
+                program_name_list[0] = "?"
     except:
         try:
             program_name_list.append(blk.find_value("_software.name"))
@@ -177,5 +179,5 @@ for cif_path in cif_files:
             writer.writerow(['R_VALUE(FREE)',r_free])
             writer.writerow(['unit','amino_number','aa_before','aa_after','cos_w','w'])
             for i in range(0,count):
-                temp_list = [new_list[i][0],new_list[i][1],new_list[i][2],new_list[i][3],cos_list[i],w_list[i],]
+                temp_list = [new_list[i][0],new_list[i][1],new_list[i][2],new_list[i][3],cos_list[i],w_list[i]]
                 writer.writerow(temp_list)

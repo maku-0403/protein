@@ -58,6 +58,8 @@ for csv_path in csv_files:
                                 csv_program_name = l[4][i]
                     elif len(l[4]) == 2:
                         csv_program_name = l[4][1]
+                    else:
+                        continue
                     print(csv_path)
                     if input_program_name in csv_program_name:
                         surch_count += 1
