@@ -13,8 +13,10 @@ cif_files = glob.glob(os.path.join(root_dir, '**', '*.cif'), recursive=True)
 
 #１つのCIFファイルごとに再帰的に繰り返し
 for cif_path in cif_files:
+    process_count += 1
     #処理中のパスを表示
-    print(f"処理中: {cif_path}")
+    if process_count % 100 == 0:
+        print(f"処理中: {process_count} / {len(cif_files)}")
 
     #読み込み/計算/書き込みのためのリスト類の定義
     temp_list = list()
