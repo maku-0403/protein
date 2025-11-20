@@ -24,6 +24,10 @@ save_file_pool = ['0-5%', '5-10%', '10-15%', '15-20%', '20-40%', '40-60%', '60-8
 
 path_name = '/Volumes/pdb_res/CIF/csv_to_graph_data/all_csv_resolution'
 
+os.makedirs("path/to/each_PDBid", exist_ok=True)
+for i in range(0,len(save_file_pool)):
+    os.makedirs("path/to/each_PDBid/"+save_file_pool[i], exist_ok=True)
+
 # 各PDB ID用のCSVファイルを作成
 for save_path in save_path_pool:
     for save_file in save_file_pool:
