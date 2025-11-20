@@ -35,8 +35,8 @@ save_file_pool = ['0-5%', '5-10%', '10-15%', '15-20%', '20-40%', '40-60%', '60-8
 out_dir = input("output directory: ")
 
 os.makedirs(out_dir+"/each_PDBid", exist_ok=True)
-for i in range(0,len(save_file_pool)):
-    os.makedirs(out_dir+"/each_PDBid/"+save_file_pool[i], exist_ok=True)
+for i in range(0,len(save_path_pool)):
+    os.makedirs(out_dir+"/each_PDBid/"+save_path_pool[i], exist_ok=True)
 
 # 各PDB ID用のCSVファイルを作成
 for save_path in save_path_pool:
