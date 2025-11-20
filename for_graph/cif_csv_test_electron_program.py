@@ -48,7 +48,14 @@ for csv_path in csv_files:
             if (len(l[0]) == 2) and (len(l) > 8):
                 #search here
                 if "ELECTRON" in l[3][1]:
-                    if input_program_name in l[4][1]:
+                    if len(l[4]) > 2:
+                        for i in range(1,len(l[4])):
+                            if "SHELX" in l[4][i]:
+                                csv_program_name = l[4][i]
+                    else:
+                        csv_program_name = l[4][1]
+                    print(csv_path)
+                    if input_program_name in csv_program_name:
                         surch_count += 1
                         file_name = l[0][1]
                         if l[1][1] == '?' or l[1][1] == '' or l[1][1] == '.' or l[1][1] == 'unknown':
