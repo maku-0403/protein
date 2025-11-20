@@ -75,11 +75,11 @@ for csv_path in csv_files:
             if len(data_list) == 1:
                 break
             
-            if data_list[8][0] != 'unit':
+            if data_list[1][0] != 'unit':
                 print('error')
                 break
             
-            cos_df = pd.DataFrame(data=data_list[9:], columns=data_list[8])
+            cos_df = pd.DataFrame(data=data_list[2:], columns=data_list[1])
             
             to_drop = pd.MultiIndex.from_tuples(del_list, names=['unit', 'amino_number'])
 
@@ -92,8 +92,8 @@ for csv_path in csv_files:
             
             with open(save_path, 'w',newline="") as f:
                 writer = csv.writer(f)
-                for i in range(0,9):
-                    writer.writerow(data_list[i])
+                writer.writerow(data_list[0])
+                writer.writerow(data_list[1])
             
             cos_df.to_csv(save_path, mode="a", header=False, index=False)
             

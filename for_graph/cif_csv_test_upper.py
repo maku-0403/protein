@@ -80,10 +80,10 @@ for csv_path in csv_files:
                         reader = csv.reader(f)
                         lu = [row for row in reader]
                         if len(lu) != 0:
-                            if (len(lu[0]) == 2) and (len(lu) > 9):
-                                upper_multi_unit_name = [lu[9][0]]
-                                upper_multi_unit_number_index = [9]
-                                for i in range(10,len(lu)):
+                            if (len(lu[0]) == 2) and (len(lu) > 2):
+                                upper_multi_unit_name = [lu[2][0]]
+                                upper_multi_unit_number_index = [2]
+                                for i in range(3,len(lu)):
                                     if lu[i][0] != lu[i-1][0]:
                                         upper_multi_unit_name.append(lu[i][0])
                                         upper_multi_unit_number_index.append(i)
