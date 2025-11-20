@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 
 # sphereルートディレクトリと出力ディレクトリ
-csv_root_dir = input("CSV root directory: ")
+csv_root_dir = input("Sphere CSV root directory: ")
 input_out_dir = input("Out directory: ")
 input_threshold = input("Pacentage of cutting: ")
 
