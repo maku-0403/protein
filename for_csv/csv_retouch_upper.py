@@ -6,11 +6,15 @@ import pandas as pd
 import numpy as np
 
 # sphereルートディレクトリと出力ディレクトリ
-root_dir = "/Volumes/pdb_res/CIF/cif_to_csv/all_csv_temperature/sphere"
-out_dir = "/Volumes/pdb_res/CIF/csv_to_graph_data/tempreture/upper_test"
+csv_root_dir = input("CSV root directory: ")
+input_out_dir = input("Out directory: ")
+input_threshold = input("Pacentage of cutting: ")
+
+out_dir = input_out_dir+"/upper_"+input_threshold
+os.makedirs(out_dir, exist_ok=True)
 
 # 全ての.csvファイルのフルパスを再帰的に取得
-csv_files = glob.glob(os.path.join(root_dir, '**', '*.csv'), recursive=True)
+csv_files = glob.glob(os.path.join(csv_root_dir, '**', '*.csv'), recursive=True)
 
 process_count = 0
 
@@ -50,7 +54,7 @@ for csv_path in csv_files:
                 break
 
             #####ここで残すパーセントを指定（75を入力したら25%切り捨てという意味）#####
-            threshold = np.percentile(sort_list,60)
+            threshold = np.percentile(sort_list,100-input_threshold)
             
             for i in range(0,len(sort_list)):
                 if sort_list[i] > threshold:
@@ -59,7 +63,7 @@ for csv_path in csv_files:
 
             data_list = list()
 
-            cos_path = "/Volumes/pdb_res/CIF/cif_to_csv/all_csv_cosw_DELETE2/"+pdb_id+".csv"
+            cos_path = csv_root_dir+"/"+pdb_id+".csv"
 
             try:
                 with open(cos_path,"r") as f:
