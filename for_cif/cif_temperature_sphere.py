@@ -5,7 +5,7 @@ import math
 import gemmi
 
 # mmCIFルートディレクトリ（あなたの環境に合わせて変更）
-root_dir = "/srv/shared/all_csv_cosw"
+root_dir = "/srv/shared/mmCIF"
 out_dir = "/srv/shared/sphere"
 
 # 全ての.cifファイルのフルパスを再帰的に取得
