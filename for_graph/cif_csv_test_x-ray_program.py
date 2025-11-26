@@ -35,6 +35,16 @@ out_dir = input("Output directory: ")
 
 input_program_name = input('Experiment Type： ')
 
+os.makedirs(out_dir+"/each_PDBid", exist_ok=True)
+for i in range(0,len(save_path_pool)):
+    os.makedirs(out_dir+"/each_PDBid/"+save_path_pool[i], exist_ok=True)
+
+# 各PDB ID用のCSVファイルを作成
+for save_path in save_path_pool:
+    for save_file in save_file_pool:
+        with open(f"{out_dir}/each_PDBid/{save_path}/{save_file}.csv", 'w',newline="") as f:
+            writer = csv.writer(f)
+
 # カウント用リストを初期化
 counts = [[0 for _ in range(8)] for _ in range(10)]
 process_count = 0
