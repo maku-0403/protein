@@ -62,6 +62,7 @@ for csv_path in csv_files:
             if (len(l[0]) == 2) and (len(l) > 8):
                 #search here
                 if "X-RAY" in l[3][1] or "NEUTRON" in l[3][1]:
+                    csv_program_name = ''
                     if len(l[4]) > 2:
                         for i in range(1,len(l[4])):
                             if "SHELX" in l[4][i]:
