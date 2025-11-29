@@ -86,7 +86,10 @@ for cif_path in cif_files:
         try:
             program_name_list.append(blk.find_value("_software.name"))
         except:
-            program_name_list[0] = "?"
+            try:
+                program_name_list.append(blk.find_value("_em_software.name"))
+            except:
+                program_name_list[0] = "?"
     
     #R(WORK+TEST)
     try:
