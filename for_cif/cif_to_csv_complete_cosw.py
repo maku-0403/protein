@@ -20,8 +20,8 @@ for cif_path in cif_files:
     if process_count % 100 == 0:
         print(f"処理中: {process_count} / {len(cif_files)}")
     
-    if process_count == 17300:
-        break
+    if process_count < 220000 :
+        continue
     
     #読み込み/計算/書き込みのためのリスト類の定義
     temp_list = list()
