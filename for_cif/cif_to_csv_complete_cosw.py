@@ -81,18 +81,27 @@ for cif_path in cif_files:
         table = blk.find('_software.', ['name','classification'])
         if table:  # 見つかったとき
             for row in table:
-                if row[1] == "refinement":
+                if "refinement" in row[1]:
                     program_name_list.append(row[0])
             if len(program_name_list) == 0:
                 program_name_list[0] = "?"
     except:
         try:
-            program_name_list.append(blk.find_value("_software.name"))
+            table = blk.find('_em_software.', ['category','name'])
+            if table:  # 見つかったとき
+                for row in table:
+                    if "REFINEMENT" in row[0]:
+                        program_name_list.append(row[1])
+                if len(program_name_list) == 0:
+                    program_name_list[0] = "?"
         except:
             try:
-                program_name_list.append(blk.find_value("_em_software.name"))
+                program_name_list.append(blk.find_value("_software.name"))
             except:
-                program_name_list[0] = "?"
+                try:
+                    program_name_list.append(blk.find_value("_em_software.name"))
+                except:
+                    program_name_list[0] = "?"
     
     #R(WORK+TEST)
     try:
