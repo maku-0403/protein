@@ -70,7 +70,15 @@ for csv_path in csv_files:
                     if len(l[4]) > 2:
                         for i in range(1,len(l[4])):
                             if (l[4][i] != '?') and (l[4][i] not in program_list):
-                                program_list.append(l[4][i])
+                                for j in range(0,len(program_list)):
+                                    if l[4][i] in program_list[j] or l[4][i].lower in program_list[j] or l[4][i].upper in program_list[j]:
+                                        print("Same program")
+                                        break
+                                    if "Coot" in l[4][i] and len(program_list) != 0:
+                                        print("Coot")
+                                        break
+                                    if j == len(program_list)-1:
+                                        program_list.append(l[4][i])
                         if len(program_list) == 1:
                             csv_program_name = program_list[0]
                         else:
@@ -80,7 +88,7 @@ for csv_path in csv_files:
                     else:
                         unknown_count += 1
                         continue
-                    if input_program_name in csv_program_name:
+                    if input_program_name in csv_program_name or input_program_name.lower() in csv_program_name:
                         surch_count += 1
                         file_name = l[0][1]
                         if l[1][1] == '?' or l[1][1] == '' or l[1][1] == '.' or l[1][1] == 'unknown':
