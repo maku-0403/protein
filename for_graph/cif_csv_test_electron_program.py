@@ -71,6 +71,7 @@ for csv_path in csv_files:
                         for i in range(1,len(l[4])):
                             if (l[4][i] != '?') and (l[4][i] not in program_list):
                                 for j in range(0,len(program_list)):
+                                    print(j,len(program_list))
                                     if l[4][i] in program_list[j] or l[4][i].lower in program_list[j] or l[4][i].upper in program_list[j]:
                                         print("Same program")
                                         break
