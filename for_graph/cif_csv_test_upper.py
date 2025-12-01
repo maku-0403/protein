@@ -9,6 +9,20 @@ df = pd.read_csv("/Volumes/pdb_res/PDB/pdb_resolution_list.csv", header=None)
 # 1列目をキー、2列目を値として辞書に変換
 mapping = pd.Series(df[1].values, index=df[0]).to_dict()
 
+w_res = list()
+
+while(True):
+    input_setting = input("1:RUN 2:setting_params (initial:10 degrees, 100 amino number) : ")
+
+    if input_setting == '1':
+        degree = 10
+        input_amino_number = 100
+        break
+    elif input_setting == '2':
+        degree = int(input('How many degree(s)? : '))
+        input_amino_number = int(input('How many number(s) of amino acid? : '))
+        break
+
 # CSVルートディレクトリ（あなたの環境に合わせて変更）
 root_dir = input("ALL CSV dir: ")
 
