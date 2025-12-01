@@ -52,6 +52,7 @@ counts = [[0 for _ in range(8)] for _ in range(10)]
 process_count = 0
 surch_count = 0
 res_error_count = 0
+unknown_count = 0
 
 for csv_path in csv_files:
     process_count += 1
@@ -69,9 +70,13 @@ for csv_path in csv_files:
                         for i in range(1,len(l[4])):
                             if "SHELX" in l[4][i]:
                                 csv_program_name = l[4][i]
+                            else:
+                                print(csv_path)
+                                break
                     elif len(l[4]) == 2:
                         csv_program_name = l[4][1]
                     else:
+                        unknown_count += 1
                         continue
                     if input_program_name in csv_program_name:
                         surch_count += 1
@@ -140,3 +145,4 @@ with open(f"{out_dir}/CSV_data_x-ray_"+input_program_name+'_'+todays_date+".csv"
 
 print(res_error_count)
 print("Count: "+str(surch_count))
+print("Unknown Count: "+str(unknown_count))
