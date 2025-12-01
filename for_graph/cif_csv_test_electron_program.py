@@ -82,7 +82,7 @@ for csv_path in csv_files:
                         if len(program_list) == 1:
                             csv_program_name = program_list[0]
                         else:
-                            print(csv_path)
+                            print(program_list,csv_path)
                     elif len(l[4]) == 2:
                         csv_program_name = l[4][1]
                     else:
