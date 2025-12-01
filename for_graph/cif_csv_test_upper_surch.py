@@ -126,7 +126,7 @@ for csv_path in csv_files:
                                                 for j, (low_rate, high_rate) in enumerate([(0, 5), (5, 10), (10, 15), (15, 20), (20, 40), (40, 60), (60, 80), (80, 100)]):
                                                     if low_rate <= w_res[1] < high_rate:
                                                         counts[i][j] += 1
-                                                        with open(f"{path_name}/each_PDBid/{save_path_pool[i]}/{save_file_pool[j]}.csv", 'a',newline="") as f:
+                                                        with open(f"{out_dir}/each_PDBid/{save_path_pool[i]}/{save_file_pool[j]}.csv", 'a',newline="") as f:
                                                             writer = csv.writer(f)
                                                             writer.writerow([w_res[2],unit_name])
 
@@ -142,7 +142,7 @@ def rate(a, b):
 rates = [[rate(counts[i][j], totals[i]) for j in range(8)] for i in range(10)]
 
 # CSVデータを保存
-with open(f"{path_name}/CSV_data.csv", 'w',newline="") as f:
+with open(f"{out_dir}/CSV_data.csv", 'w',newline="") as f:
     writer = csv.writer(f)
     writer.writerow(['rate', '0.5-1.0Å', '1.0-1.5Å', '1.5-2.0Å', '2.0-2.5Å', '2.5-3.0Å', '3.0-3.5Å', '3.5-4.0Å', '4.0-4.5Å', '4.5-5.0Å', '5.0Å-'])
     for j, save_file in enumerate(save_file_pool):
