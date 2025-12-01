@@ -78,11 +78,11 @@ for csv_path in csv_files:
                                 if j == len(program_list)-1:
                                     program_list.append(l[4][i])
                         program_list = [l for l in program_list if l != '?']
-                        program_list = [l for l in program_list if ("Coot" not in l) and (len(program_list) > 1)]
-                        if len(program_list) == 1:
-                            csv_program_name = program_list[0]
+                        program_list_comp = [l for l in program_list if ("Coot" not in l) and (len(program_list) > 1)]
+                        if len(program_list_comp) == 1:
+                            csv_program_name = program_list_comp[0]
                         else:
-                            print(program_list,csv_path)
+                            print(program_list_comp,csv_path)
                     elif len(l[4]) == 2:
                         csv_program_name = l[4][1]
                     else:
