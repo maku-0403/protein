@@ -69,7 +69,7 @@ for csv_path in csv_files:
                     program_list = list()
                     if len(l[4]) > 2:
                         for i in range(1,len(l[4])):
-                            if len(program_list) == 0:
+                            if len(program_list) == 0 and l[4][i] != '?':
                                 program_list.append(l[4][i])
                             for j in range(0,len(program_list)):
                                 if (l[4][i] in program_list[j]) or (l[4][i].lower() in program_list[j]) or (l[4][i].upper() in program_list[j]):
@@ -78,11 +78,12 @@ for csv_path in csv_files:
                                 if j == len(program_list)-1:
                                     program_list.append(l[4][i])
                         program_list = [l for l in program_list if l != '?']
-                        program_list_comp = [l for l in program_list if ("Coot" not in l) and (len(program_list) > 1)]
-                        if len(program_list_comp) == 1:
-                            csv_program_name = program_list_comp[0]
+                        if len(program_list) > 1:
+                            program_list = [l for l in program_list if "Coot" not in l]
+                        if len(program_list) == 1:
+                            csv_program_name = program_list[0]
                         else:
-                            print(program_list_comp,csv_path)
+                            print(program_list,csv_path)
                     elif len(l[4]) == 2:
                         csv_program_name = l[4][1]
                     else:
