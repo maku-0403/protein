@@ -35,6 +35,8 @@ out_dir = input("Output directory: ")
 
 input_program_name = input('Experiment Type： ')
 
+todays_date = input("Today's Date: ")
+
 os.makedirs(out_dir+"/each_PDBid", exist_ok=True)
 for i in range(0,len(save_path_pool)):
     os.makedirs(out_dir+"/each_PDBid/"+save_path_pool[i], exist_ok=True)
@@ -127,7 +129,7 @@ def rate(a, b):
 rates = [[rate(counts[i][j], totals[i]) for j in range(8)] for i in range(10)]
 
 # CSVデータを保存
-with open(f"{out_dir}/CSV_data_x-ray_"+input_program_name+".csv", 'w',newline="") as f:
+with open(f"{out_dir}/CSV_data_x-ray_"+input_program_name+'_'+todays_date+".csv", 'w',newline="") as f:
     writer = csv.writer(f)
     writer.writerow(['rate', '0.5-1.0Å', '1.0-1.5Å', '1.5-2.0Å', '2.0-2.5Å', '2.5-3.0Å', '3.0-3.5Å', '3.5-4.0Å', '4.0-4.5Å', '4.5-5.0Å', '5.0Å-'])
     for j, save_file in enumerate(save_file_pool):
