@@ -72,7 +72,7 @@ for csv_path in csv_files:
                             if len(program_list) == 0 and l[4][i] != '?':
                                 program_list.append(l[4][i])
                             for j in range(0,len(program_list)):
-                                if l[4][i] in program_list[j] or l[4][i].lower in program_list[j] or l[4][i].upper in program_list[j]:
+                                if l[4][i] in program_list[j] or l[4][i].lower() in program_list[j] or l[4][i].upper() in program_list[j]:
                                     print("Same program")
                                     break
                                 if "Coot" in l[4][i] and len(program_list) != 0:
