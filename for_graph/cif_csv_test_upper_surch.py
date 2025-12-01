@@ -65,7 +65,7 @@ for csv_path in csv_files:
                 file_name = l[0][1]
                 exp_type = l[3][1]
                 ### SURCH HERE!! ###
-                if 'X-RAY' in exp_type or 'NEUTRON' in exp_type:
+                if 'ELECTRON' in exp_type:
                     if l[1][1] == '?' or l[1][1] == '' or l[1][1] == '.' or l[1][1] == 'unknown':
                         if (file_name in mapping) and (mapping[file_name] != ''):
                             resolution = float(mapping[file_name])
