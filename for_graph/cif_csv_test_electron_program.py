@@ -65,7 +65,7 @@ for csv_path in csv_files:
             if (len(l[0]) == 2) and (len(l) > 8):
                 #search here
                 if "ELECTRON" in l[3][1]:
-                    csv_program_name = ''
+                    csv_program_name = '###'
                     program_list = list()
                     if len(l[4]) > 2:
                         for i in range(1,len(l[4])):
@@ -73,7 +73,6 @@ for csv_path in csv_files:
                                 program_list.append(l[4][i])
                             for j in range(0,len(program_list)):
                                 if (l[4][i] in program_list[j]) or (l[4][i].lower() in program_list[j]) or (l[4][i].upper() in program_list[j]):
-                                    print("Same program")
                                     break
                                 if j == len(program_list)-1:
                                     program_list.append(l[4][i])
@@ -82,8 +81,6 @@ for csv_path in csv_files:
                             program_list = [l for l in program_list if "Coot" not in l]
                         if len(program_list) == 1:
                             csv_program_name = program_list[0]
-                        else:
-                            print(program_list,csv_path)
                     elif len(l[4]) == 2:
                         csv_program_name = l[4][1]
                     else:
