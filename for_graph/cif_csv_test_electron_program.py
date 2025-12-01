@@ -69,7 +69,7 @@ for csv_path in csv_files:
                     program_list = list()
                     if len(l[4]) > 2:
                         for i in range(1,len(l[4])):
-                            if l[4][i] == '?':
+                            if (l[4][i] != '?') and (l[4][i] not in program_list):
                                 program_list.append(l[4][i])
                         if len(program_list) == 1:
                             csv_program_name = program_list[0]
