@@ -66,13 +66,15 @@ for csv_path in csv_files:
                 #search here
                 if "ELECTRON" in l[3][1]:
                     csv_program_name = ''
+                    program_list = list()
                     if len(l[4]) > 2:
                         for i in range(1,len(l[4])):
-                            if "SHELX" in l[4][i]:
-                                csv_program_name = l[4][i]
-                            else:
-                                print(csv_path)
-                                break
+                            if l[4][i] == '?':
+                                program_list.append(l[4][i])
+                        if len(program_list) == 1:
+                            csv_program_name = program_list[0]
+                        else:
+                            print(csv_path)
                     elif len(l[4]) == 2:
                         csv_program_name = l[4][1]
                     else:
