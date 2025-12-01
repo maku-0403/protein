@@ -46,7 +46,6 @@ for idx, csv_path in enumerate(csv_files, start=1):
     programs = {
         p.strip()
         for p in program_row[1:]
-        if p.strip() not in ("", "?", ".", "unknown")
     }
     if not programs:
         continue
