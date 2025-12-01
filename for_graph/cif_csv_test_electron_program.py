@@ -139,3 +139,4 @@ with open(f"{out_dir}/CSV_data_x-ray_"+input_program_name+'_'+todays_date+".csv"
     writer.writerow(['sum'] + totals)
 
 print(res_error_count)
+print("Count: "+surch_count)
