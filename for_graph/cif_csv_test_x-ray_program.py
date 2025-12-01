@@ -52,6 +52,7 @@ counts = [[0 for _ in range(8)] for _ in range(10)]
 process_count = 0
 surch_count = 0
 res_error_count = 0
+unknown_count = 0
 
 for csv_path in csv_files:
     process_count += 1
@@ -64,16 +65,28 @@ for csv_path in csv_files:
             if (len(l[0]) == 2) and (len(l) > 8):
                 #search here
                 if "X-RAY" in l[3][1] or "NEUTRON" in l[3][1]:
-                    csv_program_name = ''
+                    csv_program_name = '###'
+                    program_list = list()
                     if len(l[4]) > 2:
                         for i in range(1,len(l[4])):
-                            if "SHELX" in l[4][i]:
-                                csv_program_name = l[4][i]
+                            if len(program_list) == 0 and l[4][i] != '?':
+                                program_list.append(l[4][i])
+                            for j in range(0,len(program_list)):
+                                if (l[4][i] in program_list[j]) or (l[4][i].lower() in program_list[j]) or (l[4][i].upper() in program_list[j]):
+                                    break
+                                if j == len(program_list)-1:
+                                    program_list.append(l[4][i])
+                        program_list = [l for l in program_list if l != '?']
+                        if len(program_list) > 1:
+                            program_list = [l for l in program_list if "Coot" not in l]
+                        if len(program_list) == 1:
+                            csv_program_name = program_list[0]
                     elif len(l[4]) == 2:
                         csv_program_name = l[4][1]
                     else:
+                        unknown_count += 1
                         continue
-                    if input_program_name in csv_program_name:
+                    if input_program_name in csv_program_name or input_program_name.lower() in csv_program_name:
                         surch_count += 1
                         file_name = l[0][1]
                         if l[1][1] == '?' or l[1][1] == '' or l[1][1] == '.' or l[1][1] == 'unknown':
@@ -139,3 +152,5 @@ with open(f"{out_dir}/CSV_data_x-ray_"+input_program_name+'_'+todays_date+".csv"
     writer.writerow(['sum'] + totals)
 
 print(res_error_count)
+print("Count: "+str(surch_count))
+print("Unknown Count: "+str(unknown_count))
