@@ -113,7 +113,7 @@ for csv_path in csv_files:
                                             continue
                                         upper_amino_number = int(lu[upper_multi_unit_number_index[i+1]-1][1])
                                         for j in range(upper_multi_unit_number_index[i], upper_multi_unit_number_index[i+1]):
-                                            if float(lu[j][3]) > degree:
+                                            if float(lu[j][5]) > degree:
                                                 count += 1
                                         w_rate = count / upper_amino_number * 100
                                         if resolution != '?':
