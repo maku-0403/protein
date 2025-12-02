@@ -6,15 +6,11 @@ import pandas as pd
 import numpy as np
 
 # sphereルートディレクトリと出力ディレクトリ
-csv_root_dir = input("Sphere CSV root directory: ")
-input_out_dir = input("Out directory: ")
-input_threshold = input("Pacentage of cutting: ")
-
-out_dir = input_out_dir+"/upper_"+input_threshold
-os.makedirs(out_dir, exist_ok=True)
+root_dir = "/srv/shared/sphere"
+out_dir = "/srv/shared/mahan_kunii/graph/test/upper"
 
 # 全ての.csvファイルのフルパスを再帰的に取得
-csv_files = glob.glob(os.path.join(csv_root_dir, '**', '*.csv'), recursive=True)
+csv_files = glob.glob(os.path.join(root_dir, '**', '*.csv'), recursive=True)
 
 process_count = 0
 
@@ -54,7 +50,7 @@ for csv_path in csv_files:
                 break
 
             #####ここで残すパーセントを指定（75を入力したら25%切り捨てという意味）#####
-            threshold = np.percentile(sort_list,100-int(input_threshold))
+            threshold = np.percentile(sort_list,75)
             
             for i in range(0,len(sort_list)):
                 if sort_list[i] > threshold:
@@ -63,23 +59,20 @@ for csv_path in csv_files:
 
             data_list = list()
 
-            cos_path = csv_root_dir+"/"+pdb_id+".csv"
+            cos_path = "/srv/shared/all_csv_cosw/"+pdb_id+".csv"
 
-            try:
-                with open(cos_path,"r") as f:
-                    for line in f:
-                        data_list.append(line.strip().replace("'", "").split(','))
-            except:
-                break
+            with open(cos_path,"r") as f:
+                for line in f:
+                    data_list.append(line.strip().replace("'", "").split(','))
             
             if len(data_list) == 1:
                 break
             
-            if data_list[1][0] != 'unit':
+            if data_list[8][0] != 'unit':
                 print('error')
                 break
             
-            cos_df = pd.DataFrame(data=data_list[2:], columns=data_list[1])
+            cos_df = pd.DataFrame(data=data_list[9:], columns=data_list[8])
             
             to_drop = pd.MultiIndex.from_tuples(del_list, names=['unit', 'amino_number'])
 
@@ -92,8 +85,8 @@ for csv_path in csv_files:
             
             with open(save_path, 'w',newline="") as f:
                 writer = csv.writer(f)
-                writer.writerow(data_list[0])
-                writer.writerow(data_list[1])
+                for i in range(0,9):
+                    writer.writerow(data_list[i])
             
             cos_df.to_csv(save_path, mode="a", header=False, index=False)
             
