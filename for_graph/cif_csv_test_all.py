@@ -49,6 +49,7 @@ counts = [[0 for _ in range(8)] for _ in range(10)]
 process_count = 0
 surch_count = 0
 res_error_count = 0
+entry_count = 0
 
 for csv_path in csv_files:
     process_count += 1
@@ -82,6 +83,7 @@ for csv_path in csv_files:
                     unit_name = multi_unit_name[i]
                     amino_number = int(l[multi_unit_number_index[i+1]-1][1])
                     if  amino_number >= input_amino_number:
+                        entry_count += 1
                         for j in range(multi_unit_number_index[i], multi_unit_number_index[i+1]):
                             if float(l[j][5]) > degree:
                                 count += 1
@@ -122,3 +124,4 @@ with open(f"{out_dir}/CSV_data.csv", 'w',newline="") as f:
     writer.writerow(['sum'] + totals)
 
 print(res_error_count)
+print("Entry Count: "+str(entry_count))
