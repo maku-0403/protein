@@ -1,5 +1,5 @@
 """
-AlphaFold CSV 可視化ツール
+CSV 分子量可視化ツール
 - 散布図（密度なし）
 - 散布図（密度あり・KDE色分け）
 - 3D棒グラフ（X×Yビンごとの個数をZ軸）
@@ -12,6 +12,7 @@ import numpy as np
 import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
+from tqdm import tqdm
 
 matplotlib.use('Agg')
 
@@ -21,7 +22,7 @@ matplotlib.use('Agg')
 # ──────────────────────────────────────────────
 
 print("=" * 50)
-print(" AlphaFold CSV 可視化ツール")
+print(" CSV 分子量可視化ツール")
 print("=" * 50)
 
 print("\n【プロット種別を選択してください】")
@@ -60,7 +61,7 @@ x_values = []
 y_values = []
 skipped = 0
 
-for fpath in csv_files:
+for fpath in tqdm(csv_files, unit="file"):
     try:
         # NO_DATA ファイルをスキップ
         with open(fpath, 'r', encoding='utf-8', errors='replace') as f:
