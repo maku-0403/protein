@@ -8,6 +8,7 @@ CSV 分子量可視化ツール
 import os
 import glob
 import sys
+import csv
 import numpy as np
 import pandas as pd
 import matplotlib
@@ -46,6 +47,9 @@ out_dir = os.path.dirname(out_path)
 if out_dir and not os.path.exists(out_dir):
     os.makedirs(out_dir)
 
+# ログCSVのパス（出力ファイルと同じ場所、拡張子を .log.csv に）
+log_path = os.path.splitext(out_path)[0] + ".log.csv"
+
 # ──────────────────────────────────────────────
 # 2. CSVデータ読み込み
 # ──────────────────────────────────────────────
@@ -59,6 +63,7 @@ print(f"\n{len(csv_files)} 件のCSVを処理中...")
 
 x_values = []
 y_values = []
+log_records = []  # (filename, unit, amino_count, ratio)
 skipped = 0
 
 for fpath in tqdm(csv_files, unit="file"):
@@ -84,6 +89,8 @@ for fpath in tqdm(csv_files, unit="file"):
             skipped += 1
             continue
 
+        fname = os.path.basename(fpath)
+
         # unit 列があれば行順で unit の切り替わりを検出してグループ化
         # なければファイル全体を1グループとして扱う
         if 'unit' in df.columns:
@@ -100,10 +107,12 @@ for fpath in tqdm(csv_files, unit="file"):
             total_aa = len(grp)
             if total_aa > 2500:
                 continue
+            unit_name = grp['unit'].iloc[0] if 'unit' in grp.columns else 'N/A'
             w_vals = grp['w']
             ratio = (w_vals >= 10).sum() / len(w_vals)
             x_values.append(total_aa)
             y_values.append(ratio)
+            log_records.append((fname, unit_name, total_aa, ratio))
 
     except Exception:
         skipped += 1
@@ -115,12 +124,22 @@ if processed == 0:
     print("エラー: プロット可能なデータがありません。")
     sys.exit(1)
 
-x_arr = np.array(x_values)
-y_arr = np.array(y_values)
+# ──────────────────────────────────────────────
+# 3. ログCSV出力
+# ──────────────────────────────────────────────
+
+with open(log_path, 'w', newline='', encoding='utf-8') as f:
+    writer = csv.writer(f)
+    writer.writerow(['filename', 'unit', 'amino_count', 'ratio_w_ge10'])
+    writer.writerows(log_records)
+print(f"ログCSVを保存しました: {log_path}")
 
 # ──────────────────────────────────────────────
-# 3. プロット
+# 4. プロット
 # ──────────────────────────────────────────────
+
+x_arr = np.array(x_values)
+y_arr = np.array(y_values)
 
 TITLE_BASE = f"amino acid count vs proportion of w ≥ 10\n(N={processed})"
 
@@ -197,4 +216,4 @@ elif choice == "3":
     fig.tight_layout()
     fig.savefig(out_path, dpi=150)
 
-print(f"\n保存しました: {out_path}")
+print(f"散布図を保存しました: {out_path}")
