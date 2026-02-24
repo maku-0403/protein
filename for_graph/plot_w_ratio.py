@@ -98,6 +98,8 @@ for fpath in tqdm(csv_files, unit="file"):
                 continue
             # アミノ酸数 = そのユニットの行数
             total_aa = len(grp)
+            if total_aa > 2500:
+                continue
             w_vals = grp['w']
             ratio = (w_vals >= 10).sum() / len(w_vals)
             x_values.append(total_aa)
