@@ -63,10 +63,10 @@ if not csv_files:
 
 print(f"\n{len(csv_files)} 件のCSVを処理中...")
 
-x_values   = []
-y_values   = []
+x_values    = []
+y_values    = []
 log_records = []  # (filename, unit, amino_count, ratio)
-skipped    = 0
+skipped     = 0
 
 for fpath in tqdm(csv_files, unit="file"):
     try:
@@ -94,7 +94,12 @@ for fpath in tqdm(csv_files, unit="file"):
         fname = os.path.basename(fpath)
 
         # unit 列があれば行順で切り替わりを検出してグループ化
+        # NaN unit 行はユニット不明のため除外する
         if 'unit' in df.columns:
+            df = df.dropna(subset=['unit'])          # ← NaN unit 行を除外
+            if len(df) == 0:
+                skipped += 1
+                continue
             group_id = (df['unit'] != df['unit'].shift()).cumsum()
             groups = df.groupby(group_id, sort=False)
         else:
@@ -107,7 +112,7 @@ for fpath in tqdm(csv_files, unit="file"):
             total_aa = len(grp)
             if total_aa > 2500:
                 continue
-            unit_name = grp['unit'].iloc[0] if 'unit' in grp.columns else 'N/A'
+            unit_name = str(grp['unit'].iloc[0]) if 'unit' in grp.columns else 'N/A'
             w_vals = grp['w']
             ratio = (w_vals >= 10).sum() / len(w_vals)
             x_values.append(total_aa)
@@ -226,7 +231,6 @@ elif choice == "4":
     ratios     = [r[3] for r in log_records]
 
     # X軸（アミノ酸数）にジッターを加えて重なりを緩和
-    # ジッター幅はX軸レンジの0.3%
     jitter_scale = max(aa_counts) * 0.003
     rng = np.random.default_rng(seed=42)
     x_jitter = x_arr + rng.uniform(-jitter_scale, jitter_scale, size=len(x_arr))
@@ -246,7 +250,6 @@ elif choice == "4":
         marker=dict(size=5, color='steelblue', opacity=0.5),
         text=hover_text,
         hovertemplate="%{text}<extra></extra>",
-        customdata=list(zip(aa_counts, ratios)),  # 元の値（ジッターなし）
     ))
 
     fig.update_layout(
