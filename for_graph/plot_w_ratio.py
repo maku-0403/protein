@@ -3,7 +3,6 @@ CSV 分子量可視化ツール
 - 散布図（密度なし）
 - 散布図（密度あり・KDE色分け）
 - 3D棒グラフ（X×Yビンごとの個数をZ軸）
-- インタラクティブ散布図（plotly・HTML出力、ジッターあり）
 """
 
 import os
@@ -31,26 +30,44 @@ print("\n【プロット種別を選択してください】")
 print("  1: 散布図（密度なし）")
 print("  2: 散布図（密度あり・KDE色分け）")
 print("  3: 3D棒グラフ（個数軸）")
-print("  4: インタラクティブ散布図（HTML・ホバー情報付き）")
 
 while True:
-    choice = input("\n番号を入力 [1/2/3/4]: ").strip()
-    if choice in ("1", "2", "3", "4"):
+    choice = input("\n番号を入力 [1/2/3]: ").strip()
+    if choice in ("1", "2", "3"):
         break
-    print("  ※ 1, 2, 3, 4 のいずれかを入力してください。")
+    print("  ※ 1, 2, 3 のいずれかを入力してください。")
 
 csv_dir = input("\nCSVフォルダのパスを入力: ").strip()
 if not os.path.isdir(csv_dir):
     print(f"エラー: フォルダが見つかりません -> {csv_dir}")
     sys.exit(1)
 
-default_ext = ".html" if choice == "4" else ".png"
-out_path = input(f"出力ファイルのパスを入力（例: /path/to/output{default_ext}）: ").strip()
+out_path = input("出力ファイルのパスを入力（例: /path/to/output.png）: ").strip()
 out_dir = os.path.dirname(out_path)
 if out_dir and not os.path.exists(out_dir):
     os.makedirs(out_dir)
 
 log_path = os.path.splitext(out_path)[0] + ".log.csv"
+
+# フィルタリングCSV（任意）
+# pdb_chain_sp_primary_filtered.csv を指定すると、
+# 対応する {PDBid}.csv の指定 CHAIN のみをプロット対象にする
+filter_map = None  # {PDB_ID(大文字): set(CHAIN)}
+use_filter = input("\nフィルタリングCSV（pdb_chain_sp_primary_filtered.csv）を使用しますか？ [y/N]: ").strip().lower()
+if use_filter == 'y':
+    filter_csv_path = input("フィルタリングCSVのパスを入力: ").strip()
+    if not os.path.isfile(filter_csv_path):
+        print(f"エラー: ファイルが見つかりません -> {filter_csv_path}")
+        sys.exit(1)
+    filter_map = {}
+    with open(filter_csv_path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            pdb = row['PDB'].upper()
+            chain = row['CHAIN']
+            filter_map.setdefault(pdb, set()).add(chain)
+    print(f"フィルタリング対象: {len(filter_map)} PDB ID, "
+          f"{sum(len(v) for v in filter_map.values())} CHAIN")
 
 # ──────────────────────────────────────────────
 # 2. CSVデータ読み込み
@@ -61,7 +78,12 @@ if not csv_files:
     print(f"エラー: CSVファイルが見つかりません -> {csv_dir}")
     sys.exit(1)
 
-print(f"\n{len(csv_files)} 件のCSVを処理中...")
+if filter_map is not None:
+    csv_files = [f for f in csv_files
+                 if os.path.splitext(os.path.basename(f))[0].upper() in filter_map]
+    print(f"\nフィルタリング後: {len(csv_files)} 件のCSVを処理中...")
+else:
+    print(f"\n{len(csv_files)} 件のCSVを処理中...")
 
 x_values    = []
 y_values    = []
@@ -113,6 +135,13 @@ for fpath in tqdm(csv_files, unit="file"):
             if total_aa > 2500:
                 continue
             unit_name = str(grp['unit'].iloc[0]) if 'unit' in grp.columns else 'N/A'
+
+            # CHAINフィルタリング
+            if filter_map is not None:
+                pdb_id = os.path.splitext(fname)[0].upper()
+                if unit_name not in filter_map.get(pdb_id, set()):
+                    continue
+
             w_vals = grp['w']
             ratio = (w_vals >= 10).sum() / len(w_vals)
             x_values.append(total_aa)
@@ -220,49 +249,5 @@ elif choice == "3":
     ax.set_title("3D histogram: " + TITLE_BASE, fontsize=12)
     fig.tight_layout()
     fig.savefig(out_path, dpi=150)
-
-# ---------- 選択肢 4: インタラクティブ散布図（plotly）----------
-elif choice == "4":
-    import plotly.graph_objects as go
-
-    filenames  = [r[0] for r in log_records]
-    unit_names = [r[1] for r in log_records]
-    aa_counts  = [r[2] for r in log_records]
-    ratios     = [r[3] for r in log_records]
-
-    # X軸（アミノ酸数）にジッターを加えて重なりを緩和
-    jitter_scale = max(aa_counts) * 0.003
-    rng = np.random.default_rng(seed=42)
-    x_jitter = x_arr + rng.uniform(-jitter_scale, jitter_scale, size=len(x_arr))
-
-    hover_text = [
-        f"<b>File:</b> {fn}<br>"
-        f"<b>Unit:</b> {un}<br>"
-        f"<b>Amino acids:</b> {aa}<br>"
-        f"<b>Ratio (w≥10):</b> {rt:.4f}"
-        for fn, un, aa, rt in zip(filenames, unit_names, aa_counts, ratios)
-    ]
-
-    fig = go.Figure(go.Scatter(
-        x=x_jitter,
-        y=y_arr,
-        mode='markers',
-        marker=dict(size=5, color='steelblue', opacity=0.5),
-        text=hover_text,
-        hovertemplate="%{text}<extra></extra>",
-    ))
-
-    fig.update_layout(
-        title=dict(text="Interactive scatter: " + TITLE_BASE, font=dict(size=15)),
-        xaxis=dict(title="Total amino acid count", showgrid=True, gridcolor='lightgrey'),
-        yaxis=dict(title="Proportion of w ≥ 10", showgrid=True, gridcolor='lightgrey',
-                   range=[-0.05, 1.05]),
-        plot_bgcolor='white',
-        hoverlabel=dict(bgcolor='white', font_size=13),
-        width=1000,
-        height=700,
-    )
-
-    fig.write_html(out_path, include_plotlyjs='cdn')
 
 print(f"保存しました: {out_path}")
